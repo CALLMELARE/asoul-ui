@@ -1,0 +1,235 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-btn {
+    box-sizing: border-box;
+    display: inline-block;
+    font-weight: normal;
+    user-select: none;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-align: center;
+    outline: none;
+    width: auto;
+    height: 36px;
+    border-radius: 4px;
+
+    font-size: 15px;
+    color: $black;
+    background-color: transparent;
+    padding: 0 15px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border: none;
+
+    &:not(.auto) {
+        min-width: 50px;
+    }
+
+    &.mini {
+        width: initial;
+        font-size: 12px;
+        padding: 0 8px;
+        height: 28px;
+    }
+
+    &.small {
+        width: initial;
+        font-size: 13px;
+        padding: 0 12px;
+        height: 32px;
+    }
+
+    &.large {
+        width: initial;
+        font-size: 18px;
+        padding: 0 20px;
+        height: 45px;
+    }
+
+    &.block {
+        min-width: 100% !important;
+    }
+
+    &.disabled {
+        background-color: $grayLight !important;
+        border-color: transparent !important;
+        color: $gray !important;
+
+        &:hover,
+        &:focus {
+            background-color: $grayLight;
+        }
+
+        cursor: not-allowed !important;
+    }
+
+    &.loading {
+        pointer-events: none;
+        border: none !important;
+
+        &.asoul-loading-icon {
+            background-color: #000;
+        }
+    }
+
+    &.auto {
+        min-width: auto;
+    }
+}
+
+.asoul-btn {
+    &.default {
+        background-color: $primaryDefault;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background-color: transparentize($primaryDefault, 0.1);
+        }
+    }
+
+    &.outlined {
+        border: 1px solid $primaryDefault;
+        color: $primaryDefault;
+
+        &:hover,
+        &:focus {
+            background-color: transparentize($primaryDefault, 0.9);
+        }
+    }
+
+    &.text {
+        color: $primaryDefault;
+
+        &:hover,
+        &:focus {
+            background-color: transparentize($primaryDefault, 0.9);
+        }
+
+    }
+
+    &.glass {
+        background: transparentize($white, 0.3);
+        backdrop-filter: blur(10px);
+        color: $black;
+
+        &:hover,
+        &:focus {
+            background-color: transparentize($primaryDefault, 0.9);
+        }
+    }
+}
+
+.asoul-btn {
+    &.primary {}
+
+    &.success {
+        border-color: $successDefault;
+        background-color: $successDefault;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: $white;
+            background-color: $successLight;
+        }
+    }
+
+    &.warning {
+        border-color: $warningDefault;
+        background-color: $warningDefault;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: $white;
+            background-color: $warningLight;
+        }
+    }
+
+    &.error {
+        background-color: $errorDefault;
+        border-color: $errorDefault;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: $white;
+            background-color: $errorLight;
+        }
+    }
+}
+
+
+.asoul-button-drip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    svg {
+        position: absolute;
+        animation: 350ms ease-in expand;
+        animation-fill-mode: forwards;
+        width: 16px;
+        height: 16px;
+    }
+
+    @keyframes expand {
+        0% {
+            opacity: 0;
+            transform: scale(1);
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        80% {
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: scale(28);
+            opacity: 0;
+        }
+    }
+}
+
+.asoul-btn-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    color: $gray;
+    border-color: $grayLight;
+    background-color: $grayLight;
+
+    svg{
+        width: 24px;
+        height: 100%;
+        color: $gray;
+    }
+
+    &.success {
+        border-color: $successDefault;
+        background-color: $successDefault;
+        color: #fff;
+    }
+
+    &.warning {
+        border-color: $warningDefault;
+        background-color: $warningDefault;
+        color: #fff;
+    }
+
+    &.error {
+        background-color: $errorDefault;
+        border-color: $errorDefault;
+        color: #fff;
+    }
+}

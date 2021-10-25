@@ -1,0 +1,20 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-tabs {
+    width: fit-content;
+
+    .asoul-tab-header {
+        position: relative;
+        display: flex;
+        cursor: pointer;
+        flex-wrap: nowrap;
+        user-select: none;
+        overflow: scroll;
+        scrollbar-width: none;
+        border-radius: 5px 5px 0 0;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

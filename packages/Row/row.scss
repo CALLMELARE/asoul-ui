@@ -1,0 +1,31 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.asoul-justify-center {
+    justify-content: center;
+}
+
+.asoul-justify-end {
+    justify-content: flex-end;
+}
+
+.asoul-justify-space-around {
+    justify-content: space-around;
+}
+
+.asoul-justify-space-between {
+    justify-content: space-between;
+}
+
+.asoul-align-middle {
+    align-items: center;
+}
+
+.asoul-align-bottom {
+    align-items: flex-end;
+}

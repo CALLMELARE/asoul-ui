@@ -1,0 +1,183 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-radio {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: initial;
+
+
+    &.mini {
+        $size: $mini;
+
+        .asoul-radio-name {
+            font-size: $size;
+        }
+
+        .asoul-radio-point {
+            height: $size;
+            width: $size;
+            margin-right: $size * 0.375;
+
+            &.rounded {
+                border-radius: $size / 2;
+
+                &::before {
+                    border-radius: $size / 2;
+                }
+            }
+
+            &.active::before {
+                transform: scale(0.6);
+            }
+        }
+
+        .asoul-radio-point::before {
+            height: $size;
+            width: $size;
+        }
+    }
+
+    &.small {
+        $size: $small;
+
+        .asoul-radio-name {
+            font-size: $size;
+        }
+
+        .asoul-radio-point {
+            height: $size;
+            width: $size;
+            margin-right: $size * 0.375;
+
+            &.rounded {
+                border-radius: $size / 2;
+
+                &::before {
+                    border-radius: $size / 2;
+                }
+            }
+
+            &.active::before {
+                transform: scale(0.8);
+            }
+        }
+
+        .asoul-radio-point::before {
+            height: $size;
+            width: $size;
+        }
+    }
+
+    &.medium {
+        $size: $medium;
+
+        .asoul-radio-name {
+            font-size: $size;
+        }
+
+        .asoul-radio-point {
+            height: $size;
+            width: $size;
+            margin-right: $size * 0.375;
+
+            &.rounded {
+                border-radius: $size / 2;
+
+                &::before {
+                    border-radius: $size / 2;
+                }
+            }
+        }
+
+        .asoul-radio-point::before {
+            height: $size;
+            width: $size;
+        }
+    }
+
+    &.large {
+        $size: $large;
+
+        .asoul-radio-name {
+            font-size: $size;
+        }
+
+        .asoul-radio-point {
+            height: $size;
+            width: $size;
+            margin-right: $size * 0.375;
+
+            &.rounded {
+                border-radius: $size / 2;
+
+                &::before {
+                    border-radius: $size / 2;
+                }
+            }
+        }
+
+        .asoul-radio-point::before {
+            height: $size;
+            width: $size;
+        }
+    }
+
+    input {
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    label {
+        cursor: pointer;
+
+        &:hover:not(.disabled) {
+            .asoul-radio-point {
+                background-color: transparentize($primaryDefault, 0.8);
+            }
+        }
+
+        &.disabled {
+            color: $grayLight;
+            cursor: not-allowed;
+
+            .asoul-radio-point {
+                border: 1px solid $grayLight;
+            }
+        }
+    }
+
+    .asoul-radio-name {
+        user-select: none;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .asoul-radio-point {
+        $radius: 5px;
+        border: 1px solid $primaryDefault;
+        border-radius: $radius;
+        transition: all 0.2s ease 0s;
+        position: relative;
+        display: inline-block;
+        transform: scale(0.875);
+
+        &::before {
+            background-color: $primaryDefault;
+            content: '';
+            position: absolute;
+            transform: scale(0);
+            border-radius: $radius;
+        }
+
+        &.disabled::before {
+            background-color: $grayLight;
+        }
+
+        &.active::before {
+            transition: all 0.2s ease 0s;
+            transform: scale(0.875);
+        }
+    }
+}

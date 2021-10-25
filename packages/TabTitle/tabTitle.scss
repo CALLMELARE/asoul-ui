@@ -1,0 +1,75 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-tab-title {
+    position: relative;
+    padding: 8px 12px;
+    font-size: $medium;
+    line-height: $medium*1.3;
+    color: $black;
+    outline: 0;
+    background-color: transparentize($grayLight, 0.9);
+
+
+
+    &.active {
+        color: $primaryDefault;
+        padding: 8px 12px 6px 12px;
+
+        // border-bottom: 2px solid $primaryDefault;
+        // background-color: transparentize($primaryDefault, 0.9);
+        .asoul-tab-slider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $primaryDefault;
+            transition: left 0.3s ease;
+            -webkit-animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+    }
+
+    &:not(.active) {
+        color: $gray;
+
+        // border-bottom: 2px solid $grayLight;
+        .asoul-tab-slider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: transparentize($grayLight, 0.8);
+        }
+    }
+
+    &:hover {
+        background-color: transparentize($grayLight, 0.8);
+        // color: $primaryDefault;
+    }
+}
+
+@-webkit-keyframes scale-up-hor-center {
+    0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scale-up-hor-center {
+    0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}

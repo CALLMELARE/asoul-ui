@@ -1,0 +1,205 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-check_box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    cursor: pointer;
+    user-select: none;
+
+    &.mini {
+        $size: $mini;
+        height: $size;
+        line-height: $size;
+
+        .asoul-text_inner {
+            font-size: $size;
+            padding-left: $size * 0.3;
+
+            .asoul-check_box-point {
+                width: $size;
+                height: $size;
+                border-radius: 5px;
+                margin-right: $size * 0.375;
+
+                &.active::after {
+                    width: $size/16*3;
+                    height: $size/16*8;
+                    left: $size/16*5;
+                    top: $size/16*2;
+                    border-width: 0 $size/16*2 $size/16*2 0;
+                }
+            }
+
+            .asoul-check_box-point::before {
+                width: $size;
+                height: $size;
+            }
+        }
+    }
+
+    &.small {
+        $size: $small;
+        height: $size;
+        line-height: $size;
+
+        .asoul-text_inner {
+            font-size: $size;
+            padding-left: $size * 0.3;
+
+            .asoul-check_box-point {
+                width: $size;
+                height: $size;
+                border-radius: 5px;
+                margin-right: $size * 0.375;
+
+                &.active::after {
+                    width: $size/16*3;
+                    height: $size/16*8;
+                    left: $size/16*5;
+                    top: $size/16*2;
+                    border-width: 0 $size/16*2 $size/16*2 0;
+                }
+            }
+
+            .asoul-check_box-point::before {
+                width: $size;
+                height: $size;
+            }
+        }
+    }
+
+    &.medium {
+        $size: $medium;
+        height: $size;
+        line-height: $size;
+
+        .asoul-text_inner {
+            font-size: $size;
+            padding-left: $size * 0.3;
+
+            .asoul-check_box-point {
+                width: $size;
+                height: $size;
+                border-radius: 5px;
+                margin-right: $size * 0.375;
+
+                &.active::after {
+                    width: $size/16*3;
+                    height: $size/16*8;
+                    left: $size/16*5;
+                    top: $size/16*2;
+                    border-width: 0 $size/16*2 $size/16*2 0;
+                }
+            }
+
+            .asoul-check_box-point::before {
+                width: $size;
+                height: $size;
+            }
+        }
+
+    }
+
+    &.large {
+        $size: $large;
+        height: $size;
+        line-height: $size;
+        font-size: $size;
+
+        .asoul-text_inner {
+            font-size: $size;
+            line-height: $size;
+            padding-left: $size * 0.3;
+
+            .asoul-check_box-point {
+                width: $size;
+                height: $size;
+                border-radius: 5px;
+                margin-right: $size * 0.375;
+
+                &.active::after {
+                    width: $size/16*3;
+                    height: $size/16*8;
+                    left: $size/16*5;
+                    top: $size/16*2;
+                    border-width: 0 $size/16*2 $size/16*2 0;
+                }
+            }
+
+            .asoul-check_box-point::before {
+                width: $size;
+                height: $size;
+            }
+        }
+    }
+}
+
+.asoul-check_box {
+    .asoul-check_box-point {
+        border: 1px solid $primaryDefault;
+        transition: all 0.2s ease 0s;
+        position: relative;
+        display: inline-block;
+        transform: scale(0.875);
+
+        &::before {
+            background-color: $primaryDefault;
+            content: '';
+            position: absolute;
+            position: absolute;
+            transform: scale(0);
+            border-radius: 5px;
+        }
+
+        &.disabled {
+            border: 1px solid $grayLight;
+        }
+
+        &.active::before {
+            transition: all 0.2s ease 0s;
+            transform: scale(0.875);
+        }
+
+        &.active::after {
+            content: '';
+            position: absolute;
+            border: solid #fff;
+            transform: rotate(45deg);
+        }
+    }
+
+    .asoul-text_inner {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    input {
+        outline: none;
+        position: absolute;
+        height: 0;
+        width: 0;
+        opacity: 0;
+        z-index: -1;
+        background-color: transparent;
+    }
+
+    &:hover:not(.disabled) {
+        .asoul-check_box-point {
+            background-color: transparentize($primaryDefault, 0.8);
+        }
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+
+        .asoul-check_box-point::before {
+            background-color: $grayLight;
+        }
+
+        .asoul-text_inner {
+            color: $grayLight;
+        }
+    }
+}

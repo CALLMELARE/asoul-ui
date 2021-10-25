@@ -1,0 +1,11 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-tab {
+    padding: 12px;
+    background-color: transparentize($grayLight, 0.9);
+    color: $black;
+
+    &.none {
+        display: none;
+    }
+}

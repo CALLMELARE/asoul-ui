@@ -1,0 +1,25 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-progress {
+    padding: 12px;
+    width: 100%;
+    background: transparent;
+
+    .asoul-progress-bar {
+        height: 4px;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+    }
+
+    .asoul-progress-linear-background {
+        height: 4px;
+        background-color: transparentize($primaryDefault, 0.8);
+    }
+
+    .asoul-progress-linear-determinate {
+        height: 4px;
+        background-color: $primaryDefault;
+    }
+}

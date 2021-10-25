@@ -1,0 +1,12 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-footer-item {
+    color: $white;
+    font-size: $medium;
+    line-height: $medium * 1.4;
+    width: 100%;
+    max-width: 341px;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

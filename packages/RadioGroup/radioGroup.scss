@@ -1,0 +1,19 @@
+@import "../utils/styles/theme.scss";
+
+.asoul-radio-group {
+    display: flex;
+    flex-direction: column;
+
+    & .asoul-radio:not(.asoul-radio:first-of-type) {
+        margin-top: 15px;
+    }
+
+    &.useRow {
+        flex-direction: row;
+
+        & .asoul-radio:not(.asoul-radio:first-of-type) {
+            margin-left: 15px;
+            margin-top: 0;
+        }
+    }
+}
