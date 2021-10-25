@@ -1,6 +1,12 @@
 // theme color
 
-$primaryDefault:rgba(87,102,144, 1);
+$AvaTheme:rgba(154, 200, 226, 1);
+$BellaTheme:rgba(189, 125, 116, 1);
+$CarolTheme:rgba(184, 166, 217, 1);
+$DianaTheme:rgba(231, 153, 176, 1);
+$EileenTheme:rgba(87, 102, 144, 1);
+
+$primaryDefault:$EileenTheme;
 
 $successLight:rgba(88, 224, 0, 1);
 $successDefault:rgba(20, 209, 0, 1);
