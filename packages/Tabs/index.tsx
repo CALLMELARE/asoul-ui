@@ -1,5 +1,5 @@
 import { createProvider } from "../utils/useHooks";
-import { ComponentInstance } from "packages/utils/base";
+import { ComponentInstance } from "../utils/base";
 import { computed, Ref, ref, watch } from "vue";
 import { createNameSpace } from "../utils";
 import TabTitle, { TabTitleEmit } from "../TabTitle";
