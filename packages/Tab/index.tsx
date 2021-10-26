@@ -23,7 +23,7 @@ export default createComponent({
     const self = ref<string | number>(props.value);
     if (!context) {
       if (process.env.NODE_ENV !== "production") {
-        console.error("[TWT] <Tab> must be a child component of <Tabs>.");
+        console.error("[ASoul] <Tab> must be a child component of <Tabs>.");
       }
       return;
     }

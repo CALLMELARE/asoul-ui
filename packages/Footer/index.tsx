@@ -8,7 +8,7 @@ export default createComponent({
   props: {
     copyinfo: {
       type: String,
-      default: "TWT Studio",
+      default: "ASoul UI",
     },
     copyright: Boolean,
     bgcolor: {

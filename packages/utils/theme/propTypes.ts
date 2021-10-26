@@ -1,7 +1,7 @@
 const tuple = <T extends string[]>(...args: T): T => {
   const noStr = [...args].map((_) => typeof _ !== "string").includes(true);
   if (noStr) {
-    throw new Error("[TWT] type Error. type is not a string!");
+    throw new Error("[ASoul] type Error. type is not a string!");
   }
   return args;
 };
