@@ -13,6 +13,16 @@
     "moduleResolution": "node",
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["components", "../../shims/*"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "packages/**/*",
+    "/**/*",
+    "/*",
+    "*"
+  ],
+  "exclude": ["node_modules", "src/**/*.js", "src/**/*.jsx"]
 }

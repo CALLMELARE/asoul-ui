@@ -25,5 +25,5 @@
     "tests/**/*.tsx",
     "packages/**/*"
   ],
-  "exclude": ["node_modules", "packages", "src/**/*.js", "src/**/*.jsx"]
+  "exclude": ["node_modules", "src/**/*.js", "src/**/*.jsx"]
 }

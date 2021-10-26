@@ -1,6 +1,6 @@
 {
   "name": "asoul-ui",
-  "version": "0.1.11",
+  "version": "0.1.15",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,6 +8,9 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name asoul-ui -dest lib packages/index.ts"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "@fect-ui/vue-hooks": "0.0.2",
     "core-js": "^3.6.5",

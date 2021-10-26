@@ -1,10 +1,9 @@
 {
   "name": "asoul-ui",
-  "version": "0.1.12",
+  "version": "0.1.19",
   "description": "Vue3 UI library,for ASoul",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
+  "main": "index.ts",
+  "bin": "index.ts",
   "scripts": {
     "collect": "non collect",
     "build": "non compile",
@@ -21,10 +20,11 @@
     "url": "https://github.com/CALLMELARE/asoul-ui"
   },
   "files": [
-    "lib/",
-    "es/",
-    "types/",
-    "vetur/"
+    "*"
+  ],
+  "workspaces": [
+    "*",
+    "/*"
   ],
   "author": "LARE",
   "license": "MIT",
