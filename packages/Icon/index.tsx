@@ -1,6 +1,6 @@
 import { computed, toRefs } from "vue";
 import { createNameSpace } from "../utils";
-import "./progress.scss";
+import "./icon.scss";
 
 const [createComponent] = createNameSpace("Icon");
 
