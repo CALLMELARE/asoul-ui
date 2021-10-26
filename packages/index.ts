@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import FooterItem from "./FooterItem";
 import FooterList from "./FooterList";
 import FooterTitle from "./FooterTitle";
+import Icon from "./Icon";
 import Progress from "./Progress";
 import Radio from "./Radio";
 import RadioGroup from "./RadioGroup";
@@ -29,6 +30,7 @@ const components = [
   FooterItem,
   FooterList,
   FooterTitle,
+  Icon,
   Progress,
   Radio,
   RadioGroup,
@@ -63,6 +65,7 @@ export {
   FooterItem as ASFooterItem,
   FooterList as ASFooterList,
   FooterTitle as ASFooterTitle,
+  Icon as ASIcon,
   Progress as ASProgress,
   Radio as ASRadio,
   RadioGroup as ASRadioGroup,
