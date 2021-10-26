@@ -1,6 +1,11 @@
 @import "../utils/styles/theme.scss";
 
-.asoul-icon{
+.asoul-icon {
     color: $primaryDefault;
     font-size: $medium;
+
+    svg {
+        height: 1em;
+        width: 1em;
+    }
 }
