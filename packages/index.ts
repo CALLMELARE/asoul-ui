@@ -4,6 +4,7 @@ import Alert from "./Alert";
 import Button from "./Button";
 import Card from "./Card";
 import CheckBox from "./CheckBox";
+import CheckboxGroup from "./CheckboxGroup";
 import Col from "./Col";
 import Footer from "./Footer";
 import FooterItem from "./FooterItem";
@@ -60,6 +61,7 @@ export {
   Button as ASButton,
   Card as ASCard,
   CheckBox as ASCheckBox,
+  CheckboxGroup as ASCheckboxGroup,
   Col as ASCol,
   Footer as ASFooter,
   FooterItem as ASFooterItem,
