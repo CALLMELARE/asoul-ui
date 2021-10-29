@@ -7,7 +7,7 @@ const [createComponent] = createNameSpace("Icon");
 export default createComponent({
   props: {
     color: { type: String, default: "" },
-    size: { type: String, default: "1em" },
+    size: { type: String, default: "" },
   },
   setup(props, { attrs, slots, emit }) {
     const color = ref<string>(props.color);
