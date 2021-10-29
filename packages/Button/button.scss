@@ -1,4 +1,4 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 .asoul-btn {
     box-sizing: border-box;
@@ -14,7 +14,7 @@
     border-radius: 4px;
 
     font-size: 15px;
-    color: $black;
+    @include font_color(primary_color);
     background-color: transparent;
     padding: 0 15px;
     overflow: hidden;
@@ -52,13 +52,14 @@
     }
 
     &.disabled {
-        background-color: $grayLight !important;
+        @include background_important(sub_color);
         border-color: transparent !important;
-        color: $gray !important;
+        @include font_color_important(secondary_color);
 
         &:hover,
         &:focus {
-            background-color: $grayLight;
+            @include background_color(sub_color);
+            
         }
 
         cursor: not-allowed !important;
@@ -80,43 +81,44 @@
 
 .asoul-btn {
     &.default {
-        background-color: $primaryDefault;
-        color: $white;
+        @include background_color(theme_color);
+        @include font_color(invert_color);
 
         &:hover,
         &:focus {
-            background-color: transparentize($primaryDefault, 0.1);
+            @include background_transparent(theme_color, 0.1);
         }
     }
 
     &.outlined {
-        border: 1px solid $primaryDefault;
-        color: $primaryDefault;
+        border: 1px solid;
+        @include border_color(theme_color);
+        @include font_color(theme_color);
 
         &:hover,
         &:focus {
-            background-color: transparentize($primaryDefault, 0.9);
+            @include background_transparent(theme_color, 0.9);
         }
     }
 
     &.text {
-        color: $primaryDefault;
+        @include font_color(theme_color);
 
         &:hover,
         &:focus {
-            background-color: transparentize($primaryDefault, 0.9);
+            @include background_transparent(theme_color, 0.9);
         }
 
     }
 
     &.glass {
-        background: transparentize($white, 0.3);
+        @include background_transparent(invert_color, 0.3);
         backdrop-filter: blur(10px);
-        color: $black;
+        @include font_color(primary_color);
 
         &:hover,
         &:focus {
-            background-color: transparentize($primaryDefault, 0.9);
+            @include background_transparent(theme_color, 0.9);
         }
     }
 }
@@ -131,7 +133,7 @@
 
         &:hover,
         &:focus {
-            color: $white;
+            @include font_color(invert_color);
             background-color: $successLight;
         }
     }
@@ -143,7 +145,7 @@
 
         &:hover,
         &:focus {
-            color: $white;
+            @include font_color(invert_color);
             background-color: $warningLight;
         }
     }
@@ -155,7 +157,7 @@
 
         &:hover,
         &:focus {
-            color: $white;
+            @include font_color(invert_color);
             background-color: $errorLight;
         }
     }
@@ -205,14 +207,14 @@
     right: 0;
     bottom: 0;
     z-index: 2;
-    color: $gray;
-    border-color: $grayLight;
-    background-color: $grayLight;
+    @include font_color(secondary_color);
+    @include border_color(sub_color);
+    @include background_color(sub_color);
 
-    svg{
+    svg {
         width: 24px;
         height: 100%;
-        color: $gray;
+        @include font_color(secondary_color);
     }
 
     &.success {

@@ -1,4 +1,4 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 .asoul-check_box {
     display: inline-flex;
@@ -138,14 +138,15 @@
 
 .asoul-check_box {
     .asoul-check_box-point {
-        border: 1px solid $primaryDefault;
+        border: 1px solid;
+        @include border_color(theme_color);
         transition: all 0.2s ease 0s;
         position: relative;
         display: inline-block;
         transform: scale(0.875);
 
         &::before {
-            background-color: $primaryDefault;
+            @include background_color(theme_color);
             content: '';
             position: absolute;
             position: absolute;
@@ -154,7 +155,8 @@
         }
 
         &.disabled {
-            border: 1px solid $grayLight;
+            border: 1px solid;
+            @include border_color(sub_color);
         }
 
         &.active::before {
@@ -187,7 +189,7 @@
 
     &:hover:not(.disabled) {
         .asoul-check_box-point {
-            background-color: transparentize($primaryDefault, 0.8);
+            @include background_transparent(theme_color, 0.8);
         }
     }
 
@@ -195,11 +197,11 @@
         cursor: not-allowed;
 
         .asoul-check_box-point::before {
-            background-color: $grayLight;
+            @include background_color(sub_color);
         }
 
         .asoul-text_inner {
-            color: $grayLight;
+            @include font_color(sub_color);
         }
     }
 }

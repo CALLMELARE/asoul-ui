@@ -1,9 +1,9 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 .asoul-footer {
     width: 100%;
     position: relative;
-    background-color: $primaryDefault;
+    @include background_color(theme_color);
 
     .asoul-footer-row {
         display: flex;
@@ -16,8 +16,8 @@
     .asoul-footer-copyright {
         width: 100%;
         text-align: center;
-        background-color: transparentize($gray, 0.8);
-        color: $white;
+        @include background_transparent(secondary_color, 0.8);
+        @include font_color(invert_color);
         font-weight: bold;
         padding: 12px 0;
     }

@@ -1,4 +1,4 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 $font:$medium;
 
@@ -15,53 +15,57 @@ $font:$medium;
 
 .asoul-text-field {
     width: 100%;
+
     .asoul-text-field-wrapper {
         width: 100%;
+
         .asoul-text-field-box {
             position: relative;
             width: 100%;
 
             .asoul-text-field-input {
-                color: $black;
+                @include font_color(primary_color);
                 padding: $font*1.2 5px $font / 2 5px;
                 font-size: $font;
                 line-height: $font;
                 outline: none;
                 border: none;
-                border-bottom: 2px solid $grayLight;
+                border-bottom: 2px solid;
+                @include border_color(sub_color);
                 // border-radius: 5px;
 
                 &.disabled {
                     pointer-events: none;
 
                     ~.asoul-text-filed-label {
-                        color: $gray;
+                        @include font_color(secondary_color);
                     }
 
                     cursor: not-allowed;
-                    background-color: $grayLight;
+                    @include background_color(sub_color);
                     user-select: none;
                 }
 
                 &:focus:not(.disabled) {
-                    border-bottom: 2px solid $primaryDefault;
+                    border-bottom: 2px solid;
+                    @include border_color(theme_color);
 
                     ~.asoul-text-filed-label {
-                        color: $primaryDefault;
+                        @include font_color(theme_color);
                         transform: translate(-12%, -50%) scale(0.75);
                     }
                 }
             }
 
             .asoul-text-filed-label {
-                color: $grayLight;
+                @include font_color(sub_color);
                 position: absolute;
                 transition: .2s ease;
                 top: $font*.2;
                 left: 5px;
 
                 &.focused {
-                    color: $grayLight;
+                    @include font_color(sub_color);
                     transform: translate(-12%, -50%) scale(0.75);
                 }
             }

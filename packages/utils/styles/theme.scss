@@ -22,7 +22,7 @@ $errorDark:rgba(235, 0, 59, 1);
 
 $black:rgba(37, 37, 37, 1);
 $gray:rgba(101, 102, 103, 1);
-$grayLight:rgb(204, 204, 204);
+$grayLight:rgba(204, 204, 204, 1);
 $white:rgba(255, 255, 255, 1);
 
 // Size
@@ -31,3 +31,19 @@ $mini:9px;
 $small:14px;
 $medium:16px;
 $large:22px;
+
+// Themes
+
+$themes:(light: (theme_color:$primaryDefault,
+        primary_color: $black,
+        secondary_color: $gray,
+        sub_color:$grayLight,
+        invert_color:$white,
+    ),
+
+    dark: (theme_color:$primaryDefault,
+        primary_color: $white,
+        secondary_color: $white,
+        sub_color:$gray,
+        invert_color:$black,
+    ))

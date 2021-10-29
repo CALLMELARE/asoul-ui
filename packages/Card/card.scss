@@ -1,4 +1,4 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 .asoul-card {
     margin: 0;
@@ -7,9 +7,10 @@
     transition: all 0.2s ease;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px solid $grayLight;
-    background-color: $white;
-    color: $black;
+    border: 1px solid;
+    @include border_color(sub_color);
+    @include background_color(invert_color);
+    @include font_color(primary_color);
 }
 
 .asoul-card {
@@ -25,8 +26,8 @@
     }
 
     &.inverse {
-        background-color: $primaryDefault;
-        color: $white;
+        @include background_color(theme_color);
+        @include font_color(invert_color);
     }
 }
 

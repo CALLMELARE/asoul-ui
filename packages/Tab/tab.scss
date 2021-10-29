@@ -1,9 +1,9 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 .asoul-tab {
     padding: 12px;
-    background-color: transparentize($grayLight, 0.9);
-    color: $black;
+    @include background_transparent(sub_color, 0.9);
+    @include font_color(primary_color);
 
     &.none {
         display: none;

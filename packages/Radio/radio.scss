@@ -1,4 +1,4 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 .asoul-radio {
     display: flex;
@@ -134,16 +134,17 @@
 
         &:hover:not(.disabled) {
             .asoul-radio-point {
-                background-color: transparentize($primaryDefault, 0.8);
+                @include background_transparent(theme_color, 0.8);
             }
         }
 
         &.disabled {
-            color: $grayLight;
+            @include font_color(sub_color);
             cursor: not-allowed;
 
             .asoul-radio-point {
-                border: 1px solid $grayLight;
+                border: 1px solid;
+                @include border_color(sub_color);
             }
         }
     }
@@ -156,7 +157,8 @@
 
     .asoul-radio-point {
         $radius: 5px;
-        border: 1px solid $primaryDefault;
+        border: 1px solid;
+        @include border_color(theme_color);
         border-radius: $radius;
         transition: all 0.2s ease 0s;
         position: relative;
@@ -164,7 +166,7 @@
         transform: scale(0.875);
 
         &::before {
-            background-color: $primaryDefault;
+            @include background_color(theme_color);
             content: '';
             position: absolute;
             transform: scale(0);
@@ -172,7 +174,7 @@
         }
 
         &.disabled::before {
-            background-color: $grayLight;
+            @include background_color(sub_color);
         }
 
         &.active::before {

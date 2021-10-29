@@ -1,4 +1,4 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 .asoul-progress {
     padding: 12px;
@@ -15,11 +15,11 @@
 
     .asoul-progress-linear-background {
         height: 4px;
-        background-color: transparentize($primaryDefault, 0.8);
+        @include background_transparent(theme_color, 0.8);
     }
 
     .asoul-progress-linear-determinate {
         height: 4px;
-        background-color: $primaryDefault;
+        @include background_color(theme_color);
     }
 }

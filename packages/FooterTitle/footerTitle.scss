@@ -1,7 +1,7 @@
-@import "../utils/styles/theme.scss";
+@import "../utils/styles/mixin.scss";
 
 .asoul-footer-title {
-    color: $white;
+    @include font_color(invert_color);
     font-weight: bold;
     font-size: $medium * 1.1;
     line-height: $medium * 1.5;
