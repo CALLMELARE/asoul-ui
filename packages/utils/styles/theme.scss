@@ -43,7 +43,7 @@ $themes:(light: (theme_color:$primaryDefault,
 
     dark: (theme_color:$primaryDefault,
         primary_color: $white,
-        secondary_color: $white,
+        secondary_color: $grayLight,
         sub_color:$gray,
         invert_color:$black,
     ))

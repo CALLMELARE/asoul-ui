@@ -16,12 +16,12 @@
 .asoul-card {
     &.hoverable {
         &:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            @include box_shadow(0, 8px, 30px, primary_color, 0.88);
         }
     }
 
     &.shadow {
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+        @include box_shadow(0, 5px, 10px, primary_color, 0.88);
         border-color: transparent;
     }
 

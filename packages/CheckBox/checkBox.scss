@@ -7,7 +7,9 @@
     width: auto;
     cursor: pointer;
     user-select: none;
-
+    .asoul-text_inner{
+        @include font_color(primary_color);
+    }
     &.mini {
         $size: $mini;
         height: $size;

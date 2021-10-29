@@ -6,6 +6,9 @@
     position: relative;
     width: initial;
 
+    .asoul-radio-name {
+        @include font_color(primary_color);
+    }
 
     &.mini {
         $size: $mini;

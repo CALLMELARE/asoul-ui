@@ -77,3 +77,11 @@
         border-color: transparentize(themed($color), $opacity);
     }
 }
+
+// 阴影
+
+@mixin box_shadow($h, $v, $blur, $color, $opacity) {
+    @include themeify {
+        box-shadow: $h $v $blur transparentize(themed($color), $opacity);
+    }
+}
