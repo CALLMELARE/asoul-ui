@@ -53,10 +53,22 @@
     }
 }
 
+@mixin font_transparent($color, $opacity) {
+    @include themeify {
+        color: transparentize(themed($color), $opacity);
+    }
+}
+
 //获取边框颜色
 @mixin border_color($color) {
     @include themeify {
         border-color: themed($color);
+    }
+}
+
+@mixin border_color_important($color) {
+    @include themeify {
+        border-color: themed($color) !important;
     }
 }
 
