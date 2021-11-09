@@ -2,6 +2,8 @@ import { App } from "vue";
 
 import Alert from "./Alert";
 import Button from "./Button";
+import Breadcrumb from './Breadcrumb';
+import BreadcrumbItem from "./Breadcrumb/breadcrumb-item";
 import Card from "./Card";
 import CheckBox from "./CheckBox";
 import CheckboxGroup from "./CheckboxGroup";
@@ -25,6 +27,8 @@ import TextField from "./TextField";
 const components = [
   Alert,
   Button,
+  Breadcrumb,
+  BreadcrumbItem,
   Card,
   CheckBox,
   Col,
@@ -61,6 +65,8 @@ export default { install };
 export {
   Alert as ASAlert,
   Button as ASButton,
+  Breadcrumb as ASBreadcrumb,
+  BreadcrumbItem as ASBreadcrumbItem,
   Card as ASCard,
   CheckBox as ASCheckBox,
   CheckboxGroup as ASCheckboxGroup,
