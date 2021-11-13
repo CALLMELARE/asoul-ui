@@ -29,7 +29,7 @@
   "author": "LARE",
   "license": "MIT",
   "dependencies": {
-    "@fect-ui/vue-hooks": "^0.0.2"
+    "@fect-ui/vue-hooks": "^0.0.3"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
