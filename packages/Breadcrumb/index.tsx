@@ -1,29 +1,34 @@
-import { NormalSizes } from "asoul-ui/utils/theme/propTypes";
+import { NormalSizes } from "../utils/theme/propTypes";
 import { computed, PropType, toRefs } from "vue";
-import { createNameSpace } from "asoul-ui/utils";
-import "asoul-ui/Breadcrumb/breadcrumb.scss";
+import { createNameSpace } from "../utils";
+import "../Breadcrumb/breadcrumb.scss";
 import { createProvider } from "@fect-ui/vue-hooks";
 
 const [createComponent] = createNameSpace("Breadcrumb");
-export const READONLY_BREADCRUMB_KEY = 'breadcrumbKey';
+export const READONLY_BREADCRUMB_KEY = "breadcrumbKey";
 export type BreadcrumbProvider = {
-  separator: String
-}
+  separator: String;
+  disabled: Boolean;
+};
 
 export default createComponent({
   props: {
     separator: {
       type: String,
-      default: '/'
+      default: ">",
     },
     size: {
       type: String as PropType<NormalSizes>,
-      default: "medium"
-    }
+      default: "medium",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup(props, { attrs, slots, emit }) {
     const { provider } = createProvider(READONLY_BREADCRUMB_KEY);
-    provider({ separator: props.separator || '/' })
+    provider({ separator: props.separator, disabled: props.disabled });
     const setClass = computed(() => {
       const names = [];
       props.size && names.push(props.size);

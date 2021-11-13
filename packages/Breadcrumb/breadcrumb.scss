@@ -1,5 +1,39 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-breadcrumb {
-    
+  display: inline-flex;
+  padding: 0.2rem;
+  .asoul-breadcrumb-item {
+    user-select: none;
+    .asoul-breadcrumb-content {
+      display: inline-flex;
+      @include font_color(secondary_color);
+      width: auto;
+      line-height: 1.2;
+      cursor: pointer;
+      &.disabled {
+        cursor: default;
+      }
+      &:hover {
+        @include font_transparent(theme_color, 0.2);
+      }
+    }
+    .asoul-breadcrumb-separator {
+      display: inline-flex;
+      padding: 0 0.3rem;
+      align-items: center;
+      cursor: default;
+      width: fit-content;
+      height: fit-content;
+      @include font_color(secondary_color);
+    }
+    &:last-child {
+      .asoul-breadcrumb-content {
+        @include font_color(theme_color);
+      }
+      .asoul-breadcrumb-separator {
+        display: none;
+      }
+    }
+  }
 }
