@@ -14,6 +14,7 @@ import FooterItem from "./FooterItem";
 import FooterList from "./FooterList";
 import FooterTitle from "./FooterTitle";
 import GradientText from "./GradientText";
+import { H1, H2, H3, Tip, Text } from "./Typography";
 import Icon from "./Icon";
 import Progress from "./Progress";
 import Radio from "./Radio";
@@ -40,6 +41,9 @@ const components = [
   FooterList,
   FooterTitle,
   GradientText,
+  H1,
+  H2,
+  H3,
   Icon,
   Progress,
   Radio,
@@ -50,7 +54,9 @@ const components = [
   Tab,
   Tabs,
   Tag,
+  Text,
   TextField,
+  Tip,
 ];
 const install = (app: App) => {
   components.forEach((c: any) => {
@@ -81,6 +87,9 @@ export {
   FooterList as ASFooterList,
   FooterTitle as ASFooterTitle,
   GradientText as ASGradientText,
+  H1 as ASH1,
+  H2 as ASH2,
+  H3 as ASH3,
   Icon as ASIcon,
   Progress as ASProgress,
   Radio as ASRadio,
@@ -91,5 +100,7 @@ export {
   Tab as ASTab,
   Tabs as ASTabs,
   Tag as ASTag,
+  Text as ASText,
   TextField as ASTextField,
+  Tip as ASTip,
 };
