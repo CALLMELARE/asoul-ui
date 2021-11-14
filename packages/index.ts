@@ -2,7 +2,7 @@ import { App } from "vue";
 
 import Alert from "./Alert";
 import Button from "./Button";
-import Breadcrumb from './Breadcrumb';
+import Breadcrumb from "./Breadcrumb";
 import BreadcrumbItem from "./Breadcrumb/breadcrumb-item";
 import Card from "./Card";
 import CheckBox from "./CheckBox";
@@ -22,6 +22,7 @@ import Row from "./Row";
 import Showcase from "./Showcase";
 import Tab from "./Tab";
 import Tabs from "./Tabs";
+import Tag from "./Tag";
 import TextField from "./TextField";
 
 const components = [
@@ -46,6 +47,7 @@ const components = [
   Showcase,
   Tab,
   Tabs,
+  Tag,
   TextField,
 ];
 const install = (app: App) => {
@@ -85,5 +87,6 @@ export {
   Showcase as ASShowcase,
   Tab as ASTab,
   Tabs as ASTabs,
+  Tag as ASTag,
   TextField as ASTextField,
 };

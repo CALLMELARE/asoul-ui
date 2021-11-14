@@ -1,0 +1,68 @@
+@import "../utils/styles/mixin.scss";
+
+.asoul-tag {
+  white-space: nowrap;
+  position: relative;
+  box-sizing: border-box;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  line-height: 1.5;
+  padding: 0 $medium * 0.3;
+  border-radius: 5px;
+  border: 1px solid;
+  user-select: none;
+  font-size: $medium;
+  @include font_color(theme_color);
+  @include border_transparent(theme_color, 0.3);
+  @include background_transparent(theme_color, 0.9);
+  &.outlined {
+    @include background_transparent(theme_color, 1);
+  }
+  &.disabled {
+    @include font_color(secondary_color);
+    @include border_transparent(secondary_color, 0.3);
+    @include background_transparent(secondary_color, 0.9);
+  }
+  &.success {
+    color: $successDark;
+    border-color: transparentize($successDark, 0.3);
+    background-color: transparentize($successDark, 0.9);
+  }
+  &.warning {
+    color: $warningDark;
+    border-color: transparentize($warningDark, 0.3);
+    background-color: transparentize($warningDark, 0.9);
+  }
+  &.error {
+    color: $errorDark;
+    border-color: transparentize($errorDark, 0.3);
+    background-color: transparentize($errorDark, 0.9);
+  }
+  &.rounded {
+    border-radius: $medium * 0.75;
+    padding: 0 $medium * 0.5;
+  }
+  &.mini {
+    font-size: $mini;
+    &.rounded {
+      border-radius: $mini * 0.75;
+      padding: 0 $mini * 0.5;
+    }
+  }
+  &.small {
+    font-size: $small;
+    &.rounded {
+      border-radius: $small * 0.75;
+      padding: 0 $small * 0.5;
+    }
+  }
+  &.large {
+    font-size: $large;
+    &.rounded {
+      border-radius: $large * 0.75;
+      padding: 0 $large * 0.5;
+    }
+  }
+}
