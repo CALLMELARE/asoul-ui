@@ -27,6 +27,10 @@ export default createComponent({
       type: Boolean,
       default: false,
     },
+    invert:{
+      type: Boolean,
+      default: false,
+    }
   },
   setup(props, { attrs, slots, emit }) {
     const setClass = computed(() => {
@@ -36,6 +40,7 @@ export default createComponent({
       props.disabled && names.push("disabled");
       props.rounded && names.push("rounded");
       props.outlined && names.push("outlined");
+      props.invert && names.push("invert");
       return names.join(" ");
     });
     return () => (

@@ -25,20 +25,37 @@
     @include border_transparent(secondary_color, 0.3);
     @include background_transparent(secondary_color, 0.9);
   }
+  &.invert {
+    @include font_color(invert_color);
+    @include border_color(theme_color);
+    @include background_color(theme_color);
+  }
   &.success {
     color: $successDark;
     border-color: transparentize($successDark, 0.3);
     background-color: transparentize($successDark, 0.9);
+    &.invert {
+      border-color: $successDark;
+      background-color: $successDark;
+    }
   }
   &.warning {
     color: $warningDark;
     border-color: transparentize($warningDark, 0.3);
     background-color: transparentize($warningDark, 0.9);
+    &.invert {
+      border-color: $warningDark;
+      background-color: $warningDark;
+    }
   }
   &.error {
     color: $errorDark;
     border-color: transparentize($errorDark, 0.3);
     background-color: transparentize($errorDark, 0.9);
+    &.invert {
+      border-color: $errorDark;
+      background-color: $errorDark;
+    }
   }
   &.rounded {
     border-radius: $medium * 0.75;
