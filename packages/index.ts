@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import FooterItem from "./FooterItem";
 import FooterList from "./FooterList";
 import FooterTitle from "./FooterTitle";
+import GradientText from "./GradientText";
 import Icon from "./Icon";
 import Progress from "./Progress";
 import Radio from "./Radio";
@@ -38,6 +39,7 @@ const components = [
   FooterItem,
   FooterList,
   FooterTitle,
+  GradientText,
   Icon,
   Progress,
   Radio,
@@ -78,6 +80,7 @@ export {
   FooterItem as ASFooterItem,
   FooterList as ASFooterList,
   FooterTitle as ASFooterTitle,
+  GradientText as ASGradientText,
   Icon as ASIcon,
   Progress as ASProgress,
   Radio as ASRadio,
