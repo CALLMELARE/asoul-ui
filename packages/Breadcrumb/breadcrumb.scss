@@ -7,7 +7,7 @@
     user-select: none;
     .asoul-breadcrumb-content {
       display: inline-flex;
-      @include font_color(secondary_color);
+      @include font_transparent(secondary_color,0.3);
       width: auto;
       line-height: 1.2;
       cursor: pointer;
