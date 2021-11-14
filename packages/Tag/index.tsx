@@ -1,7 +1,7 @@
 import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
 import { computed, PropType, toRefs } from "vue";
 import { createNameSpace } from "../utils";
-import "../Tag/tag.scss";
+import "./tag.scss";
 
 const [createComponent] = createNameSpace("Tag");
 

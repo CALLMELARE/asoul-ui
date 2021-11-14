@@ -1,5 +1,5 @@
 import { createNameSpace } from "../utils";
-import "../Typography/typography.scss";
+import "./typography.scss";
 import { computed, PropType } from "vue";
 import { NormalTypes } from "../utils/theme/propTypes";
 

@@ -22,6 +22,7 @@ import RadioGroup from "./RadioGroup";
 import Result from "./Result";
 import Row from "./Row";
 import Showcase from "./Showcase";
+import Statistic from "./Statistic";
 import Tab from "./Tab";
 import Tabs from "./Tabs";
 import Tag from "./Tag";
@@ -51,6 +52,7 @@ const components = [
   Result,
   Row,
   Showcase,
+  Statistic,
   Tab,
   Tabs,
   Tag,
@@ -97,6 +99,7 @@ export {
   Result as ASResult,
   Row as ASRow,
   Showcase as ASShowcase,
+  Statistic as ASStatistic,
   Tab as ASTab,
   Tabs as ASTabs,
   Tag as ASTag,
