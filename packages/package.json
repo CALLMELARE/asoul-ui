@@ -1,6 +1,6 @@
 {
   "name": "asoul-ui",
-  "version": "0.1.26",
+  "version": "0.1.27",
   "description": "Vue3 UI library,for ASoul",
   "main": "index.ts",
   "bin": "index.ts",
@@ -14,7 +14,7 @@
     "asoul",
     "vue ui"
   ],
-  "homepage": "https://github.com/CALLMELARE/asoul-ui",
+  "homepage": "https://asoul.plus",
   "repository": {
     "type": "git",
     "url": "https://github.com/CALLMELARE/asoul-ui"
