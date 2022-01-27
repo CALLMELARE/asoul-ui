@@ -1,0 +1,48 @@
+@import "../utils/styles/mixin.scss";
+
+.asoul-numberflow {
+    @include font_color(primary_color);
+    display: inline-flex;
+    text-decoration: none;
+
+    &.indent {
+        text-indent: 2em;
+    }
+
+    &.italic {
+        font-style: italic;
+    }
+
+    &.underline {
+        text-decoration: underline;
+    }
+
+    &.delete {
+        text-decoration: line-through;
+    }
+
+    &.code {
+        white-space: nowrap;
+        padding: 0 0.35em;
+        @include background_transparent(sub_color, 0.6);
+        border-radius: 5px;
+    }
+}
+
+.asoul-numberflow {
+    &.primary {
+        @include font_color(theme_color);
+    }
+
+    &.success {
+        color: $successDefault;
+    }
+
+    &.warning {
+        color: $warningDefault;
+    }
+
+    &.error {
+        color: $errorDefault;
+    }
+}

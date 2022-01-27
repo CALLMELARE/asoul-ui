@@ -16,6 +16,7 @@ import FooterTitle from "./FooterTitle";
 import GradientText from "./GradientText";
 import { H1, H2, H3, Tip, Text } from "./Typography";
 import Icon from "./Icon";
+import NumberFlow from './NumberFlow'
 import Progress from "./Progress";
 import Radio from "./Radio";
 import RadioGroup from "./RadioGroup";
@@ -46,6 +47,7 @@ const components = [
   H2,
   H3,
   Icon,
+  NumberFlow,
   Progress,
   Radio,
   RadioGroup,
@@ -93,6 +95,7 @@ export {
   H2 as ASH2,
   H3 as ASH3,
   Icon as ASIcon,
+  NumberFlow as ASNumberFlow,
   Progress as ASProgress,
   Radio as ASRadio,
   RadioGroup as ASRadioGroup,

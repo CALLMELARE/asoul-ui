@@ -1,1 +1,7 @@
-export * as format from './string'
+import { camelize } from "./string";
+import { round } from "./round";
+
+export default {
+  camelize,
+  round,
+};
