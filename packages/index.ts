@@ -9,6 +9,7 @@ import CheckBox from "./CheckBox";
 import CheckboxGroup from "./CheckboxGroup";
 import Col from "./Col";
 import Divider from "./Divider";
+import Empty from "./Empty";
 import Footer from "./Footer";
 import FooterItem from "./FooterItem";
 import FooterList from "./FooterList";
@@ -38,6 +39,7 @@ const components = [
   CheckBox,
   Col,
   Divider,
+  Empty,
   Footer,
   FooterItem,
   FooterList,
@@ -86,6 +88,7 @@ export {
   CheckboxGroup as ASCheckboxGroup,
   Col as ASCol,
   Divider as ASDivider,
+  Empty as ASEmpty,
   Footer as ASFooter,
   FooterItem as ASFooterItem,
   FooterList as ASFooterList,
