@@ -1,3 +1,4 @@
-import * as theme from './propTypes'
-import * as color from './color'
-export { theme, color }
+import * as theme from "./propTypes";
+import * as color from "./color";
+import * as types from "./propTypes";
+export { theme, color, types };

@@ -29,6 +29,7 @@ import Tab from "./Tab";
 import Tabs from "./Tabs";
 import Tag from "./Tag";
 import TextField from "./TextField";
+// import Visual from "./Visual";
 
 const components = [
   Alert,
@@ -63,6 +64,7 @@ const components = [
   Text,
   TextField,
   Tip,
+  // Visual
 ];
 const install = (app: App) => {
   components.forEach((c: any) => {
@@ -112,4 +114,5 @@ export {
   Text as ASText,
   TextField as ASTextField,
   Tip as ASTip,
+  // Visual as ASVisual,
 };

@@ -38,6 +38,8 @@ const snippetStyleTypes = tuple(
 
 const placeTypes = tuple("topLeft", "topRight", "bottomLeft", "bottomRight");
 
+const chartTypes = tuple("pie", "bar");
+
 export {
   tuple,
   buttonTypes,
@@ -49,6 +51,7 @@ export {
   snippetCopyTypes,
   snippetStyleTypes,
   placeTypes,
+  chartTypes,
 };
 export type ButtonTypes = typeof buttonTypes[number];
 export type NormalSizes = typeof normalSizes[number];
@@ -59,3 +62,4 @@ export type AlignTypes = typeof alignTypes[number];
 export type SnippetCopyTypes = typeof snippetCopyTypes[number];
 export type SnippetStyleTypes = typeof snippetStyleTypes[number];
 export type PlaceTypes = typeof placeTypes[number];
+export type ChartTypes =typeof chartTypes[number]
