@@ -5,9 +5,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include font_color(sub_color);
+
     .asoul-empty-description {
         margin-top: 0.75rem;
-        @include font_color(primary_color);
         font-size: $medium;
         line-height: 1.1;
     }

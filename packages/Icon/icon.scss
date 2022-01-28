@@ -1,7 +1,7 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-icon {
-    @include font_color(theme_color);
+    color: inherit;
     font-size: 1em;
     line-height: 1em;
 
