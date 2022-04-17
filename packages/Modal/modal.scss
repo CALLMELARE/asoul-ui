@@ -1,0 +1,104 @@
+@import "../utils/styles/mixin.scss";
+
+.asoul-modal-mask {
+    z-index: 9998;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, .4);
+
+    .asoul-modal {
+        box-shadow: 0 5px 10px rgba(37, 37, 37, 0.12);
+        position: relative;
+        align-self: center;
+        width: 446px;
+        max-width: calc(100vw - 32px);
+        margin: auto;
+        padding: 0;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid;
+        @include border_color(sub_color);
+        @include background_color(invert_color);
+        @include font_color(primary_color);
+
+        .asoul-modal-header {
+            padding: 16px;
+            box-sizing: border-box;
+            font-weight: bold;
+            // border-bottom: 1px solid;
+            // @include border_color(sub_color);
+            display: flex;
+            justify-content: space-between;
+
+            .asoul-modal-close {
+                height: 20px;
+                padding: 0 4px;
+                font-size: 16px;
+                min-width: 20px;
+            }
+        }
+
+        .asoul-modal-footer {
+            padding: 16px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+            // border-top: 1px solid;
+            // @include border_color(sub_color);
+        }
+
+        .asoul-modal-content {
+            width: 100%;
+            padding: 16px;
+            box-sizing: border-box;
+
+            & *:first-child {
+                margin-top: 0;
+            }
+
+            & *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        -webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    }
+}
+
+.hide {
+   display: none;
+}
+
+@-webkit-keyframes scale-up-ver-center {
+    0% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes scale-up-ver-center {
+    0% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}

@@ -12,7 +12,6 @@ export default createComponent({
       type: String,
       default: "空空如也",
     },
-    
   },
   setup(props, { attrs, slots, emit }) {
     return () => (
