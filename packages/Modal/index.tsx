@@ -1,7 +1,6 @@
 import { createNameSpace } from "../utils";
 import "./modal.scss";
 import { ASIcon, ASButton } from "../";
-import { computed, onMounted, watchEffect, ref, reactive } from "vue";
 
 const [createComponent] = createNameSpace("Modal");
 
