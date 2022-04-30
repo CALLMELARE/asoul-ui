@@ -1,7 +1,7 @@
 import { createNameSpace } from "../utils";
 import "./empty.scss";
 import { ASIcon } from "../";
-import { Archive20Regular } from "@vicons/fluent";
+import { FolderOpenTwotone } from "@vicons/material";
 import { computed, onMounted, watchEffect, ref } from "vue";
 
 const [createComponent] = createNameSpace("Empty");
@@ -17,7 +17,7 @@ export default createComponent({
     return () => (
       <div class="asoul-empty">
         <ASIcon size="36px" style={`text-align: center;`}>
-          <Archive20Regular />
+          <FolderOpenTwotone />
         </ASIcon>
         {slots.default?.()}
         <div class="asoul-empty-description">{props.description}</div>

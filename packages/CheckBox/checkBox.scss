@@ -26,11 +26,11 @@
                 margin-right: $size * 0.375;
 
                 &.active::after {
-                    width: $size/16*3;
-                    height: $size/16*8;
-                    left: $size/16*5;
-                    top: $size/16*2;
-                    border-width: 0 $size/16*2 $size/16*2 0;
+                    width: calc($size / 16)*3;
+                    height: calc($size / 16)*8;
+                    left: calc($size / 16)*5;
+                    top: calc($size / 16)*2;
+                    border-width: 0 calc($size / 16)*2 calc($size / 16)*2 0;
                 }
             }
 
@@ -57,11 +57,11 @@
                 margin-right: $size * 0.375;
 
                 &.active::after {
-                    width: $size/16*3;
-                    height: $size/16*8;
-                    left: $size/16*5;
-                    top: $size/16*2;
-                    border-width: 0 $size/16*2 $size/16*2 0;
+                    width: calc($size / 16)*3;
+                    height: calc($size / 16)*8;
+                    left: calc($size / 16)*5;
+                    top: calc($size / 16)*2;
+                    border-width: 0 calc($size / 16)*2 calc($size / 16)*2 0;
                 }
             }
 
@@ -88,11 +88,11 @@
                 margin-right: $size * 0.375;
 
                 &.active::after {
-                    width: $size/16*3;
-                    height: $size/16*8;
-                    left: $size/16*5;
-                    top: $size/16*2;
-                    border-width: 0 $size/16*2 $size/16*2 0;
+                    width: calc($size / 16)*3;
+                    height: calc($size / 16)*8;
+                    left: calc($size / 16)*5;
+                    top: calc($size / 16)*2;
+                    border-width: 0 calc($size / 16)*2 calc($size / 16)*2 0;
                 }
             }
 
@@ -122,11 +122,11 @@
                 margin-right: $size * 0.375;
 
                 &.active::after {
-                    width: $size/16*3;
-                    height: $size/16*8;
-                    left: $size/16*5;
-                    top: $size/16*2;
-                    border-width: 0 $size/16*2 $size/16*2 0;
+                    width: calc($size / 16)*3;
+                    height: calc($size / 16)*8;
+                    left: calc($size / 16)*5;
+                    top: calc($size / 16)*2;
+                    border-width: 0 calc($size / 16)*2 calc($size / 16)*2 0;
                 }
             }
 

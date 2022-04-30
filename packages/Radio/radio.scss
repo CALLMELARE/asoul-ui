@@ -23,10 +23,10 @@
             margin-right: $size * 0.375;
 
             &.rounded {
-                border-radius: $size / 2;
+                border-radius: calc($size / 2);
 
                 &::before {
-                    border-radius: $size / 2;
+                    border-radius: calc($size / 2);
                 }
             }
 
@@ -54,10 +54,10 @@
             margin-right: $size * 0.375;
 
             &.rounded {
-                border-radius: $size / 2;
+                border-radius: calc($size / 2);
 
                 &::before {
-                    border-radius: $size / 2;
+                    border-radius: calc($size / 2);
                 }
             }
 
@@ -85,10 +85,10 @@
             margin-right: $size * 0.375;
 
             &.rounded {
-                border-radius: $size / 2;
+                border-radius: calc($size / 2);
 
                 &::before {
-                    border-radius: $size / 2;
+                    border-radius: calc($size / 2);
                 }
             }
         }
@@ -112,10 +112,10 @@
             margin-right: $size * 0.375;
 
             &.rounded {
-                border-radius: $size / 2;
+                border-radius: calc($size / 2);
 
                 &::before {
-                    border-radius: $size / 2;
+                    border-radius: calc($size / 2);
                 }
             }
         }

@@ -6,7 +6,7 @@ import {
   NormalTypes,
 } from "../utils/theme/propTypes";
 import ButtonDrip from "./button-drip";
-import ButtonLoading from './button-loading'
+import ButtonLoading from "./button-loading";
 import "./button.scss";
 
 const [createComponent] = createNameSpace("Button");
