@@ -1,0 +1,47 @@
+@import "asoul-ui/utils/styles/mixin.scss";
+
+h1 {
+    @include font_color(primary_color);
+    font-weight: lighter;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+h2 {
+    @include font_color(primary_color);
+    font-weight: lighter;
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+h3 {
+    @include font_color(primary_color);
+    font-weight: lighter;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+}
+
+tip {
+    display: block;
+    @include font_color(secondary_color);
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    border-left: 3px solid ;
+    @include border_color(theme_color);
+}
+
+text {
+    @include font_color(primary_color);
+    font-size: 1rem;
+}
+
+codeblock {
+    display: block;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    border: 1px solid ;
+    @include border_transparent(theme_color, 0.5);
+}
