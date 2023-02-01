@@ -2,7 +2,7 @@
   <div class="welcome">
     <div class="welcome-text">ASoul</div>
     <div class="welcome-subtext">
-      {{$t("welcome")}}
+      {{ $t("welcome") }}
     </div>
   </div>
 </template>
@@ -38,12 +38,12 @@ export default {
     user-select: none;
     font-size: 4rem;
     letter-spacing: 0.25rem;
-    @include font_transparent(theme_color, 0.9);
+    color: var(--theme_color_90);
     animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       both;
   }
   .welcome-subtext {
-    @include font_color(theme_color);
+    color: var(--theme_color);
     animation: blink infinite 3s;
     letter-spacing: 0.25rem;
   }

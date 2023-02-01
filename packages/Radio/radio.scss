@@ -1,188 +1,188 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-radio {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    width: initial;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  width: initial;
+
+  .asoul-radio-name {
+    color: var(--primary_color);
+  }
+
+  &.mini {
+    $size: $mini;
 
     .asoul-radio-name {
-        @include font_color(primary_color);
-    }
-
-    &.mini {
-        $size: $mini;
-
-        .asoul-radio-name {
-            font-size: $size;
-        }
-
-        .asoul-radio-point {
-            height: $size;
-            width: $size;
-            margin-right: $size * 0.375;
-
-            &.rounded {
-                border-radius: calc($size / 2);
-
-                &::before {
-                    border-radius: calc($size / 2);
-                }
-            }
-
-            &.active::before {
-                transform: scale(0.6);
-            }
-        }
-
-        .asoul-radio-point::before {
-            height: $size;
-            width: $size;
-        }
-    }
-
-    &.small {
-        $size: $small;
-
-        .asoul-radio-name {
-            font-size: $size;
-        }
-
-        .asoul-radio-point {
-            height: $size;
-            width: $size;
-            margin-right: $size * 0.375;
-
-            &.rounded {
-                border-radius: calc($size / 2);
-
-                &::before {
-                    border-radius: calc($size / 2);
-                }
-            }
-
-            &.active::before {
-                transform: scale(0.8);
-            }
-        }
-
-        .asoul-radio-point::before {
-            height: $size;
-            width: $size;
-        }
-    }
-
-    &.medium {
-        $size: $medium;
-
-        .asoul-radio-name {
-            font-size: $size;
-        }
-
-        .asoul-radio-point {
-            height: $size;
-            width: $size;
-            margin-right: $size * 0.375;
-
-            &.rounded {
-                border-radius: calc($size / 2);
-
-                &::before {
-                    border-radius: calc($size / 2);
-                }
-            }
-        }
-
-        .asoul-radio-point::before {
-            height: $size;
-            width: $size;
-        }
-    }
-
-    &.large {
-        $size: $large;
-
-        .asoul-radio-name {
-            font-size: $size;
-        }
-
-        .asoul-radio-point {
-            height: $size;
-            width: $size;
-            margin-right: $size * 0.375;
-
-            &.rounded {
-                border-radius: calc($size / 2);
-
-                &::before {
-                    border-radius: calc($size / 2);
-                }
-            }
-        }
-
-        .asoul-radio-point::before {
-            height: $size;
-            width: $size;
-        }
-    }
-
-    input {
-        opacity: 0;
-        overflow: hidden;
-        visibility: hidden;
-    }
-
-    label {
-        cursor: pointer;
-
-        &:hover:not(.disabled) {
-            .asoul-radio-point {
-                @include background_transparent(theme_color, 0.8);
-            }
-        }
-
-        &.disabled {
-            @include font_color(sub_color);
-            cursor: not-allowed;
-
-            .asoul-radio-point {
-                border: 1px solid;
-                @include border_color(sub_color);
-            }
-        }
-    }
-
-    .asoul-radio-name {
-        user-select: none;
-        display: inline-flex;
-        align-items: center;
+      font-size: $size;
     }
 
     .asoul-radio-point {
-        $radius: 5px;
-        border: 1px solid;
-        @include border_color(theme_color);
-        border-radius: $radius;
-        transition: all 0.2s ease 0s;
-        position: relative;
-        display: inline-block;
-        transform: scale(0.875);
+      height: $size;
+      width: $size;
+      margin-right: $size * 0.375;
+
+      &.rounded {
+        border-radius: calc($size / 2);
 
         &::before {
-            @include background_color(theme_color);
-            content: '';
-            position: absolute;
-            transform: scale(0);
-            border-radius: $radius;
+          border-radius: calc($size / 2);
         }
+      }
 
-        &.disabled::before {
-            @include background_color(sub_color);
-        }
-
-        &.active::before {
-            transition: all 0.2s ease 0s;
-            transform: scale(0.875);
-        }
+      &.active::before {
+        transform: scale(0.6);
+      }
     }
+
+    .asoul-radio-point::before {
+      height: $size;
+      width: $size;
+    }
+  }
+
+  &.small {
+    $size: $small;
+
+    .asoul-radio-name {
+      font-size: $size;
+    }
+
+    .asoul-radio-point {
+      height: $size;
+      width: $size;
+      margin-right: $size * 0.375;
+
+      &.rounded {
+        border-radius: calc($size / 2);
+
+        &::before {
+          border-radius: calc($size / 2);
+        }
+      }
+
+      &.active::before {
+        transform: scale(0.8);
+      }
+    }
+
+    .asoul-radio-point::before {
+      height: $size;
+      width: $size;
+    }
+  }
+
+  &.medium {
+    $size: $medium;
+
+    .asoul-radio-name {
+      font-size: $size;
+    }
+
+    .asoul-radio-point {
+      height: $size;
+      width: $size;
+      margin-right: $size * 0.375;
+
+      &.rounded {
+        border-radius: calc($size / 2);
+
+        &::before {
+          border-radius: calc($size / 2);
+        }
+      }
+    }
+
+    .asoul-radio-point::before {
+      height: $size;
+      width: $size;
+    }
+  }
+
+  &.large {
+    $size: $large;
+
+    .asoul-radio-name {
+      font-size: $size;
+    }
+
+    .asoul-radio-point {
+      height: $size;
+      width: $size;
+      margin-right: $size * 0.375;
+
+      &.rounded {
+        border-radius: calc($size / 2);
+
+        &::before {
+          border-radius: calc($size / 2);
+        }
+      }
+    }
+
+    .asoul-radio-point::before {
+      height: $size;
+      width: $size;
+    }
+  }
+
+  input {
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  label {
+    cursor: pointer;
+
+    &:hover:not(.disabled) {
+      .asoul-radio-point {
+        background-color: var(--theme_color_80);
+      }
+    }
+
+    &.disabled {
+      color: var(--sub_color);
+      cursor: not-allowed;
+
+      .asoul-radio-point {
+        border: 1px solid;
+        border-color: (--sub_color);
+      }
+    }
+  }
+
+  .asoul-radio-name {
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .asoul-radio-point {
+    $radius: 5px;
+    border: 1px solid;
+    border-color: (--theme_color);
+    border-radius: $radius;
+    transition: all 0.2s ease 0s;
+    position: relative;
+    display: inline-block;
+    transform: scale(0.875);
+
+    &::before {
+      background-color: var(--theme_color);
+      content: "";
+      position: absolute;
+      transform: scale(0);
+      border-radius: $radius;
+    }
+
+    &.disabled::before {
+      background-color: var(--sub_color);
+    }
+
+    &.active::before {
+      transition: all 0.2s ease 0s;
+      transform: scale(0.875);
+    }
+  }
 }

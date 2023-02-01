@@ -59,14 +59,14 @@ export default {
 .color-block {
   height: 2.5rem;
   border-radius: 5px;
-  @include background_color(invert_color);
+  background-color: var(--invert_color);
   .color-text {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     margin: 0.5rem 0;
     .color-item {
       font-size: 1rem;
-      @include font_color(invert_color);
+      color: var(--invert_color);
       line-height: 2.5rem;
       text-align: center;
       font-weight: lighter;

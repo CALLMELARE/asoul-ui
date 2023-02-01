@@ -1,75 +1,75 @@
 @import "../utils/styles/mixin.scss";
 
-$font:$medium;
+$font: $medium;
 
 .asoul-text-field {
-    display: flex;
-    width: fit-content;
+  display: flex;
+  width: fit-content;
 
-    .asoul-text-filed-label {
-        font-size: $font;
-        line-height: $font;
-        padding: $font * 1 0 0 0;
-    }
+  .asoul-text-filed-label {
+    font-size: $font;
+    line-height: $font;
+    padding: $font * 1 0 0 0;
+  }
 }
 
 .asoul-text-field {
+  width: 100%;
+
+  .asoul-text-field-wrapper {
     width: 100%;
 
-    .asoul-text-field-wrapper {
-        width: 100%;
+    .asoul-text-field-box {
+      position: relative;
+      width: 100%;
 
-        .asoul-text-field-box {
-            position: relative;
-            width: 100%;
+      .asoul-text-field-input {
+        background-color: var(--invert_color);
+        color: var(--primary_color);
+        padding: $font * 1.2 5px $font / 2 5px;
+        font-size: $font;
+        line-height: $font;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid;
+        border-color: (--sub_color);
+        // border-radius: 5px;
 
-            .asoul-text-field-input {
-                @include background_color(invert_color);
-                @include font_color(primary_color);
-                padding: $font*1.2 5px $font / 2 5px;
-                font-size: $font;
-                line-height: $font;
-                outline: none;
-                border: none;
-                border-bottom: 2px solid;
-                @include border_color(sub_color);
-                // border-radius: 5px;
+        &.disabled {
+          pointer-events: none;
 
-                &.disabled {
-                    pointer-events: none;
+          ~ .asoul-text-filed-label {
+            color: var(--secondary_color);
+          }
 
-                    ~.asoul-text-filed-label {
-                        @include font_color(secondary_color);
-                    }
-
-                    cursor: not-allowed;
-                    @include background_color(sub_color);
-                    user-select: none;
-                }
-
-                &:focus:not(.disabled) {
-                    border-bottom: 2px solid;
-                    @include border_color(theme_color);
-
-                    ~.asoul-text-filed-label {
-                        @include font_color(theme_color);
-                        transform: translate(-12%, -50%) scale(0.75);
-                    }
-                }
-            }
-
-            .asoul-text-filed-label {
-                @include font_color(sub_color);
-                position: absolute;
-                transition: .2s ease;
-                top: $font*.2;
-                left: 5px;
-
-                &.focused {
-                    @include font_color(sub_color);
-                    transform: translate(-12%, -50%) scale(0.75);
-                }
-            }
+          cursor: not-allowed;
+          background-color: var(--sub_color);
+          user-select: none;
         }
+
+        &:focus:not(.disabled) {
+          border-bottom: 2px solid;
+          border-color: (--theme_color);
+
+          ~ .asoul-text-filed-label {
+            color: var(--theme_color);
+            transform: translate(-12%, -50%) scale(0.75);
+          }
+        }
+      }
+
+      .asoul-text-filed-label {
+        color: var(--sub_color);
+        position: absolute;
+        transition: 0.2s ease;
+        top: $font * 0.2;
+        left: 5px;
+
+        &.focused {
+          color: var(--sub_color);
+          transform: translate(-12%, -50%) scale(0.75);
+        }
+      }
     }
+  }
 }

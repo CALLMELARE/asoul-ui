@@ -5,6 +5,7 @@
 <script lang="ts">
 import {} from "asoul-ui";
 import { reactive } from "vue";
+import hljs from "highlight.js";
 // import 'highlight.js/styles/github.css';
 export default {
   name: "Menu",
@@ -14,7 +15,6 @@ export default {
   },
   setup(props: any) {
     const code = reactive(props.code);
-    const hljs = require("highlight.js");
     const html = hljs.highlightAuto(code).value;
     return { html };
   },
@@ -27,13 +27,12 @@ export default {
   margin: 0.5rem 0;
   padding: 0.5rem;
   border: 1px solid;
-  @include border_transparent(theme_color, 0.2);
-  background-color: $grayLight;
+  border-color: var(--theme_color_30);
   border-radius: 5px;
 }
 
 .hljs {
-  @include font_color(primary_color);
+  color: var(--primary_color);
   background: #ffffff;
 }
 
@@ -95,7 +94,7 @@ export default {
 .hljs-selector-tag,
 .hljs-selector-pseudo {
   /* prettylights-syntax-entity-tag */
-  @include font_color(theme_color);
+  color: var(--theme_color);
 }
 
 .hljs-subst {

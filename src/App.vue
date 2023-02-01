@@ -8,14 +8,10 @@
 </template>
 
 <script>
-import useTheme from "asoul-ui/utils/theme/useTheme";
 import Navbar from "./components/Navbar.vue";
 export default {
   components: {
     Navbar,
-  },
-  setup() {
-    useTheme("light");
   },
 };
 </script>
@@ -27,7 +23,7 @@ body {
   margin: 0;
 }
 .app {
-  @include background_color(invert_color);
+  background-color: var(--invert_color);
   height: 100vh;
 }
 </style>

@@ -1,127 +1,139 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-alert {
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: $medium;
+  display: flex;
+  border-color: (--invert_color);
+
+  .asoul-alert-wrapper {
+    width: 100%;
+    padding: $medium;
     border-radius: 5px;
-    position: relative;
-    margin-bottom: $medium;
-    display: flex;
-    @include border_color(invert_color);
+    font-size: $medium;
+    line-height: $medium + 8px;
+    white-space: pre-wrap;
+  }
+
+  &.primary {
+    .asoul-alert-border {
+      background-color: var(--theme_color);
+    }
 
     .asoul-alert-wrapper {
-        width: 100%;
-        padding: $medium;
-        border-radius: 5px;
-        font-size: $medium;
-        line-height: $medium+8px;
-        white-space: pre-wrap;
+      color: var(--theme_color);
+      background-color: var(--theme_color_90);
+    }
+  }
+
+  &.success {
+    .asoul-alert-border {
+      background-color: $successDark;
+    }
+
+    .asoul-alert-wrapper {
+      color: $successDark;
+      background-image: linear-gradient(
+        45deg,
+        transparentize($successDark, 0.9),
+        transparentize($successDark, 0.8)
+      );
+    }
+  }
+
+  &.warning {
+    .asoul-alert-border {
+      background-color: $warningDark;
+    }
+
+    .asoul-alert-wrapper {
+      color: $warningDark;
+      background-image: linear-gradient(
+        45deg,
+        transparentize($warningDark, 0.9),
+        transparentize($warningDark, 0.8)
+      );
+    }
+  }
+
+  &.error {
+    .asoul-alert-border {
+      background-color: $errorDark;
+    }
+
+    .asoul-alert-wrapper {
+      color: $errorDark;
+      background-image: linear-gradient(
+        45deg,
+        transparentize($errorDark, 0.9),
+        transparentize($errorDark, 0.8)
+      );
+    }
+  }
+}
+
+.asoul-alert {
+  &.border {
+    .asoul-alert-wrapper {
+      padding: $medium $medium $medium $medium + 8px;
+    }
+
+    .asoul-alert-border {
+      position: absolute;
+      width: 8px;
+      height: 100%;
+      border-radius: 5px 0 0 5px;
+      background-color: #a9a9a9;
     }
 
     &.primary {
-        .asoul-alert-border {
-            @include background_color(theme_color);
-        }
-
-        .asoul-alert-wrapper {
-            @include font_color(theme_color);
-            @include background_transparent(theme_color, 0.9)
-        }
+      .asoul-alert-border {
+        background-color: var(--theme_color);
+      }
     }
 
     &.success {
-        .asoul-alert-border {
-            background-color: $successDark;
-        }
-
-        .asoul-alert-wrapper {
-            color: $successDark;
-            background-image: linear-gradient(45deg, transparentize($successDark, 0.9), transparentize($successDark, 0.8));
-        }
+      .asoul-alert-border {
+        background-color: $successDark;
+      }
     }
 
     &.warning {
-        .asoul-alert-border {
-            background-color: $warningDark;
-        }
-
-        .asoul-alert-wrapper {
-            color: $warningDark;
-            background-image: linear-gradient(45deg, transparentize($warningDark, 0.9), transparentize($warningDark, 0.8));
-        }
+      .asoul-alert-border {
+        background-color: $warningDark;
+      }
     }
 
     &.error {
-        .asoul-alert-border {
-            background-color: $errorDark;
-        }
-
-        .asoul-alert-wrapper {
-            color: $errorDark;
-            background-image: linear-gradient(45deg, transparentize($errorDark, 0.9), transparentize($errorDark, 0.8));
-        }
+      .asoul-alert-border {
+        background-color: $errorDark;
+      }
     }
+  }
 }
 
 .asoul-alert {
-    &.border {
-        .asoul-alert-wrapper {
-            padding: $medium $medium $medium $medium+8px;
-        }
-
-        .asoul-alert-border {
-            position: absolute;
-            width: 8px;
-            height: 100%;
-            border-radius: 5px 0 0 5px;
-            background-color: #a9a9a9;
-        }
-
-        &.primary {
-            .asoul-alert-border {
-                @include background_color(theme_color);
-            }
-        }
-
-        &.success {
-            .asoul-alert-border {
-                background-color: $successDark;
-            }
-        }
-
-        &.warning {
-            .asoul-alert-border {
-                background-color: $warningDark;
-            }
-        }
-
-        &.error {
-            .asoul-alert-border {
-                background-color: $errorDark;
-            }
-        }
+  &.outlined {
+    &.primary {
+      border: 1px solid;
+      border-color: (--theme_color);
     }
-}
 
-.asoul-alert {
-    &.outlined {
-        &.primary {
-            border: 1px solid;
-            @include border_color(theme_color);
-        }
-
-        .asoul-alert-wrapper {
-            padding: $medium - 1px;
-        }
-
-        &.success {
-            border: 1px solid $successDark;
-        }
-
-        &.warning {
-            border: 1px solid $warningDark;
-        }
-
-        &.error {
-            border: 1px solid $errorDark;
-        }
+    .asoul-alert-wrapper {
+      padding: $medium - 1px;
     }
+
+    &.success {
+      border: 1px solid $successDark;
+    }
+
+    &.warning {
+      border: 1px solid $warningDark;
+    }
+
+    &.error {
+      border: 1px solid $errorDark;
+    }
+  }
 }

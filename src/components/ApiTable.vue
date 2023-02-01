@@ -66,7 +66,7 @@ th {
 }
 
 .api-table caption {
-  @include font_color(primary_color);
+  color: var(--primary_color);
   font: italic 85%/1 arial, sans-serif;
   padding: 1em 0;
   text-align: center;
@@ -74,7 +74,7 @@ th {
 
 .api-table td,
 .api-table th {
-  @include font_color(secondary_color);
+  color: var(--secondary_color);
   border-width: 0 0 0 1px;
   font-size: inherit;
   margin: 0;
@@ -85,8 +85,8 @@ th {
 }
 
 .api-table thead {
-  @include background_transparent(theme_color, 0.9);
-  @include font_color(primary_color);
+  background-color: var(--theme_color_90);
+  color: var(--primary_color);
   text-align: left;
   vertical-align: bottom;
   font-weight: normal;

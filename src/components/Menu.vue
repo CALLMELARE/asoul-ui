@@ -80,7 +80,7 @@ export default {
     .menu-title {
       margin: 0.25rem;
       padding: 0 1rem 0 1rem;
-      @include font_color(theme_color);
+      color: var(--theme_color);
       cursor: default;
       font-size: 1rem;
       height: 36px;
@@ -93,15 +93,15 @@ export default {
       margin: 0.2rem 0.25rem;
       padding: 0 1rem 0 2rem;
       border-radius: 5px;
-      @include font_color(secondary_color);
+      color: var(--secondary_color);
       cursor: pointer;
       font-size: 0.9rem;
       height: 36px;
       line-height: 36px;
       &:hover,
       &.active {
-        @include background_transparent(theme_color, 0.8);
-        @include font_color(theme_color);
+        background-color: var(--theme_color_30);
+        color: var(--theme_color);
       }
     }
   }

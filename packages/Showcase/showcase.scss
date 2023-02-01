@@ -1,41 +1,41 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-showcase {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  .asoul-showcase-img-container {
+    contain: strict;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .asoul-showcase-img {
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: none;
+    // transform: translate(-50%);
+    will-change: transform;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+    z-index: 1;
+  }
+
+  .asoul-showcase-content {
+    color: var(--invert_color);
+    height: 100%;
+    z-index: 2;
     position: relative;
-    overflow: hidden;
-    z-index: 0;
-
-    .asoul-showcase-img-container {
-        contain: strict;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-    }
-
-    .asoul-showcase-img {
-        position: absolute;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        display: none;
-        // transform: translate(-50%);
-        will-change: transform;
-        transition: opacity .3s cubic-bezier(.25, .8, .5, 1);
-        z-index: 1;
-    }
-
-    .asoul-showcase-content {
-        @include font_color(invert_color);
-        height: 100%;
-        z-index: 2;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 1rem;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
 }

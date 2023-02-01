@@ -1,11 +1,11 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-tab {
-    padding: 12px;
-    @include background_transparent(sub_color, 0.9);
-    @include font_color(primary_color);
+  padding: 12px;
+  background-color: var(--sub_color_90);
+  color: var(--primary_color);
 
-    &.none {
-        display: none;
-    }
+  &.none {
+    display: none;
+  }
 }

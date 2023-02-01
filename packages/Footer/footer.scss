@@ -1,24 +1,24 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-footer {
+  width: 100%;
+  position: relative;
+  background-color: var(--theme_color);
+
+  .asoul-footer-row {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 16px 0;
+  }
+
+  .asoul-footer-copyright {
     width: 100%;
-    position: relative;
-    @include background_color(theme_color);
-
-    .asoul-footer-row {
-        display: flex;
-        justify-content: space-around;
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 16px 0;
-    }
-
-    .asoul-footer-copyright {
-        width: 100%;
-        text-align: center;
-        @include background_transparent(secondary_color, 0.8);
-        @include font_color(invert_color);
-        font-weight: bold;
-        padding: 12px 0;
-    }
+    text-align: center;
+    background-color: var(--secondary_color_80);
+    color: var(--invert_color);
+    font-weight: bold;
+    padding: 12px 0;
+  }
 }

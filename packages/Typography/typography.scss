@@ -1,21 +1,21 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-h1 {
-  @include font_color(primary_color);
+  color: var(--primary_color);
   font-weight: lighter;
   font-size: 2rem;
   margin: 1.5rem 0;
 }
 
 .asoul-h2 {
-  @include font_color(primary_color);
+  color: var(--primary_color);
   font-weight: lighter;
   font-size: 1.25rem;
   margin: 1.5rem 0;
 }
 
 .asoul-h3 {
-  @include font_color(primary_color);
+  color: var(--primary_color);
   font-weight: lighter;
   font-size: 1.1rem;
   margin: 1.5rem 0;
@@ -23,16 +23,16 @@
 
 .asoul-tip {
   display: block;
-  @include font_color(secondary_color);
+  color: var(--secondary_color);
   font-size: 1rem;
   padding-left: 1rem;
   margin: 1.5rem 0;
   border-left: 3px solid;
-  @include border_color(theme_color);
+  border-color: (--theme_color);
 }
 
 .asoul-text {
-  @include font_color(primary_color);
+  color: var(--primary_color);
   display: inline-flex;
   text-decoration: none;
   &.indent {
@@ -50,14 +50,14 @@
   &.code {
     white-space: nowrap;
     padding: 0 0.35em;
-    @include background_transparent(sub_color, 0.6);
+    background-color: var(--sub_color_60);
     border-radius: 5px;
   }
 }
 
 .asoul-text {
   &.primary {
-    @include font_color(theme_color);
+    color: var(--theme_color);
   }
   &.success {
     color: $successDefault;

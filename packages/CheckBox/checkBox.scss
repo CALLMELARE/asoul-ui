@@ -1,209 +1,208 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-check_box {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    cursor: pointer;
-    user-select: none;
-    .asoul-text_inner{
-        @include font_color(primary_color);
-    }
-    &.mini {
-        $size: $mini;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+  .asoul-text_inner {
+    color: var(--primary_color);
+  }
+  &.mini {
+    $size: $mini;
+    height: $size;
+    line-height: $size;
+
+    .asoul-text_inner {
+      font-size: $size;
+      padding-left: $size * 0.3;
+
+      .asoul-check_box-point {
+        width: $size;
         height: $size;
-        line-height: $size;
+        border-radius: 5px;
+        margin-right: $size * 0.375;
 
-        .asoul-text_inner {
-            font-size: $size;
-            padding-left: $size * 0.3;
-
-            .asoul-check_box-point {
-                width: $size;
-                height: $size;
-                border-radius: 5px;
-                margin-right: $size * 0.375;
-
-                &.active::after {
-                    width: calc($size / 16)*3;
-                    height: calc($size / 16)*8;
-                    left: calc($size / 16)*5;
-                    top: calc($size / 16)*2;
-                    border-width: 0 calc($size / 16)*2 calc($size / 16)*2 0;
-                }
-            }
-
-            .asoul-check_box-point::before {
-                width: $size;
-                height: $size;
-            }
+        &.active::after {
+          width: calc($size / 16) * 3;
+          height: calc($size / 16) * 8;
+          left: calc($size / 16) * 5;
+          top: calc($size / 16) * 2;
+          border-width: 0 calc($size / 16) * 2 calc($size / 16) * 2 0;
         }
-    }
+      }
 
-    &.small {
-        $size: $small;
+      .asoul-check_box-point::before {
+        width: $size;
         height: $size;
-        line-height: $size;
-
-        .asoul-text_inner {
-            font-size: $size;
-            padding-left: $size * 0.3;
-
-            .asoul-check_box-point {
-                width: $size;
-                height: $size;
-                border-radius: 5px;
-                margin-right: $size * 0.375;
-
-                &.active::after {
-                    width: calc($size / 16)*3;
-                    height: calc($size / 16)*8;
-                    left: calc($size / 16)*5;
-                    top: calc($size / 16)*2;
-                    border-width: 0 calc($size / 16)*2 calc($size / 16)*2 0;
-                }
-            }
-
-            .asoul-check_box-point::before {
-                width: $size;
-                height: $size;
-            }
-        }
+      }
     }
+  }
 
-    &.medium {
-        $size: $medium;
+  &.small {
+    $size: $small;
+    height: $size;
+    line-height: $size;
+
+    .asoul-text_inner {
+      font-size: $size;
+      padding-left: $size * 0.3;
+
+      .asoul-check_box-point {
+        width: $size;
         height: $size;
-        line-height: $size;
+        border-radius: 5px;
+        margin-right: $size * 0.375;
 
-        .asoul-text_inner {
-            font-size: $size;
-            padding-left: $size * 0.3;
-
-            .asoul-check_box-point {
-                width: $size;
-                height: $size;
-                border-radius: 5px;
-                margin-right: $size * 0.375;
-
-                &.active::after {
-                    width: calc($size / 16)*3;
-                    height: calc($size / 16)*8;
-                    left: calc($size / 16)*5;
-                    top: calc($size / 16)*2;
-                    border-width: 0 calc($size / 16)*2 calc($size / 16)*2 0;
-                }
-            }
-
-            .asoul-check_box-point::before {
-                width: $size;
-                height: $size;
-            }
+        &.active::after {
+          width: calc($size / 16) * 3;
+          height: calc($size / 16) * 8;
+          left: calc($size / 16) * 5;
+          top: calc($size / 16) * 2;
+          border-width: 0 calc($size / 16) * 2 calc($size / 16) * 2 0;
         }
+      }
 
-    }
-
-    &.large {
-        $size: $large;
+      .asoul-check_box-point::before {
+        width: $size;
         height: $size;
-        line-height: $size;
-        font-size: $size;
-
-        .asoul-text_inner {
-            font-size: $size;
-            line-height: $size;
-            padding-left: $size * 0.3;
-
-            .asoul-check_box-point {
-                width: $size;
-                height: $size;
-                border-radius: 5px;
-                margin-right: $size * 0.375;
-
-                &.active::after {
-                    width: calc($size / 16)*3;
-                    height: calc($size / 16)*8;
-                    left: calc($size / 16)*5;
-                    top: calc($size / 16)*2;
-                    border-width: 0 calc($size / 16)*2 calc($size / 16)*2 0;
-                }
-            }
-
-            .asoul-check_box-point::before {
-                width: $size;
-                height: $size;
-            }
-        }
+      }
     }
+  }
+
+  &.medium {
+    $size: $medium;
+    height: $size;
+    line-height: $size;
+
+    .asoul-text_inner {
+      font-size: $size;
+      padding-left: $size * 0.3;
+
+      .asoul-check_box-point {
+        width: $size;
+        height: $size;
+        border-radius: 5px;
+        margin-right: $size * 0.375;
+
+        &.active::after {
+          width: calc($size / 16) * 3;
+          height: calc($size / 16) * 8;
+          left: calc($size / 16) * 5;
+          top: calc($size / 16) * 2;
+          border-width: 0 calc($size / 16) * 2 calc($size / 16) * 2 0;
+        }
+      }
+
+      .asoul-check_box-point::before {
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+
+  &.large {
+    $size: $large;
+    height: $size;
+    line-height: $size;
+    font-size: $size;
+
+    .asoul-text_inner {
+      font-size: $size;
+      line-height: $size;
+      padding-left: $size * 0.3;
+
+      .asoul-check_box-point {
+        width: $size;
+        height: $size;
+        border-radius: 5px;
+        margin-right: $size * 0.375;
+
+        &.active::after {
+          width: calc($size / 16) * 3;
+          height: calc($size / 16) * 8;
+          left: calc($size / 16) * 5;
+          top: calc($size / 16) * 2;
+          border-width: 0 calc($size / 16) * 2 calc($size / 16) * 2 0;
+        }
+      }
+
+      .asoul-check_box-point::before {
+        width: $size;
+        height: $size;
+      }
+    }
+  }
 }
 
 .asoul-check_box {
-    .asoul-check_box-point {
-        border: 1px solid;
-        @include border_color(theme_color);
-        transition: all 0.2s ease 0s;
-        position: relative;
-        display: inline-block;
-        transform: scale(0.875);
+  .asoul-check_box-point {
+    border: 1px solid;
+    border-color: (--theme_color);
+    transition: all 0.2s ease 0s;
+    position: relative;
+    display: inline-block;
+    transform: scale(0.875);
 
-        &::before {
-            @include background_color(theme_color);
-            content: '';
-            position: absolute;
-            position: absolute;
-            transform: scale(0);
-            border-radius: 5px;
-        }
-
-        &.disabled {
-            border: 1px solid;
-            @include border_color(sub_color);
-        }
-
-        &.active::before {
-            transition: all 0.2s ease 0s;
-            transform: scale(0.875);
-        }
-
-        &.active::after {
-            content: '';
-            position: absolute;
-            border: solid #fff;
-            transform: rotate(45deg);
-        }
-    }
-
-    .asoul-text_inner {
-        display: inline-flex;
-        align-items: center;
-    }
-
-    input {
-        outline: none;
-        position: absolute;
-        height: 0;
-        width: 0;
-        opacity: 0;
-        z-index: -1;
-        background-color: transparent;
-    }
-
-    &:hover:not(.disabled) {
-        .asoul-check_box-point {
-            @include background_transparent(theme_color, 0.8);
-        }
+    &::before {
+      background-color: var(--theme_color);
+      content: "";
+      position: absolute;
+      position: absolute;
+      transform: scale(0);
+      border-radius: 5px;
     }
 
     &.disabled {
-        cursor: not-allowed;
-
-        .asoul-check_box-point::before {
-            @include background_color(sub_color);
-        }
-
-        .asoul-text_inner {
-            @include font_color(sub_color);
-        }
+      border: 1px solid;
+      border-color: (--sub_color);
     }
+
+    &.active::before {
+      transition: all 0.2s ease 0s;
+      transform: scale(0.875);
+    }
+
+    &.active::after {
+      content: "";
+      position: absolute;
+      border: solid #fff;
+      transform: rotate(45deg);
+    }
+  }
+
+  .asoul-text_inner {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  input {
+    outline: none;
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: transparent;
+  }
+
+  &:hover:not(.disabled) {
+    .asoul-check_box-point {
+      background-color: var(--theme_color_80);
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .asoul-check_box-point::before {
+      background-color: var(--sub_color);
+    }
+
+    .asoul-text_inner {
+      color: var(--sub_color);
+    }
+  }
 }

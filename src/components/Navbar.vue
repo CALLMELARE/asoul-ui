@@ -57,7 +57,7 @@
         </nav>
         <nav class="nav-bar-item">
           <ASButton type="text" class="">
-            {{version}}
+            {{ version }}
           </ASButton>
         </nav>
       </nav>
@@ -71,7 +71,7 @@ import useTheme from "asoul-ui/utils/theme/useTheme";
 import { WeatherMoon16Regular, WeatherSunny16Regular } from "@vicons/fluent";
 import { useRouter } from "vue-router";
 import { reactive } from "vue";
-import pkg from "../../package.json";
+import pkg from "asoul-ui/package.json";
 export default {
   name: "Navbar",
   components: { ASButton, ASIcon, WeatherMoon16Regular, WeatherSunny16Regular },
@@ -88,18 +88,12 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const version = pkg.dependencies["asoul-ui"].replace("^","");
+    const version = pkg.dependencies["asoul-ui"]?.replace("^", "") || "Develop";
     function updateTheme(mode: Boolean) {
-      theme.darkmode = !mode;
-      mode = theme.darkmode;
-      if (mode) {
-        useTheme("dark");
-      } else {
-        useTheme("light");
-      }
+      useTheme("theme-dark");
     }
 
-    return { open, jump, theme, updateTheme ,version};
+    return { open, jump, theme, updateTheme, version };
   },
 };
 </script>
@@ -109,9 +103,9 @@ export default {
   height: 3.75rem;
   display: flex;
   position: relative;
-  @include background_color(invert_color);
+  background-color: var(--invert_color);
   border-bottom: 1px solid;
-  @include border_transparent(theme_color, 0.8);
+  border-color: var(--theme_color_80);
   .nav-bar-brand {
     width: 15%;
     position: relative;

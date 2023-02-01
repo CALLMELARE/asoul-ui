@@ -1,237 +1,234 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-btn {
-    box-sizing: border-box;
-    display: inline-block;
-    font-weight: normal;
-    user-select: none;
-    text-transform: capitalize;
-    white-space: nowrap;
-    text-align: center;
-    outline: none;
-    width: auto;
-    height: 36px;
-    border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-weight: normal;
+  user-select: none;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-align: center;
+  outline: none;
+  width: auto;
+  height: 36px;
+  border-radius: 4px;
 
-    font-size: 15px;
-    @include font_color(primary_color);
-    background-color: transparent;
-    padding: 0 15px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    border: none;
+  font-size: 15px;
+  color: var(--primary_color);
+  background-color: transparent;
+  padding: 0 15px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: none;
 
-    &:not(.auto) {
-        min-width: 50px;
+  &:not(.auto) {
+    min-width: 50px;
+  }
+
+  &.mini {
+    width: initial;
+    font-size: 12px;
+    padding: 0 8px;
+    height: 28px;
+  }
+
+  &.small {
+    width: initial;
+    font-size: 13px;
+    padding: 0 12px;
+    height: 32px;
+  }
+
+  &.large {
+    width: initial;
+    font-size: 18px;
+    padding: 0 20px;
+    height: 45px;
+  }
+
+  &.block {
+    min-width: 100% !important;
+  }
+
+  &.disabled {
+    background-color: var(--sub_color);
+    border-color: transparent !important;
+    color: var(--secondary_color) !important;
+
+    &:hover,
+    &:focus {
+      background-color: var(--sub_color);
     }
 
-    &.mini {
-        width: initial;
-        font-size: 12px;
-        padding: 0 8px;
-        height: 28px;
+    cursor: not-allowed !important;
+  }
+
+  &.loading {
+    pointer-events: none;
+    border: none !important;
+
+    &.asoul-loading-icon {
+      background-color: #000;
     }
+  }
 
-    &.small {
-        width: initial;
-        font-size: 13px;
-        padding: 0 12px;
-        height: 32px;
-    }
-
-    &.large {
-        width: initial;
-        font-size: 18px;
-        padding: 0 20px;
-        height: 45px;
-    }
-
-    &.block {
-        min-width: 100% !important;
-    }
-
-    &.disabled {
-        @include background_important(sub_color);
-        border-color: transparent !important;
-        @include font_color_important(secondary_color);
-
-        &:hover,
-        &:focus {
-            @include background_color(sub_color);
-            
-        }
-
-        cursor: not-allowed !important;
-    }
-
-    &.loading {
-        pointer-events: none;
-        border: none !important;
-
-        &.asoul-loading-icon {
-            background-color: #000;
-        }
-    }
-
-    &.auto {
-        min-width: auto;
-    }
+  &.auto {
+    min-width: auto;
+  }
 }
 
 .asoul-btn {
-    &.default {
-        @include background_color(theme_color);
-        @include font_color(invert_color);
+  &.default {
+    background-color: var(--theme_color);
+    color: var(--invert_color);
 
-        &:hover,
-        &:focus {
-            @include background_transparent(theme_color, 0.1);
-        }
+    &:hover,
+    &:focus {
+      background-color: var(--theme_color_10);
     }
+  }
 
-    &.outlined {
-        border: 1px solid;
-        @include border_color(theme_color);
-        @include font_color(theme_color);
+  &.outlined {
+    border: 1px solid;
+    border-color: (--theme_color);
+    color: var(--theme_color);
 
-        &:hover,
-        &:focus {
-            @include background_transparent(theme_color, 0.9);
-        }
+    &:hover,
+    &:focus {
+      background-color: var(--theme_color_90);
     }
+  }
 
-    &.text {
-        @include font_color(theme_color);
+  &.text {
+    color: var(--theme_color);
 
-        &:hover,
-        &:focus {
-            @include background_transparent(theme_color, 0.9);
-        }
-
+    &:hover {
+      background-color: var(--theme_color_10);
     }
+  }
 
-    &.glass {
-        @include background_transparent(invert_color, 0.3);
-        backdrop-filter: blur(10px);
-        @include font_color(primary_color);
+  &.glass {
+    background-color: var(--invert_color_30);
+    backdrop-filter: blur(10px);
+    color: var(--primary_color);
 
-        &:hover,
-        &:focus {
-            @include background_transparent(theme_color, 0.9);
-        }
+    &:hover,
+    &:focus {
+      background-color: var(--theme_color_90);
     }
+  }
 }
 
 .asoul-btn {
-    &.primary {}
+  &.primary {
+  }
 
-    &.success {
-        border-color: $successDefault;
-        background-color: $successDefault;
-        color: #fff;
+  &.success {
+    border-color: $successDefault;
+    background-color: $successDefault;
+    color: #fff;
 
-        &:hover,
-        &:focus {
-            @include font_color(invert_color);
-            background-color: $successLight;
-        }
+    &:hover,
+    &:focus {
+      color: var(--invert_color);
+      background-color: $successLight;
     }
+  }
 
-    &.warning {
-        border-color: $warningDefault;
-        background-color: $warningDefault;
-        color: #fff;
+  &.warning {
+    border-color: $warningDefault;
+    background-color: $warningDefault;
+    color: #fff;
 
-        &:hover,
-        &:focus {
-            @include font_color(invert_color);
-            background-color: $warningLight;
-        }
+    &:hover,
+    &:focus {
+      color: var(--invert_color);
+      background-color: $warningLight;
     }
+  }
 
-    &.error {
-        background-color: $errorDefault;
-        border-color: $errorDefault;
-        color: #fff;
+  &.error {
+    background-color: $errorDefault;
+    border-color: $errorDefault;
+    color: #fff;
 
-        &:hover,
-        &:focus {
-            @include font_color(invert_color);
-            background-color: $errorLight;
-        }
+    &:hover,
+    &:focus {
+      color: var(--invert_color);
+      background-color: $errorLight;
     }
+  }
 }
-
 
 .asoul-button-drip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  svg {
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    animation: 350ms ease-in expand;
+    animation-fill-mode: forwards;
+    width: 16px;
+    height: 16px;
+  }
 
-    svg {
-        position: absolute;
-        animation: 350ms ease-in expand;
-        animation-fill-mode: forwards;
-        width: 16px;
-        height: 16px;
+  @keyframes expand {
+    0% {
+      opacity: 0;
+      transform: scale(1);
     }
 
-    @keyframes expand {
-        0% {
-            opacity: 0;
-            transform: scale(1);
-        }
-
-        30% {
-            opacity: 1;
-        }
-
-        80% {
-            opacity: 0.5;
-        }
-
-        100% {
-            transform: scale(28);
-            opacity: 0;
-        }
+    30% {
+      opacity: 1;
     }
+
+    80% {
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: scale(28);
+      opacity: 0;
+    }
+  }
 }
 
 .asoul-btn-loading {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    @include font_color(secondary_color);
-    @include border_color(sub_color);
-    @include background_color(sub_color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  color: var(--secondary_color);
+  border-color: (--sub_color);
+  background-color: var(--sub_color);
 
-    svg {
-        width: 24px;
-        height: 100%;
-        @include font_color(secondary_color);
-    }
+  svg {
+    width: 24px;
+    height: 100%;
+    color: var(--secondary_color);
+  }
 
-    &.success {
-        border-color: $successDefault;
-        background-color: $successDefault;
-        color: #fff;
-    }
+  &.success {
+    border-color: $successDefault;
+    background-color: $successDefault;
+    color: #fff;
+  }
 
-    &.warning {
-        border-color: $warningDefault;
-        background-color: $warningDefault;
-        color: #fff;
-    }
+  &.warning {
+    border-color: $warningDefault;
+    background-color: $warningDefault;
+    color: #fff;
+  }
 
-    &.error {
-        background-color: $errorDefault;
-        border-color: $errorDefault;
-        color: #fff;
-    }
+  &.error {
+    background-color: $errorDefault;
+    border-color: $errorDefault;
+    color: #fff;
+  }
 }

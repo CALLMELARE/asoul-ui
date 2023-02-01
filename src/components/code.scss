@@ -1,6 +1,6 @@
 @import "asoul-ui/utils/styles/mixin.scss";
 .hljs {
-  @include font_color(primary_color);
+  color: var(--primary_color);
   background: #ffffff;
 }
 

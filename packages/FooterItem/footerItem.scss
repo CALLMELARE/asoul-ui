@@ -1,12 +1,12 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-footer-item {
-    @include font_color(invert_color);
-    font-size: $medium;
-    line-height: $medium * 1.4;
-    width: 100%;
-    max-width: 341px;
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  color: var(--invert_color);
+  font-size: $medium;
+  line-height: $medium * 1.4;
+  width: 100%;
+  max-width: 341px;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

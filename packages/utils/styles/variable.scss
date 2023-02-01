@@ -1,0 +1,33 @@
+// colors
+
+$AvaTheme: #9ac8e2;
+$BellaTheme: #bd7d74;
+$CarolTheme: #b8a6d9;
+$DianaTheme: #e799b0;
+$EileenTheme: #576690;
+
+$primaryDefault: $EileenTheme;
+
+$successLight: rgba(88, 224, 0, 1);
+$successDefault: rgba(20, 209, 0, 1);
+$successDark: rgba(0, 185, 69, 1);
+
+$warningLight: rgba(255, 222, 0, 1);
+$warningDefault: rgba(255, 209, 0, 1);
+$warningDark: rgba(255, 195, 0, 1);
+
+$errorLight: rgba(255, 44, 0, 1);
+$errorDefault: rgba(251, 0, 13, 1);
+$errorDark: rgba(235, 0, 59, 1);
+
+$black: #252525;
+$gray: #656667;
+$grayLight: #cccccc;
+$white: #ffffff;
+
+// Size
+
+$mini: 9px;
+$small: 14px;
+$medium: 16px;
+$large: 22px;

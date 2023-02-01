@@ -140,7 +140,7 @@ export default {
     display: flex;
     flex-direction: column;
     .home-banner-title {
-      @include font_color(primary_color);
+      color: var(--primary_color);
       cursor: default;
       user-select: none;
       margin-top: 20vh;
@@ -151,7 +151,7 @@ export default {
       letter-spacing: 0.3rem;
     }
     .home-banner-subtitle {
-      @include font_color(primary_color);
+      color: var(--primary_color);
       cursor: default;
       user-select: none;
       margin-top: 1rem;
@@ -232,7 +232,7 @@ export default {
     }
     #item-1 {
       background-color: $AvaTheme;
-      @include font_color(invert_color);
+      color: var(--invert_color);
       .home-banner-avatar {
         background-image: url("../assets/avatar-ava.png");
       }
@@ -242,7 +242,7 @@ export default {
     }
     #item-2 {
       background-color: $BellaTheme;
-      @include font_color(invert_color);
+      color: var(--invert_color);
       .home-banner-avatar {
         background-image: url("../assets/avatar-bella.png");
       }
@@ -252,7 +252,7 @@ export default {
     }
     #item-3 {
       background-color: $CarolTheme;
-      @include font_color(invert_color);
+      color: var(--invert_color);
       .home-banner-avatar {
         background-image: url("../assets/avatar-carol.png");
       }
@@ -262,7 +262,7 @@ export default {
     }
     #item-4 {
       background-color: $DianaTheme;
-      @include font_color(invert_color);
+      color: var(--invert_color);
       .home-banner-avatar {
         background-image: url("../assets/avatar-diana.png");
       }
@@ -272,7 +272,7 @@ export default {
     }
     #item-5 {
       background-color: $EileenTheme;
-      @include font_color(invert_color);
+      color: var(--invert_color);
       .home-banner-avatar {
         background-image: url("../assets/avatar-eileen.png");
       }
@@ -296,50 +296,50 @@ export default {
 @keyframes ava-trans {
   0% {
     color: $AvaTheme;
-    @include background_color(invert_color);
+    background-color: var(--invert_color);
   }
   100% {
-    @include font_color(invert_color);
+    color: var(--invert_color);
     background-color: $AvaTheme;
   }
 }
 @keyframes bella-trans {
   0% {
     color: $BellaTheme;
-    @include background_color(invert_color);
+    background-color: var(--invert_color);
   }
   100% {
-    @include font_color(invert_color);
+    color: var(--invert_color);
     background-color: $BellaTheme;
   }
 }
 @keyframes carol-trans {
   0% {
     color: $CarolTheme;
-    @include background_color(invert_color);
+    background-color: var(--invert_color);
   }
   100% {
-    @include font_color(invert_color);
+    color: var(--invert_color);
     background-color: $CarolTheme;
   }
 }
 @keyframes diana-trans {
   0% {
     color: $DianaTheme;
-    @include background_color(invert_color);
+    background-color: var(--invert_color);
   }
   100% {
-    @include font_color(invert_color);
+    color: var(--invert_color);
     background-color: $DianaTheme;
   }
 }
 @keyframes eileen-trans {
   0% {
     color: $EileenTheme;
-    @include background_color(invert_color);
+    background-color: var(--invert_color);
   }
   100% {
-    @include font_color(invert_color);
+    color: var(--invert_color);
     background-color: $EileenTheme;
   }
 }

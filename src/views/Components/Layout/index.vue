@@ -103,9 +103,9 @@ export default {
   margin: 0.2rem 0;
 }
 .bg-1 {
-  @include background_color(theme_color);
+  background-color: var(--theme_color);
 }
 .bg-2 {
-  @include background_transparent(theme_color, 0.5);
+  background-color: var(--theme_color_50);
 }
 </style>
