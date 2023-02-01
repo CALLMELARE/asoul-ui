@@ -1,12 +1,13 @@
+import { computed, PropType, provide } from "vue";
 import { NormalSizes } from "../utils/theme/propTypes";
-import { computed, PropType, toRefs } from "vue";
 import { createNameSpace } from "../utils";
 import "./breadcrumb.scss";
-import { createProvider } from "@fect-ui/vue-hooks";
 
 const [createComponent] = createNameSpace("Breadcrumb");
+
 export const READONLY_BREADCRUMB_KEY = "breadcrumbKey";
-export type BreadcrumbProvider = {
+
+export type BreadcrumbProvide = {
   separator: String;
   disabled: Boolean;
 };
@@ -27,8 +28,10 @@ export default createComponent({
     },
   },
   setup(props, { attrs, slots, emit }) {
-    const { provider } = createProvider(READONLY_BREADCRUMB_KEY);
-    provider({ separator: props.separator, disabled: props.disabled });
+    provide(READONLY_BREADCRUMB_KEY, {
+      separator: props.separator,
+      disabled: props.disabled,
+    });
     const setClass = computed(() => {
       const names = [];
       props.size && names.push(props.size);

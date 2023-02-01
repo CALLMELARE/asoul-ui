@@ -1,13 +1,13 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-divider {
-    margin: 1rem 0;
-    width: 100%;
-    border-bottom: 2px solid;
-    @include border_transparent(theme_color, 0.6);
+  margin: 1rem 0;
+  width: 100%;
+  border-bottom: 2px solid;
+  border-color: var(--theme_color_60);
 
-    &.dashed {
-        border-bottom: 2px dashed;
-        @include border_transparent(theme_color, 0.6);
-    }
+  &.dashed {
+    border-bottom: 2px dashed;
+    border-color: var(--theme_color_60);
+  }
 }

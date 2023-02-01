@@ -1,6 +1,5 @@
-import { PropType } from "vue";
+import { PropType, provide } from "vue";
 import { createNameSpace } from "../utils";
-import { createProvider } from "../utils/useHooks";
 import { NormalSizes } from "../utils/theme/propTypes";
 const [createComponent] = createNameSpace("CheckboxGroup");
 import "./checkboxGroup.scss";
@@ -45,13 +44,15 @@ export default createComponent({
   },
   emits: ["change", "update:modelValue"],
   setup(props, { slots, emit }) {
-    const { provider } = createProvider(READONLY_CHECKBOX_KEY);
-
     const updateParentValue = (pre: unknown[]) =>
       emit("update:modelValue", pre);
     const handlerParentChange = (e: CheckboxEvent) => emit("change", e);
 
-    provider({ props, updateParentValue, handlerParentChange });
+    provide(READONLY_CHECKBOX_KEY, {
+      props,
+      updateParentValue,
+      handlerParentChange,
+    });
 
     return () => (
       <div class={`asoul-checkbox_group ${props.useRow ? "useRow" : ""}`}>

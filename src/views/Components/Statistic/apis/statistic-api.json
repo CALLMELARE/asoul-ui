@@ -1,0 +1,23 @@
+[
+  {
+    "name": "label",
+    "type": "string",
+    "default": "-",
+    "option": "-",
+    "desc": "名称"
+  },
+  {
+    "name": "value",
+    "type": "string",
+    "default": "-",
+    "option": "-",
+    "desc": "要展示的数字"
+  },
+  {
+    "name": "separate",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "使用千分位分隔符"
+  }
+]

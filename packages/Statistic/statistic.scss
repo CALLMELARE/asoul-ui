@@ -2,14 +2,14 @@
 
 .asoul-statistic {
   .asoul-statistic-label {
-    @include font_transparent(secondary_color, 0.3);
+    color: var(--secondary_color_30);
   }
   .asoul-statistic-content {
-    @include font_color(primary_color);
+    color: var(--primary_color);
     // margin-top: 0.25rem;
     font-size: $medium * 1.5;
     &.primary {
-      @include font_color(theme_color);
+      color: var(--theme_color);
     }
     &.success {
       color: $successDefault;

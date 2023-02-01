@@ -1,6 +1,12 @@
-import { createProvider } from "../utils/useHooks";
-import { ComponentInstance } from "../utils/base";
-import { computed, Ref, ref, watch } from "vue";
+import {
+  computed,
+  Ref,
+  ref,
+  watch,
+  provide,
+  reactive,
+  ComponentPublicInstance,
+} from "vue";
 import { createNameSpace } from "../utils";
 import TabTitle, { TabTitleEmit } from "../TabTitle";
 import "./tabs.scss";
@@ -29,11 +35,7 @@ export default createComponent({
   setup(props, { attrs, slots, emit }) {
     const currentChecked = ref<string | number>(props.select);
 
-    const { provider, children } = createProvider<ComponentInstance>(
-      READONLY_TABS_KEY
-    );
-
-    provider({ props, currentChecked });
+    provide(READONLY_TABS_KEY, { props, currentChecked });
 
     const setSelect = (data: TabTitleEmit) => {
       const { value, e } = data;
@@ -53,15 +55,20 @@ export default createComponent({
     watch(currentChecked, (pre) => emit("change", pre));
 
     const renderTitle = () => {
-      return children.map((e, i) => (
-        <TabTitle
-          title={e.title}
-          value={e.value || i}
-          key={i}
-          active={currentChecked.value}
-          onClick={setSelect}
-        />
-      ));
+      const children = slots.default?.();
+      if (children) {
+        return children.map((e, i) => {
+          return (
+            <TabTitle
+              title={e.props?.title}
+              value={e.props?.value || i}
+              key={i}
+              active={currentChecked.value}
+              onClick={setSelect}
+            />
+          );
+        });
+      }
     };
 
     return () => (

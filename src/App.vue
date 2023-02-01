@@ -1,26 +1,29 @@
 <template>
   <div class="app">
+    <keep-alive>
+      <Navbar></Navbar>
+    </keep-alive>
     <router-view />
   </div>
 </template>
 
 <script>
-import * as Component from "../packages";
+import Navbar from "./components/Navbar.vue";
 export default {
   components: {
-    ...Component
-  }
+    Navbar,
+  },
 };
 </script>
 
-
 <style lang="scss">
+@import "asoul-ui/utils/styles/mixin.scss";
+
 body {
   margin: 0;
 }
 .app {
-  margin: 3rem;
-  /* background-image: url("./assets/bg.jpeg"); */
-  background-size: cover;
+  background-color: var(--invert_color);
+  height: 100vh;
 }
 </style>

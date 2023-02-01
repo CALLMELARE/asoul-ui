@@ -1,0 +1,44 @@
+[
+  {
+    "name": "disabled",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "开启禁用"
+  },
+  {
+    "name": "rounded",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "变为胶囊形"
+  },
+  {
+    "name": "outlined",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "变为线框"
+  },
+  {
+    "name": "invert",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "开启反色"
+  },
+  {
+    "name": "type",
+    "type": "string",
+    "default": "primary",
+    "option": "'primary', 'success', 'warning', 'error'",
+    "desc": "类型"
+  },
+  {
+    "name": "size",
+    "type": "string",
+    "default": "'medium'",
+    "option": "'mini', 'small', 'medium', 'large'",
+    "desc": "尺寸"
+  }
+]

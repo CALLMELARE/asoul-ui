@@ -1,0 +1,23 @@
+[
+  {
+    "name": "hoverable",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "悬浮"
+  },
+  {
+    "name": "inverse",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "反色"
+  },
+  {
+    "name": "shadow",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "阴影"
+  }
+]

@@ -1,8 +1,8 @@
+import { inject } from "vue";
 import { createNameSpace } from "../utils";
 import "../Breadcrumb/breadcrumb.scss";
-import { useProvider } from "@fect-ui/vue-hooks";
 import { useRouter } from "vue-router";
-import { BreadcrumbProvider, READONLY_BREADCRUMB_KEY } from "./index";
+import { BreadcrumbProvide, READONLY_BREADCRUMB_KEY } from "./index";
 
 const [createComponent] = createNameSpace("BreadcrumbItem");
 
@@ -19,9 +19,7 @@ export default createComponent({
   },
   setup(props, { attrs, slots, emit }) {
     const router = useRouter();
-    const { context } = useProvider<BreadcrumbProvider>(
-      READONLY_BREADCRUMB_KEY
-    );
+    const context = inject<BreadcrumbProvide>(READONLY_BREADCRUMB_KEY);
     function open(url: string | undefined) {
       window.open(url);
     }

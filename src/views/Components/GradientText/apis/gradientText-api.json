@@ -1,0 +1,9 @@
+[
+  {
+    "name": "type",
+    "type": "string",
+    "default": "primary",
+    "option": "'primary', 'success', 'warning', 'error'",
+    "desc": "类型"
+  }
+]

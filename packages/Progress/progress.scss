@@ -1,25 +1,25 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-progress {
-    padding: 12px;
-    // width: 100%;
-    background: transparent;
+  padding: 12px;
+  // width: 100%;
+  background: transparent;
 
-    .asoul-progress-bar {
-        height: 4px;
-        border-radius: 2px;
-        overflow: hidden;
-        width: 100%;
-        display: flex;
-    }
+  .asoul-progress-bar {
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+  }
 
-    .asoul-progress-linear-background {
-        height: 4px;
-        @include background_transparent(theme_color, 0.8);
-    }
+  .asoul-progress-linear-background {
+    height: 4px;
+    background-color: var(--theme_color_80);
+  }
 
-    .asoul-progress-linear-determinate {
-        height: 4px;
-        @include background_color(theme_color);
-    }
+  .asoul-progress-linear-determinate {
+    height: 4px;
+    background-color: var(--theme_color);
+  }
 }

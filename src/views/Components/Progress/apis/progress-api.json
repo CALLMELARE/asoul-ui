@@ -1,0 +1,16 @@
+[
+  {
+    "name": "value",
+    "type": "number",
+    "default": "-",
+    "option": "-",
+    "desc": "值"
+  },
+  {
+    "name": "maxvalue",
+    "type": "number",
+    "default": "100",
+    "option": "-",
+    "desc": "最大值"
+  }
+]

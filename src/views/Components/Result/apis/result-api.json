@@ -1,0 +1,23 @@
+[
+  {
+    "name": "type",
+    "type": "string",
+    "default": "-",
+    "option": "'primary', 'success', 'warning', 'error', 'info'",
+    "desc": "类型"
+  },
+  {
+    "name": "title",
+    "type": "string",
+    "default": "-",
+    "option": "-",
+    "desc": "标题"
+  },
+  {
+    "name": "subtitle",
+    "type": "string",
+    "default": "-",
+    "option": "-",
+    "desc": "副标题"
+  }
+]

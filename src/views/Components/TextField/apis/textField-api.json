@@ -1,0 +1,23 @@
+[
+  {
+    "name": "disabled",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "是否禁用"
+  },
+  {
+    "name": "label",
+    "type": "string",
+    "default": "-",
+    "option": "-",
+    "desc": "标签"
+  },
+  {
+    "name": "block",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "独占一行"
+  }
+]

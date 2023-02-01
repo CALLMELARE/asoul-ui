@@ -1,0 +1,30 @@
+[
+  {
+    "name": "align",
+    "type": "string",
+    "default": "'top'",
+    "option": "'top', 'middle', 'bottom'",
+    "desc": "垂直对齐"
+  },
+  {
+    "name": "gutter",
+    "type": "number, string",
+    "default": "0",
+    "option": "-",
+    "desc": "间隔"
+  },
+  {
+    "name": "justify",
+    "type": "string",
+    "default": "'start'",
+    "option": "'start', 'end', 'center', 'space-around', 'space-between'",
+    "desc": "水平对齐"
+  },
+  {
+    "name": "tag",
+    "type": "HTMLElementTagNameMap",
+    "default": "div",
+    "option": "-",
+    "desc": "标签名"
+  }
+]

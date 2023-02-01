@@ -1,0 +1,23 @@
+[
+  {
+    "name": "checked",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "选中状态"
+  },
+  {
+    "name": "rounded",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "把圆角矩形换成圆"
+  },
+  {
+    "name": "size",
+    "type": "string",
+    "default": "'medium'",
+    "option": "'mini', 'small', 'medium', 'large'",
+    "desc": "尺寸"
+  }
+]

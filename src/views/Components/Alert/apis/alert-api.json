@@ -1,0 +1,23 @@
+[
+  {
+    "name": "border",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "边框"
+  },
+  {
+    "name": "outlined",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "外边框"
+  },
+  {
+    "name": "type",
+    "type": "string",
+    "default": "'primary'",
+    "option": "'primary', 'success', 'warning', 'error', 'info'",
+    "desc": "信息类型"
+  }
+]

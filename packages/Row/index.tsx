@@ -1,8 +1,7 @@
 import { AlignTypes, JustifyTypes } from "../utils/theme/propTypes";
-import { computed, PropType, toRefs } from "vue";
+import { computed, PropType, provide } from "vue";
 import { createNameSpace } from "../utils";
 import "./row.scss";
-import { createProvider } from "../utils/useHooks";
 
 const [createComponent] = createNameSpace("Row");
 
@@ -28,8 +27,7 @@ export default createComponent({
     },
   },
   setup(props, { attrs, slots, emit }) {
-    const { provider } = createProvider(READONLY_LAYOUT_KEY);
-    provider({ gutter: props.gutter });
+    provide(READONLY_LAYOUT_KEY, { gutter: props.gutter });
 
     const setClass = computed(() => {
       const style: string[] = [];

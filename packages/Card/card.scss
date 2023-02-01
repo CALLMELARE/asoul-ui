@@ -1,48 +1,48 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-card {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: var(--sub_color);
+  background-color: var(--invert_color);
+  color: var(--primary_color);
+}
+
+.asoul-card {
+  &.hoverable {
+    &:hover {
+      box-shadow: 0 8px 30px var(--primary_color_12);
+    }
+  }
+
+  &.shadow {
+    box-shadow: 0 5px 10px var(--primary_color_12);
+    border-color: transparent;
+  }
+
+  &.inverse {
+    background-color: var(--theme_color);
+    color: var(--invert_color);
+  }
+}
+
+.asoul-card {
+  .asoul-card-content {
     width: 100%;
-    transition: all 0.2s ease;
+    padding: 16px;
     box-sizing: border-box;
-    border-radius: 5px;
-    border: 1px solid;
-    @include border_color(sub_color);
-    @include background_color(invert_color);
-    @include font_color(primary_color);
-}
 
-.asoul-card {
-    &.hoverable {
-        &:hover {
-            @include box_shadow(0, 8px, 30px, primary_color, 0.88);
-        }
+    & *:first-child {
+      margin-top: 0;
     }
 
-    &.shadow {
-        @include box_shadow(0, 5px, 10px, primary_color, 0.88);
-        border-color: transparent;
+    & *:last-child {
+      margin-bottom: 0;
     }
-
-    &.inverse {
-        @include background_color(theme_color);
-        @include font_color(invert_color);
-    }
-}
-
-.asoul-card {
-    .asoul-card-content {
-        width: 100%;
-        padding: 16px;
-        box-sizing: border-box;
-
-        & *:first-child {
-            margin-top: 0;
-        }
-
-        & *:last-child {
-            margin-bottom: 0;
-        }
-    }
+  }
 }

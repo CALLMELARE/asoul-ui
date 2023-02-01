@@ -1,0 +1,16 @@
+[
+  {
+    "name": "initialValue",
+    "type": "string,number",
+    "default": "-",
+    "option": "-",
+    "desc": "默认值"
+  },
+  {
+    "name": "useRow",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "横排"
+  }
+]
