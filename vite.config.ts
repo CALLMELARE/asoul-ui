@@ -26,6 +26,7 @@ export default defineConfig(({ command }) => {
       resolve: {
         alias: [
           { find: "asoul-ui", replacement: resolve(__dirname, "packages") },
+          { find: "assets", replacement: resolve(__dirname, "src/assets") },
         ],
       },
     };

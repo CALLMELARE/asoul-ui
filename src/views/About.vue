@@ -152,7 +152,7 @@ export default {
     width: 2rem;
     height: 2rem;
     background-size: cover;
-    background-image: url("../assets/fect.png");
+    background-image: url("assets/fect.png");
   }
 }
 </style>

@@ -177,13 +177,13 @@ export default {
         background-size: contain;
       }
       #icon-1 {
-        background-image: url("../assets/vue.png");
+        background-image: url("assets/vue.png");
       }
       #icon-2 {
-        background-image: url("../assets/typescript.png");
+        background-image: url("assets/typescript.png");
       }
       #icon-3 {
-        background-image: url("../assets/asoul.png");
+        background-image: url("assets/asoul.png");
       }
     }
   }
@@ -234,7 +234,7 @@ export default {
       background-color: $AvaTheme;
       color: var(--invert_color);
       .home-banner-avatar {
-        background-image: url("../assets/avatar-ava.png");
+        background-image: url("assets/avatar-ava.png");
       }
       /* &:hover {
         animation: ava-trans 0.5s both;
@@ -244,7 +244,7 @@ export default {
       background-color: $BellaTheme;
       color: var(--invert_color);
       .home-banner-avatar {
-        background-image: url("../assets/avatar-bella.png");
+        background-image: url("assets/avatar-bella.png");
       }
       /* &:hover {
         animation: bella-trans 0.5s both;
@@ -254,7 +254,7 @@ export default {
       background-color: $CarolTheme;
       color: var(--invert_color);
       .home-banner-avatar {
-        background-image: url("../assets/avatar-carol.png");
+        background-image: url("assets/avatar-carol.png");
       }
       /* &:hover {
         animation: carol-trans 0.5s both;
@@ -264,7 +264,7 @@ export default {
       background-color: $DianaTheme;
       color: var(--invert_color);
       .home-banner-avatar {
-        background-image: url("../assets/avatar-diana.png");
+        background-image: url("assets/avatar-diana.png");
       }
       /* &:hover {
         animation: diana-trans 0.5s both;
@@ -274,7 +274,7 @@ export default {
       background-color: $EileenTheme;
       color: var(--invert_color);
       .home-banner-avatar {
-        background-image: url("../assets/avatar-eileen.png");
+        background-image: url("assets/avatar-eileen.png");
       }
       /* &:hover {
         animation: eileen-trans 0.5s both;

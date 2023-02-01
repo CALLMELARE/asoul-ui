@@ -21,6 +21,9 @@ import ApiTable from "../../../components/ApiTable.vue";
 import showcaseApi from "./apis/showcase-api.json";
 
 import { useRouter } from "vue-router";
+
+import img from "assets/asoulall.png";
+
 export default {
   name: "Showcase",
   components: { ASShowcase, Code, ApiTable },
@@ -32,7 +35,6 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const img = require("../../../assets/asoulall.png");
 
     return { open, jump, showcaseApi, img };
   },
