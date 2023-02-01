@@ -4,30 +4,31 @@
   display: inline-flex;
   color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   background-image: linear-gradient(
     -45deg,
-    transparentize($primaryDefault,0.3) 0%,
-    transparentize($primaryDefault,0) 100%
+    transparentize($primaryDefault, 0.3) 0%,
+    transparentize($primaryDefault, 0) 100%
   );
-  &.success{
+  &.success {
     background-image: linear-gradient(
       -45deg,
-      transparentize($successDark,0.3) 0%,
-      transparentize($successDark,0) 100%
+      transparentize($successDark, 0.3) 0%,
+      transparentize($successDark, 0) 100%
     );
   }
-  &.warning{
+  &.warning {
     background-image: linear-gradient(
       -45deg,
-      transparentize($warningDark,0.3) 0%,
-      transparentize($warningDark,0) 100%
+      transparentize($warningDark, 0.3) 0%,
+      transparentize($warningDark, 0) 100%
     );
   }
-  &.error{
+  &.error {
     background-image: linear-gradient(
       -45deg,
-      transparentize($errorDark,0.3) 0%,
-      transparentize($errorDark,0) 100%
+      transparentize($errorDark, 0.3) 0%,
+      transparentize($errorDark, 0) 100%
     );
   }
 }
