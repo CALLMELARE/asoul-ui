@@ -88,7 +88,7 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const version = pkg.dependencies["asoul-ui"]?.replace("^", "") || "Dev";
+    const version = pkg["version"]?.replace("^", "");
     function updateTheme(mode: Boolean) {
       useTheme("theme-dark");
     }
@@ -102,10 +102,10 @@ export default {
 .nav-bar {
   height: 3.75rem;
   display: flex;
-  position: relative;
+  position: sticky;
   background-color: var(--invert_color);
-  border-bottom: 1px solid;
-  border-color: var(--theme_color_80);
+  box-shadow: 0 5px 10px var(--primary_color_12);
+
   .nav-bar-brand {
     width: 15%;
     position: relative;
