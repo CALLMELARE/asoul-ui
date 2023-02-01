@@ -25,7 +25,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     border: 1px solid;
-    border-color: (--sub_color);
+    border-color: var(--sub_color);
     background-color: var(--invert_color);
     color: var(--primary_color);
 

@@ -5,7 +5,7 @@
   position: relative;
   margin-bottom: $medium;
   display: flex;
-  border-color: (--invert_color);
+  border-color: var(--invert_color);
 
   .asoul-alert-wrapper {
     width: 100%;
@@ -117,7 +117,7 @@
   &.outlined {
     &.primary {
       border: 1px solid;
-      border-color: (--theme_color);
+      border-color: var(--theme_color);
     }
 
     .asoul-alert-wrapper {

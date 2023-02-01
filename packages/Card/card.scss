@@ -8,7 +8,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid;
-  border-color: (--sub_color);
+  border-color: var(--sub_color);
   background-color: var(--invert_color);
   color: var(--primary_color);
 }
@@ -16,12 +16,12 @@
 .asoul-card {
   &.hoverable {
     &:hover {
-      box-shadow: (0, 8px, 30px, --primary_color, 0.88);
+      box-shadow: 0 8px 30px var(--primary_color_12);
     }
   }
 
   &.shadow {
-    box-shadow: (0, 5px, 10px, --primary_color, 0.88);
+    box-shadow: 0 5px 10px var(--primary_color_12);
     border-color: transparent;
   }
 

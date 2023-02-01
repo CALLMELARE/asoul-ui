@@ -140,7 +140,7 @@
 .asoul-check_box {
   .asoul-check_box-point {
     border: 1px solid;
-    border-color: (--theme_color);
+    border-color: var(--theme_color);
     transition: all 0.2s ease 0s;
     position: relative;
     display: inline-block;
@@ -157,7 +157,7 @@
 
     &.disabled {
       border: 1px solid;
-      border-color: (--sub_color);
+      border-color: var(--sub_color);
     }
 
     &.active::before {

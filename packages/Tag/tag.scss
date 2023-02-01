@@ -27,7 +27,7 @@
   }
   &.invert {
     color: var(--invert_color);
-    border-color: (--theme_color);
+    border-color: var(--theme_color);
     background-color: var(--theme_color);
   }
   &.success {
