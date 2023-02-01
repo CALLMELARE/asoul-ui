@@ -16,9 +16,9 @@
   font-size: $medium;
   color: var(--theme_color);
   border-color: var(--theme_color_30);
-  background-color: var(--theme_color_90);
+  background-color: var(--theme_color_20);
   &.outlined {
-    background-color: var(--theme_color);
+    background-color: transparent;
   }
   &.disabled {
     color: var(--secondary_color);
