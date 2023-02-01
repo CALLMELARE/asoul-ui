@@ -1,7 +1,7 @@
-import { computed, ref, watchEffect, PropType } from "vue";
+import { computed, ref, watchEffect, PropType, inject } from "vue";
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
-import { useProvider } from "../utils/useHooks";
+
 import {
   RadioGroupProvide,
   READNONLY_RADIO_GROUP_KEY,
@@ -29,9 +29,7 @@ export default createComponent({
     const isDisabled = ref<boolean>(props.disabled);
     const selfChecked = ref<boolean>(!!props.checked);
 
-    const { context } = useProvider<RadioGroupProvide>(
-      READNONLY_RADIO_GROUP_KEY
-    );
+    const context = inject<RadioGroupProvide>(READNONLY_RADIO_GROUP_KEY);
 
     const changeStatus = () => {
       const { disabled, size, initialValue } = context!.props;

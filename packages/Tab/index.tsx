@@ -1,5 +1,4 @@
-import { computed, ref, Ref, toRefs, watchEffect } from "vue";
-import { useProvider } from "../utils/useHooks";
+import { computed, ref, inject, watchEffect } from "vue";
 import { createNameSpace } from "../utils";
 import { READONLY_TABS_KEY, TabsProvide } from "../Tabs";
 import "./tab.scss";
@@ -19,7 +18,7 @@ export default createComponent({
     disabled: Boolean,
   },
   setup(props, { attrs, slots, emit }) {
-    const { context, idx } = useProvider<TabsProvide>(READONLY_TABS_KEY);
+    const context = inject<TabsProvide>(READONLY_TABS_KEY);
     const self = ref<string | number>(props.value);
     if (!context) {
       if (process.env.NODE_ENV !== "production") {
@@ -27,10 +26,6 @@ export default createComponent({
       }
       return;
     }
-
-    watchEffect(() => {
-      if (self.value === "") return (self.value = idx);
-    });
 
     const isDisabled = computed(() => {
       return context.currentChecked.value === self.value ? "" : "none";

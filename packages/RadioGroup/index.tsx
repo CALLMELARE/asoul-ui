@@ -1,5 +1,4 @@
-import { createProvider } from "../utils/useHooks";
-import { ref, PropType, Ref } from "vue";
+import { ref, PropType, Ref, provide } from "vue";
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
 import "./radioGroup.scss";
@@ -44,9 +43,11 @@ export default createComponent({
   emits: ["change"],
   setup(props, { slots, emit }) {
     const groupValue = ref(null);
-    const { provider } = createProvider(READNONLY_RADIO_GROUP_KEY);
+
     const updateState = (nextVal: RadioEvent) => emit("change", nextVal);
-    provider({ props, updateState, groupValue });
+
+    provide(READNONLY_RADIO_GROUP_KEY, { props, updateState, groupValue });
+
     return () => (
       <div class={`asoul-radio-group ${props.useRow ? "useRow" : ""}`}>
         {slots.default?.()}
