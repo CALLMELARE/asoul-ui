@@ -35,7 +35,7 @@ export default defineComponent({
     });
 
     const setActive = computed(() => {
-      return props.active === props.value ? "active" : "";
+      return props.active == props.value ? "active" : "";
     });
 
     return () => (
@@ -44,7 +44,7 @@ export default defineComponent({
         onClick={(e) => handleClick(e)}
       >
         {props.title}
-        <span class={`asoul-tab-slider`}/>
+        <span class={`asoul-tab-slider`} />
       </div>
     );
   },

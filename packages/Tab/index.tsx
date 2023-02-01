@@ -19,7 +19,9 @@ export default createComponent({
   },
   setup(props, { attrs, slots, emit }) {
     const context = inject<TabsProvide>(READONLY_TABS_KEY);
+
     const self = ref<string | number>(props.value);
+
     if (!context) {
       if (process.env.NODE_ENV !== "production") {
         console.error("[ASoul] <Tab> must be a child component of <Tabs>.");
@@ -28,8 +30,9 @@ export default createComponent({
     }
 
     const isDisabled = computed(() => {
-      return context.currentChecked.value === self.value ? "" : "none";
+      return context.currentChecked.value == self.value ? "" : "none";
     });
+
     return () => (
       <div class={`asoul-tab ${isDisabled.value}`}>{slots.default?.()}</div>
     );

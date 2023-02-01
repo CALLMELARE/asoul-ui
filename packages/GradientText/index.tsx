@@ -25,7 +25,6 @@ export default createComponent({
     },
   },
   setup(props, { attrs, slots, emit }) {
-    console.log(props.gradient);
     const setClass = computed(() => {
       const names = [];
       props.type && names.push(props.type);
