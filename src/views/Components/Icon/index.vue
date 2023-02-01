@@ -10,7 +10,7 @@
 
     <h1>API</h1>
     <h2>Icon Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="iconApi"></ApiTable>
   </div>
 </template>
 
@@ -18,28 +18,15 @@
 import { ASIcon } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import iconApi from "./apis/icon-api.json";
+
 import { Wrench16Regular } from "@vicons/fluent";
 export default {
   name: "Icon",
   components: { ASIcon, Code, ApiTable, Wrench16Regular },
   setup() {
-    const api = [
-      {
-        name: "color",
-        type: "string",
-        default: "primary",
-        option: "-",
-        desc: "颜色",
-      },
-      {
-        name: "size",
-        type: "string",
-        default: "1em",
-        option: "-",
-        desc: "尺寸",
-      },
-    ];
-    return { api };
+    return { iconApi };
   },
 };
 </script>

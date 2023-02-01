@@ -1,0 +1,16 @@
+[
+  {
+    "name": "title",
+    "type": "string",
+    "default": "-",
+    "option": "-",
+    "desc": "标签名"
+  },
+  {
+    "name": "value",
+    "type": "string,number",
+    "default": "-",
+    "option": "-",
+    "desc": "标签值"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "id",
+    "type": "string",
+    "default": "-",
+    "option": "-",
+    "desc": "标识符"
+  },
+  {
+    "name": "tag",
+    "type": "HTMLElementTagNameMap",
+    "default": "div",
+    "option": "-",
+    "desc": "标签名"
+  },
+  {
+    "name": "span",
+    "type": "string, number",
+    "default": "24",
+    "option": "[1-24]",
+    "desc": "所占列数"
+  },
+  {
+    "name": "offset",
+    "type": "string, number",
+    "default": "0",
+    "option": "-",
+    "desc": "偏移"
+  }
+]

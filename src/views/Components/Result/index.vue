@@ -32,7 +32,7 @@
     ></Code>
     <h1>API</h1>
     <h2>Result Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="resultApi"></ApiTable>
   </div>
 </template>
 
@@ -40,34 +40,14 @@
 import { ASResult } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import resultApi from "./apis/result-api.json";
+
 export default {
   name: "Result",
   components: { ASResult, Code, ApiTable },
   setup() {
-    const api = [
-      {
-        name: "type",
-        type: "string",
-        default: "-",
-        option: "'primary', 'success', 'warning', 'error', 'info'",
-        desc: "类型",
-      },
-      {
-        name: "title",
-        type: "string",
-        default: "-",
-        option: "-",
-        desc: "标题",
-      },
-      {
-        name: "subtitle",
-        type: "string",
-        default: "-",
-        option: "-",
-        desc: "副标题",
-      },
-    ];
-    return { api };
+    return { resultApi };
   },
 };
 </script>

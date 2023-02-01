@@ -54,7 +54,7 @@
     <Code code="<ASButton color='error'>Error</ASButton>"></Code>
     <h1>API</h1>
     <h2>Button Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="buttonApi"></ApiTable>
   </div>
 </template>
 
@@ -62,6 +62,9 @@
 import { ASButton } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import buttonApi from "./apis/button-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Button",
@@ -75,51 +78,7 @@ export default {
       router.push(url);
     }
 
-    const api = [
-      {
-        name: "type",
-        type: "string",
-        default: "'default'",
-        option: "'default', 'outlined', 'text', 'glass'",
-        desc: "按钮类型",
-      },
-      {
-        name: "size",
-        type: "string",
-        default: "'medium'",
-        option: "'mini', 'small', 'medium', 'large'",
-        desc: "按钮大小",
-      },
-      {
-        name: "color",
-        type: "string",
-        default: "'primary'",
-        option: "'primary', 'success', 'warning', 'error', 'info'",
-        desc: "按钮颜色",
-      },
-      {
-        name: "disabled",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "禁用按钮",
-      },
-      {
-        name: "block",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "独占一行",
-      },
-      {
-        name: "loading",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "加载状态",
-      },
-    ];
-    return { open, jump, api };
+    return { open, jump, buttonApi };
   },
 };
 </script>

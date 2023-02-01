@@ -1,0 +1,9 @@
+[
+  {
+    "name": "select",
+    "type": "string,number",
+    "default": "0",
+    "option": "",
+    "desc": "指定标签"
+  }
+]

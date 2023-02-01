@@ -11,7 +11,7 @@
 
     <h1>API</h1>
     <h2>Progress Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="progressApi"></ApiTable>
   </div>
 </template>
 
@@ -19,27 +19,14 @@
 import { ASProgress } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import progressApi from "./apis/progress-api.json";
+
 export default {
   name: "Progress",
   components: { ASProgress, Code, ApiTable },
   setup() {
-    const api = [
-      {
-        name: "value",
-        type: "number",
-        default: "-",
-        option: "-",
-        desc: "值",
-      },
-      {
-        name: "maxvalue",
-        type: "number",
-        default: "100",
-        option: "-",
-        desc: "最大值",
-      },
-    ];
-    return { api };
+    return { progressApi };
   },
 };
 </script>

@@ -20,7 +20,7 @@
 
     <h1>API</h1>
     <h2>Checkbox Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="checkboxApi"></ApiTable>
   </div>
 </template>
 
@@ -28,6 +28,9 @@
 import { ASCheckBox } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import checkboxApi from "./apis/checkbox-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Checkbox",
@@ -40,16 +43,8 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api = [
-      {
-        name: "",
-        type: "",
-        default: "",
-        option: "",
-        desc: "",
-      },
-    ];
-    return { open, jump, api };
+
+    return { open, jump, checkboxApi };
   },
 };
 </script>

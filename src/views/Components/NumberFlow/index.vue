@@ -15,7 +15,7 @@
     ></Code>
     <h1>API</h1>
     <h2>NumberFlow Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="numberFlowApi"></ApiTable>
   </div>
 </template>
 
@@ -23,41 +23,14 @@
 import { ASNumberFlow } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import numberFlowApi from "./apis/numberFlow-api.json";
+
 export default {
   name: "Progress",
   components: { ASNumberFlow, Code, ApiTable },
   setup() {
-    const api = [
-      {
-        name: "start",
-        type: "number",
-        default: "0",
-        option: "-",
-        desc: "起始数值",
-      },
-      {
-        name: "end",
-        type: "number",
-        default: "0",
-        option: "-",
-        desc: "最终数值",
-      },
-      {
-        name: "duration",
-        type: "number",
-        default: "2000",
-        option: "-",
-        desc: "持续时间（ms）",
-      },
-      {
-        name: "active",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "是否启用",
-      },
-    ];
-    return { api };
+    return { numberFlowApi };
   },
 };
 </script>

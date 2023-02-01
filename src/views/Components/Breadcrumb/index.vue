@@ -28,7 +28,7 @@
     ></Code>
     <h1>API</h1>
     <h2>Breadcrumb Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="breadcrumbApi"></ApiTable>
   </div>
 </template>
 
@@ -36,6 +36,9 @@
 import { ASBreadcrumb, ASBreadcrumbItem } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import breadcrumbApi from "./apis/breadcrumb-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Breadcrumb",
@@ -48,23 +51,7 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api = [
-      {
-        name: "disabled",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "禁用",
-      },
-      {
-        name: "separator",
-        type: "string",
-        default: ">",
-        option: "-",
-        desc: "自定义分隔符",
-      },
-    ];
-    return { open, jump, api };
+    return { open, jump, breadcrumbApi };
   },
 };
 </script>

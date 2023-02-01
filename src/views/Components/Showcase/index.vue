@@ -3,13 +3,13 @@
     <h1>橱窗 / Showcase</h1>
     <tip>用来在背景图片上写些内容</tip>
     <ASShowcase :src="img" height="700">
-      <p style="font-size:3rem;">ASoul Showcase</p>
+      <p style="font-size: 3rem">ASoul Showcase</p>
     </ASShowcase>
     <Code code="<ASShowcase :src='img'>...</ASShowcase>"></Code>
 
     <h1>API</h1>
     <h2>Showcase Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="showcaseApi"></ApiTable>
   </div>
 </template>
 
@@ -17,6 +17,9 @@
 import { ASShowcase } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import showcaseApi from "./apis/showcase-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Showcase",
@@ -30,23 +33,8 @@ export default {
       router.push(url);
     }
     const img = require("../../../assets/asoulall.png");
-    const api = [
-      {
-        name: "src",
-        type: "string",
-        default: "-",
-        option: "-",
-        desc: "图片路径",
-      },
-      {
-        name: "height",
-        type: "number",
-        default: "500",
-        option: "-",
-        desc: "橱窗高度",
-      },
-    ];
-    return { open, jump, api, img };
+
+    return { open, jump, showcaseApi, img };
   },
 };
 </script>

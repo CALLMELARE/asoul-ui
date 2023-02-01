@@ -16,7 +16,7 @@
     <Code code="<ASTextField value='Block' block></ASTextField>"></Code>
     <h1>API</h1>
     <h2>TextField Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="textFieldApi"></ApiTable>
   </div>
 </template>
 
@@ -24,34 +24,14 @@
 import { ASTextField } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import textFieldApi from "./apis/textField-api.json";
+
 export default {
   name: "TextField",
   components: { ASTextField, Code, ApiTable },
   setup() {
-    const api = [
-      {
-        name: "disabled",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "是否禁用",
-      },
-      {
-        name: "label",
-        type: "string",
-        default: "-",
-        option: "-",
-        desc: "标签",
-      },
-      {
-        name: "block",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "独占一行",
-      },
-    ];
-    return { api };
+    return { textFieldApi };
   },
 };
 </script>

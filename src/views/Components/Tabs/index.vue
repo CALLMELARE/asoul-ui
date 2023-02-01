@@ -16,9 +16,9 @@
 
     <h1>API</h1>
     <h2>Tab Props</h2>
-    <ApiTable :api="api1"></ApiTable>
+    <ApiTable :api="tabApi"></ApiTable>
     <h2>Tabs Props</h2>
-    <ApiTable :api="api2"></ApiTable>
+    <ApiTable :api="tabsApi"></ApiTable>
   </div>
 </template>
 
@@ -26,6 +26,10 @@
 import { ASTab, ASTabs } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import tabApi from "./apis/tab-api.json";
+import tabsApi from "./apis/tabs-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Tabs",
@@ -38,32 +42,8 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api1 = [
-      {
-        name: "title",
-        type: "string",
-        default: "-",
-        option: "-",
-        desc: "标签名",
-      },
-      {
-        name: "value",
-        type: "string,number",
-        default: "-",
-        option: "-",
-        desc: "标签值",
-      },
-    ];
-    const api2 = [
-      {
-        name: "select",
-        type: "string,number",
-        default: "0",
-        option: "",
-        desc: "指定标签",
-      },
-    ];
-    return { open, jump, api1, api2 };
+
+    return { open, jump, tabApi, tabsApi };
   },
 };
 </script>

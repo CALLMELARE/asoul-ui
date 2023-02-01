@@ -1,0 +1,16 @@
+[
+  {
+    "name": "src",
+    "type": "string",
+    "default": "-",
+    "option": "-",
+    "desc": "图片路径"
+  },
+  {
+    "name": "height",
+    "type": "number",
+    "default": "500",
+    "option": "-",
+    "desc": "橱窗高度"
+  }
+]

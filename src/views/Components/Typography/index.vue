@@ -10,11 +10,19 @@
     <Code code="<ASH3>三级标题</ASH3>"></Code>
     <ASTip>提示语</ASTip>
     <Code code="<ASTip>提示语</ASTip>"></Code>
-    <ASText indent>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</ASText>
+    <ASText indent
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.</ASText
+    >
     <Code code="<ASText indent>Lorem ipsum...</ASText>"></Code>
     <h1>API</h1>
     <h2>Typography Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="typographyApi"></ApiTable>
   </div>
 </template>
 
@@ -22,6 +30,9 @@
 import { ASH1, ASH2, ASH3, ASTip, ASText } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import typographyApi from "./apis/typography-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Typography",
@@ -34,16 +45,8 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api = [
-      {
-        name: "",
-        type: "",
-        default: "",
-        option: "",
-        desc: "",
-      },
-    ];
-    return { open, jump, api };
+
+    return { open, jump, typographyApi };
   },
 };
 </script>

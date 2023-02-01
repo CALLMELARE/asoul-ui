@@ -7,7 +7,7 @@
 
     <h1>API</h1>
     <h2>Avatar Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="avatarApi"></ApiTable>
   </div>
 </template>
 
@@ -15,6 +15,9 @@
 import {} from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import avatarApi from "./apis/avatar-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Avatar",
@@ -27,16 +30,8 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api = [
-      {
-        name: "",
-        type: "",
-        default: "",
-        option: "",
-        desc: "",
-      },
-    ];
-    return { open, jump, api };
+
+    return { open, jump, avatarApi };
   },
 };
 </script>

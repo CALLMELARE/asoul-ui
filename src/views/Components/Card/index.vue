@@ -16,7 +16,7 @@
     <Code code="<ASCard inverse>反转了，是乃琳应援色</ASCard>"></Code>
     <h1>API</h1>
     <h2>Card Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="cardApi"></ApiTable>
   </div>
 </template>
 
@@ -24,6 +24,9 @@
 import { ASCard } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import cardApi from "./apis/card-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Card",
@@ -36,30 +39,8 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api = [
-      {
-        name: "hoverable",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "悬浮",
-      },
-      {
-        name: "inverse",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "反色",
-      },
-      {
-        name: "shadow",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "阴影",
-      },
-    ];
-    return { open, jump, api };
+
+    return { open, jump, cardApi };
   },
 };
 </script>

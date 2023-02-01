@@ -31,7 +31,7 @@
     ></Code>
     <h1>API</h1>
     <h2>Alert Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="alertApi"></ApiTable>
   </div>
 </template>
 
@@ -39,34 +39,14 @@
 import { ASAlert } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import alertApi from "./apis/alert-api.json";
+
 export default {
   name: "Alert",
   components: { ASAlert, Code, ApiTable },
   setup() {
-    const api = [
-      {
-        name: "border",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "边框",
-      },
-      {
-        name: "outlined",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "外边框",
-      },
-      {
-        name: "type",
-        type: "string",
-        default: "'primary'",
-        option: "'primary', 'success', 'warning', 'error', 'info'",
-        desc: "信息类型",
-      },
-    ];
-    return { api };
+    return { alertApi };
   },
 };
 </script>

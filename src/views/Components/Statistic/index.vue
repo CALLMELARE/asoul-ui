@@ -14,7 +14,7 @@
     ></Code>
     <h1>API</h1>
     <h2>Statistic Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="statisticApi"></ApiTable>
   </div>
 </template>
 
@@ -22,6 +22,9 @@
 import { ASStatistic } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import statisticApi from "./apis/statistic-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Statistic",
@@ -34,28 +37,8 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api = [
-      {
-        name: "label",
-        type: "string",
-        default: "-",
-        option: "-",
-        desc: "名称",
-      },      {
-        name: "value",
-        type: "string",
-        default: "-",
-        option: "-",
-        desc: "要展示的数字",
-      },      {
-        name: "separate",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "使用千分位分隔符",
-      },
-    ];
-    return { open, jump, api };
+
+    return { open, jump, statisticApi };
   },
 };
 </script>

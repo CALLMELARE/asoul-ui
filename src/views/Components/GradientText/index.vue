@@ -14,7 +14,7 @@
     <Code code="<ASGradientText type='error'>Error</ASGradientText>"></Code>
     <h1>API</h1>
     <h2>GradientText Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="gradientTextApi"></ApiTable>
   </div>
 </template>
 
@@ -22,6 +22,9 @@
 import { ASGradientText } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import gradientTextApi from "./apis/gradientText-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "GradientText",
@@ -34,16 +37,8 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api = [
-      {
-        name: "type",
-        type: "string",
-        default: "primary",
-        option: "'primary', 'success', 'warning', 'error'",
-        desc: "类型",
-      },
-    ];
-    return { open, jump, api };
+
+    return { open, jump, gradientTextApi };
   },
 };
 </script>

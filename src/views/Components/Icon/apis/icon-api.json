@@ -1,0 +1,16 @@
+[
+  {
+    "name": "color",
+    "type": "string",
+    "default": "primary",
+    "option": "-",
+    "desc": "颜色"
+  },
+  {
+    "name": "size",
+    "type": "string",
+    "default": "1em",
+    "option": "-",
+    "desc": "尺寸"
+  }
+]

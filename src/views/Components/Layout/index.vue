@@ -16,9 +16,9 @@
     </ASRow>
     <h1>API</h1>
     <h2>Row Props</h2>
-    <ApiTable :api="api1"></ApiTable>
+    <ApiTable :api="colApi"></ApiTable>
     <h2>Col Props</h2>
-    <ApiTable :api="api2"></ApiTable>
+    <ApiTable :api="rowApi"></ApiTable>
   </div>
 </template>
 
@@ -26,71 +26,15 @@
 import { ASRow, ASCol } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import colApi from "./apis/col-api.json";
+import rowApi from "./apis/row-api.json";
+
 export default {
   name: "Layout",
   components: { ASRow, ASCol, Code, ApiTable },
   setup() {
-    const api1 = [
-      {
-        name: "align",
-        type: "string",
-        default: "'top'",
-        option: "'top', 'middle', 'bottom'",
-        desc: "垂直对齐",
-      },
-      {
-        name: "gutter",
-        type: "number, string",
-        default: "0",
-        option: "-",
-        desc: "间隔",
-      },
-      {
-        name: "justify",
-        type: "string",
-        default: "'start'",
-        option: "'start', 'end', 'center', 'space-around', 'space-between'",
-        desc: "水平对齐",
-      },
-      {
-        name: "tag",
-        type: "HTMLElementTagNameMap",
-        default: "div",
-        option: "-",
-        desc: "标签名",
-      },
-    ];
-    const api2 = [
-      {
-        name: "id",
-        type: "string",
-        default: "-",
-        option: "-",
-        desc: "标识符",
-      },
-      {
-        name: "tag",
-        type: "HTMLElementTagNameMap",
-        default: "div",
-        option: "-",
-        desc: "标签名",
-      },
-      {
-        name: "span",
-        type: "string, number",
-        default: "24",
-        option: "[1-24]",
-        desc: "所占列数",
-      },
-      {
-        name: "offset",
-        type: "string, number",
-        default: "0",
-        option: "-",
-        desc: "偏移",
-      },
-    ];
-    return { api1, api2 };
+    return { colApi, rowApi };
   },
 };
 </script>

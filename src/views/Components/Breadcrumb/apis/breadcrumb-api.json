@@ -1,0 +1,16 @@
+[
+  {
+    "name": "disabled",
+    "type": "boolean",
+    "default": "false",
+    "option": "-",
+    "desc": "禁用"
+  },
+  {
+    "name": "separator",
+    "type": "string",
+    "default": ">",
+    "option": "-",
+    "desc": "自定义分隔符"
+  }
+]

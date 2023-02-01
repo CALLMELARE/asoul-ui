@@ -35,7 +35,7 @@
     <Code code="<ASTag size='large'>Large</ASTag>"></Code>
     <h1>API</h1>
     <h2>Tag Props</h2>
-    <ApiTable :api="api"></ApiTable>
+    <ApiTable :api="tagApi"></ApiTable>
   </div>
 </template>
 
@@ -43,6 +43,9 @@
 import { ASTag } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
+
+import tagApi from "./apis/tag-api.json";
+
 import { useRouter } from "vue-router";
 export default {
   name: "Tag",
@@ -55,51 +58,8 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const api = [
-      {
-        name: "disabled",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "开启禁用",
-      },
-      {
-        name: "rounded",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "变为胶囊形",
-      },
-      {
-        name: "outlined",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "变为线框",
-      },
-      {
-        name: "invert",
-        type: "boolean",
-        default: "false",
-        option: "-",
-        desc: "开启反色",
-      },
-      {
-        name: "type",
-        type: "string",
-        default: "primary",
-        option: "'primary', 'success', 'warning', 'error'",
-        desc: "类型",
-      },
-      {
-        name: "size",
-        type: "string",
-        default: "'medium'",
-        option: "'mini', 'small', 'medium', 'large'",
-        desc: "尺寸",
-      },
-    ];
-    return { open, jump, api };
+
+    return { open, jump, tagApi };
   },
 };
 </script>
