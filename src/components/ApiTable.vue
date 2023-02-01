@@ -72,8 +72,18 @@ th {
   text-align: center;
 }
 
-.api-table td,
 .api-table th {
+  color: var(--invert_color);
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0.5em 1em;
+  text-align: center;
+  font-weight: normal;
+}
+
+.api-table td {
   color: var(--secondary_color);
   border-width: 0 0 0 1px;
   font-size: inherit;
