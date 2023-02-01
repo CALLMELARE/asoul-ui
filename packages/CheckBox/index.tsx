@@ -1,11 +1,10 @@
-import { computed, ref, watchEffect, PropType } from "vue";
-import { useProvider } from "../utils/useHooks";
+import { computed, ref, watchEffect, PropType, inject } from "vue";
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
 import {
   READONLY_CHECKBOX_KEY,
-  CheckboxGroupProvide,
   CheckboxEvent,
+  CheckboxGroupProvide,
 } from "../CheckboxGroup";
 import "./checkBox.scss";
 
@@ -29,9 +28,8 @@ export default createComponent({
     const isChecked = ref<boolean>(props.modelValue);
     const selfSize = ref<NormalSizes>(props.size);
     const isDisabled = ref<boolean>(props.disabled);
-    const { context } = useProvider<CheckboxGroupProvide>(
-      READONLY_CHECKBOX_KEY
-    );
+
+    const context = inject<CheckboxGroupProvide>(READONLY_CHECKBOX_KEY);
 
     const setCurrentState = () => {
       const { modelValue } = context!.props;
@@ -107,9 +105,9 @@ export default createComponent({
         ></input>
         <span class="asoul-text_inner">
           <span
-            class={`asoul-check_box-point ${isDisabled.value ? "disabled" : ""} ${
-              isChecked.value ? "active" : ""
-            }`}
+            class={`asoul-check_box-point ${
+              isDisabled.value ? "disabled" : ""
+            } ${isChecked.value ? "active" : ""}`}
           />
           {slots.default?.()}
         </span>
