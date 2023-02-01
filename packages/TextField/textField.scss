@@ -26,7 +26,7 @@ $font: $medium;
       .asoul-text-field-input {
         background-color: var(--invert_color);
         color: var(--primary_color);
-        padding: $font * 1.2 5px $font / 2 5px;
+        padding: $font * 1.2 5px calc($font / 2) 5px;
         font-size: $font;
         line-height: $font;
         outline: none;

@@ -88,7 +88,7 @@ export default {
     function jump(url: any) {
       router.push(url);
     }
-    const version = pkg.dependencies["asoul-ui"]?.replace("^", "") || "Develop";
+    const version = pkg.dependencies["asoul-ui"]?.replace("^", "") || "Dev";
     function updateTheme(mode: Boolean) {
       useTheme("theme-dark");
     }

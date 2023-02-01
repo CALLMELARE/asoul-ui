@@ -7,6 +7,7 @@ specifiers:
   '@vicons/material': ^0.12.0
   '@vitejs/plugin-vue': ^4.0.0
   '@vitejs/plugin-vue-jsx': ^3.0.0
+  asoul-ui: ^0.1.30
   highlight.js: ^11.7.0
   sass: ^1.51.0
   typescript: ^4.5.4
@@ -21,6 +22,7 @@ dependencies:
   '@vicons/fluent': 0.12.0
   '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
   '@vitejs/plugin-vue-jsx': 3.0.0_vite@4.0.4+vue@3.2.45
+  asoul-ui: 0.1.30_vue@3.2.45
   highlight.js: 11.7.0
   sass: 1.58.0
   vite: 4.0.4_f5vcjb3akvjdur4ffzogu2hewu
@@ -75,6 +77,8 @@ packages:
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@babel/generator/7.20.14:
@@ -122,6 +126,8 @@ packages:
       '@babel/helper-replace-supers': 7.20.7
       '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
       '@babel/helper-split-export-declaration': 7.18.6
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@babel/helper-environment-visitor/7.18.9:
@@ -170,6 +176,8 @@ packages:
       '@babel/template': 7.20.7
       '@babel/traverse': 7.20.13
       '@babel/types': 7.20.7
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@babel/helper-optimise-call-expression/7.18.6:
@@ -194,6 +202,8 @@ packages:
       '@babel/template': 7.20.7
       '@babel/traverse': 7.20.13
       '@babel/types': 7.20.7
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@babel/helper-simple-access/7.20.2:
@@ -237,6 +247,8 @@ packages:
       '@babel/template': 7.20.7
       '@babel/traverse': 7.20.13
       '@babel/types': 7.20.7
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@babel/highlight/7.18.6:
@@ -285,6 +297,8 @@ packages:
       '@babel/helper-create-class-features-plugin': 7.20.12_@babel+core@7.20.12
       '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-typescript': 7.20.0_@babel+core@7.20.12
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@babel/template/7.20.7:
@@ -310,6 +324,8 @@ packages:
       '@babel/types': 7.20.7
       debug: 4.3.4
       globals: 11.12.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@babel/types/7.20.7:
@@ -474,6 +490,14 @@ packages:
     dev: false
     optional: true
 
+  /@fect-ui/vue-hooks/0.0.3_vue@3.2.45:
+    resolution: {integrity: sha512-1JJvg5VDvWrc90cD1UDL6mt9AQryYXubJwkXvfV69JNeVKoKeVHPIKMySWArJJd9OIEEgccgkf+0EcWcfW8Qbg==}
+    peerDependencies:
+      vue: ^3.0.11
+    dependencies:
+      vue: 3.2.45
+    dev: false
+
   /@fect-ui/vue-hooks/1.3.1_vue@3.2.45:
     resolution: {integrity: sha512-kSgRzDYBq0VYuNKjqsSRlphrZBYC9kfk4lBzt+s78M0U5y0tKl1ArTDRRjHgxhYk13AqgHCDCYVXVkVfTZVxsA==}
     peerDependencies:
@@ -567,7 +591,6 @@ packages:
 
   /@vicons/material/0.12.0:
     resolution: {integrity: sha512-chv1CYAl8P32P3Ycwgd5+vw/OFNc2mtkKdb1Rw4T5IJmKy6GVDsoUKV3N2l208HATn7CCQphZtuPDdsm7K2kmA==}
-    dev: true
 
   /@vitejs/plugin-vue-jsx/3.0.0_vite@4.0.4+vue@3.2.45:
     resolution: {integrity: sha512-vurkuzgac5SYuxd2HUZqAFAWGTF10diKBwJNbCvnWijNZfXd+7jMtqjPFbGt7idOJUn584fP1Ar9j/GN2jQ3Ew==}
@@ -581,6 +604,8 @@ packages:
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.20.12
       vite: 4.0.4_f5vcjb3akvjdur4ffzogu2hewu
       vue: 3.2.45
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@vitejs/plugin-vue/4.0.0_vite@4.0.4+vue@3.2.45:
@@ -642,6 +667,7 @@ packages:
       svg-tags: 1.0.0
     transitivePeerDependencies:
       - '@babel/core'
+      - supports-color
     dev: false
 
   /@vue/compiler-core/3.2.45:
@@ -739,6 +765,16 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /asoul-ui/0.1.30_vue@3.2.45:
+    resolution: {integrity: sha512-N4hEGdbyYp+/SGbA+9qgwdjqhsypbpAroiTQGMuwscu6/uOM7aDECuMPJk6FK2RQm4So7YoCk+SmIMUMVeLUdQ==}
+    hasBin: true
+    dependencies:
+      '@fect-ui/vue-hooks': 0.0.3_vue@3.2.45
+      '@vicons/material': 0.12.0
+    transitivePeerDependencies:
+      - vue
+    dev: false
+
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
@@ -816,6 +852,11 @@ packages:
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.1.2
     dev: false
