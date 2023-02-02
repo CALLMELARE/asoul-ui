@@ -17,8 +17,8 @@ import FooterTitle from "./FooterTitle";
 import GradientText from "./GradientText";
 import { H1, H2, H3, Tip, Text } from "./Typography";
 import Icon from "./Icon";
-import Modal from "./Modal"
-import NumberFlow from './NumberFlow'
+import Modal from "./Modal";
+import NumberFlow from "./NumberFlow";
 import Progress from "./Progress";
 import Radio from "./Radio";
 import RadioGroup from "./RadioGroup";
@@ -30,7 +30,6 @@ import Tab from "./Tab";
 import Tabs from "./Tabs";
 import Tag from "./Tag";
 import TextField from "./TextField";
-// import Visual from "./Visual";
 
 const components = [
   Alert,
@@ -66,7 +65,6 @@ const components = [
   Text,
   TextField,
   Tip,
-  // Visual
 ];
 const install = (app: App) => {
   components.forEach((c: any) => {

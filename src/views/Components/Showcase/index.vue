@@ -22,7 +22,7 @@ import showcaseApi from "./apis/showcase-api.json";
 
 import { useRouter } from "vue-router";
 
-import img from "assets/asoulall.png";
+import img from "/asoulall.png";
 
 export default {
   name: "Showcase",

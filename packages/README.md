@@ -1,12 +1,12 @@
 # ASoul-UI
 
+Vue3 UI library , for ASoul
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/CALLMELARE/asoul-ui?style=flat-square)
 ![npm](https://img.shields.io/npm/v/asoul-ui?style=flat-square)
 ![npm](https://img.shields.io/npm/dm/asoul-ui?style=flat-square)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CALLMELARE/asoul-ui?style=flat-square)
 ![NPM](https://img.shields.io/npm/l/asoul-ui?style=flat-square)
-
-> Vue3 UI library , for ASoul
 
 ### Get Started
 
