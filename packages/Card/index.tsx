@@ -1,4 +1,5 @@
 import { computed, toRefs } from "vue";
+import classNames from "classnames";
 import { createNameSpace } from "../utils";
 import "./card.scss";
 
@@ -11,15 +12,14 @@ export default createComponent({
     inverse: Boolean,
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names = [];
-      props.shadow && names.push("shadow");
-      props.hoverable && names.push("hoverable");
-      props.inverse && names.push("inverse");
-      return names.join(" ");
-    });
     return () => (
-      <div class={`asoul-card ${setClass.value}`}>
+      <div
+        class={`asoul-card ${classNames({
+          shadow: props.shadow,
+          hoverable: props.hoverable,
+          inverse: props.inverse,
+        })}`}
+      >
         <div class={"asoul-card-content"}>{slots.default?.()}</div>
       </div>
     );

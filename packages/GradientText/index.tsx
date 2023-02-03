@@ -1,5 +1,6 @@
-import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
 import { computed, PropType, toRefs } from "vue";
+import classNames from "classnames";
+import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
 import "../GradientText/gradientText.scss";
 
@@ -25,15 +26,8 @@ export default createComponent({
     },
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names = [];
-      props.type && names.push(props.type);
-      return names.join(" ");
-    });
     return () => (
-      <div
-        class={`asoul-gradient-text ${setClass.value}`}
-      >
+      <div class={`asoul-gradient-text ${classNames(props.type)}`}>
         {slots.default?.()}
       </div>
     );

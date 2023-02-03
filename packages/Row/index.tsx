@@ -1,5 +1,6 @@
-import { AlignTypes, JustifyTypes } from "../utils/theme/propTypes";
 import { computed, PropType, provide } from "vue";
+import classNames from "classnames";
+import { AlignTypes, JustifyTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
 import "./row.scss";
 
@@ -29,13 +30,6 @@ export default createComponent({
   setup(props, { attrs, slots, emit }) {
     provide(READONLY_LAYOUT_KEY, { gutter: props.gutter });
 
-    const setClass = computed(() => {
-      const style: string[] = [];
-      props.justify && style.push(`asoul-justify-${props.justify}`);
-      props.align && style.push(`asoul-align-${props.align}`);
-      return style.join(" ");
-    });
-
     const setStyle = computed(() => {
       if (props.gutter) {
         const half = Number(props.gutter) / 2;
@@ -45,7 +39,13 @@ export default createComponent({
     });
 
     return () => (
-      <div class={`asoul-row ${setClass.value}`} style={`${setStyle.value}`}>
+      <div
+        class={`asoul-row ${classNames({
+          [`asoul-justify-${props.justify}`]: props.justify,
+          [`asoul-align-${props.align}`]: props.align,
+        })}`}
+        style={`${setStyle.value}`}
+      >
         {slots.default?.()}
       </div>
     );

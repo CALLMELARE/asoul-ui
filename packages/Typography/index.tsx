@@ -1,7 +1,8 @@
+import { computed, PropType } from "vue";
+import classNames from "classnames";
+import { NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
 import "./typography.scss";
-import { computed, PropType } from "vue";
-import { NormalTypes } from "../utils/theme/propTypes";
 
 const [createComponent] = createNameSpace("GradientText");
 
@@ -57,18 +58,21 @@ export const Text = createComponent({
     },
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names: string[] = [];
-      props.indent && names.push("indent");
-      props.italic && names.push("italic");
-      props.underline && names.push("underline");
-      props.delete && names.push("delete");
-      props.code && names.push("code");
-      props.type && names.push(props.type);
-      return names.join(" ");
-    });
     return () => (
-      <div class={`asoul-text ${setClass.value}`}>{slots.default?.()}</div>
+      <div
+        class={`asoul-text ${classNames(
+          {
+            indent: props.indent,
+            italic: props.italic,
+            underline: props.underline,
+            delete: props.delete,
+            code: props.code,
+          },
+          props.type
+        )}`}
+      >
+        {slots.default?.()}
+      </div>
     );
   },
 });

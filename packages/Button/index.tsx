@@ -1,4 +1,5 @@
 import { computed, ref, PropType } from "vue";
+import classNames from "classnames";
 import { createNameSpace } from "../utils";
 import {
   ButtonTypes,
@@ -37,18 +38,6 @@ export default createComponent({
     const drapX = ref<number>(0);
     const drapY = ref<number>(0);
 
-    const setClass = computed(() => {
-      const names: string[] = [];
-      props.loading && names.push("loading");
-      props.disabled && names.push("disabled");
-      props.block && names.push("block");
-      props.auto && names.push("auto");
-      props.type && names.push(props.type);
-      props.size && names.push(props.size);
-      props.color && names.push(props.color);
-      return names.join(" ");
-    });
-
     const clickHandler = (e: MouseEvent) => {
       if (props.disabled || props.loading) return;
       const showDrip = true;
@@ -72,7 +61,17 @@ export default createComponent({
     return () => (
       <button
         disabled={props.disabled}
-        class={`asoul-btn ${setClass.value}`}
+        class={`asoul-btn ${classNames(
+          {
+            loading: props.loading,
+            disabled: props.disabled,
+            block: props.block,
+            auto: props.auto,
+          },
+          props.type,
+          props.size,
+          props.color
+        )}`}
         ref={buttonRef}
         onClick={clickHandler}
       >

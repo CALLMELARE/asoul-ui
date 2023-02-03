@@ -1,5 +1,6 @@
-import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
 import { computed, PropType, toRefs } from "vue";
+import classNames from "classnames";
+import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
 import "./tag.scss";
 
@@ -27,24 +28,25 @@ export default createComponent({
       type: Boolean,
       default: false,
     },
-    invert:{
+    inverse: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names = [];
-      props.size && names.push(props.size);
-      props.type && names.push(props.type);
-      props.disabled && names.push("disabled");
-      props.rounded && names.push("rounded");
-      props.outlined && names.push("outlined");
-      props.invert && names.push("invert");
-      return names.join(" ");
-    });
     return () => (
-      <div class={`asoul-tag ${setClass.value}`}>
+      <div
+        class={`asoul-tag ${classNames(
+          {
+            disabled: props.disabled,
+            rounded: props.rounded,
+            outlined: props.outlined,
+            inverse: props.inverse,
+          },
+          props.size,
+          props.type
+        )}`}
+      >
         {slots.default?.()}
       </div>
     );

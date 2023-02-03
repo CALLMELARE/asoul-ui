@@ -21,7 +21,7 @@
     "desc": "变为线框"
   },
   {
-    "name": "invert",
+    "name": "inverse",
     "type": "boolean",
     "default": "false",
     "option": "-",

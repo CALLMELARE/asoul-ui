@@ -1,4 +1,5 @@
 import { computed, CSSProperties, PropType, ref, toRefs } from "vue";
+import classNames from "classnames";
 import { createNameSpace } from "../utils";
 import "./col.scss";
 
@@ -36,12 +37,6 @@ export default createComponent({
   },
   setup(props, { attrs, slots, emit }) {
     const gutter = ref<string | number>(0);
-    const setClass = computed(() => {
-      const style: string[] = [];
-      props.span && style.push(`asoul-col-${props.span}`);
-      props.offset && style.push(`asoul-offset-${props.offset}`);
-      return style.join(" ");
-    });
     const setStyle = computed(() => {
       if (gutter.value) {
         const half = Number(gutter.value) / 2;
@@ -50,7 +45,13 @@ export default createComponent({
       return "";
     });
     return () => (
-      <tag style={setStyle.value} class={`asoul-col ${setClass.value}`}>
+      <tag
+        style={setStyle.value}
+        class={`asoul-col ${classNames(
+          [`asoul-col-${props.span}`],
+          [`asoul-offset-${props.offset}`]
+        )}`}
+      >
         {slots.default?.()}
       </tag>
     );

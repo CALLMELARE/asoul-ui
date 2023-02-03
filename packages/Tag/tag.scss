@@ -25,7 +25,7 @@
     border-color: var(--secondary_color_30);
     background-color: var(--secondary_color_90);
   }
-  &.invert {
+  &.inverse {
     color: var(--invert_color);
     border-color: var(--theme_color);
     background-color: var(--theme_color);
@@ -34,7 +34,7 @@
     color: $successDark;
     border-color: transparentize($successDark, 0.3);
     background-color: transparentize($successDark, 0.9);
-    &.invert {
+    &.inverse {
       border-color: $successDark;
       background-color: $successDark;
     }
@@ -43,7 +43,7 @@
     color: $warningDark;
     border-color: transparentize($warningDark, 0.3);
     background-color: transparentize($warningDark, 0.9);
-    &.invert {
+    &.inverse {
       border-color: $warningDark;
       background-color: $warningDark;
     }
@@ -52,7 +52,7 @@
     color: $errorDark;
     border-color: transparentize($errorDark, 0.3);
     background-color: transparentize($errorDark, 0.9);
-    &.invert {
+    &.inverse {
       border-color: $errorDark;
       background-color: $errorDark;
     }

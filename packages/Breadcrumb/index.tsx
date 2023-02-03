@@ -1,4 +1,5 @@
 import { computed, PropType, provide } from "vue";
+import classNames from "classnames";
 import { NormalSizes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
 import "./breadcrumb.scss";
@@ -32,13 +33,9 @@ export default createComponent({
       separator: props.separator,
       disabled: props.disabled,
     });
-    const setClass = computed(() => {
-      const names = [];
-      props.size && names.push(props.size);
-      return names.join(" ");
-    });
+
     return () => (
-      <nav class={`asoul-breadcrumb ${setClass.value}`}>
+      <nav class={`asoul-breadcrumb ${classNames(props.size)}`}>
         {slots.default?.()}
       </nav>
     );

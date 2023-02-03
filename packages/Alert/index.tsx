@@ -1,5 +1,6 @@
-import { NormalTypes } from "../utils/theme/propTypes";
 import { computed, PropType, toRefs } from "vue";
+import classNames from "classnames";
+import { NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
 import "./alert.scss";
 
@@ -19,15 +20,13 @@ export default createComponent({
     },
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names = [];
-      props.type && names.push(props.type);
-      props.outlined && names.push("outlined");
-      props.border && names.push("border");
-      return names.join(" ");
-    });
     return () => (
-      <div class={`asoul-alert ${setClass.value}`}>
+      <div
+        class={`asoul-alert ${classNames(props.type, {
+          outlined: props.outlined,
+          border: props.border,
+        })}`}
+      >
         <div class={`asoul-alert-border`} />
         <div class={`asoul-alert-wrapper`}>{slots.default?.()}</div>
       </div>
