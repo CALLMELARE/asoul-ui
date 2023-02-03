@@ -7,7 +7,7 @@
   width: auto;
   cursor: pointer;
   user-select: none;
-  .asoul-text_inner {
+  .asoul-check_box-text_inner {
     color: var(--primary_color);
   }
   &.mini {
@@ -46,7 +46,7 @@
     height: $size;
     line-height: $size;
 
-    .asoul-text_inner {
+    .asoul-check_box-text_inner {
       font-size: $size;
       padding-left: $size * 0.3;
 
@@ -77,7 +77,7 @@
     height: $size;
     line-height: $size;
 
-    .asoul-text_inner {
+    .asoul-check_box-text_inner {
       font-size: $size;
       padding-left: $size * 0.3;
 
@@ -109,7 +109,7 @@
     line-height: $size;
     font-size: $size;
 
-    .asoul-text_inner {
+    .asoul-check_box-text_inner {
       font-size: $size;
       line-height: $size;
       padding-left: $size * 0.3;
@@ -173,7 +173,7 @@
     }
   }
 
-  .asoul-text_inner {
+  .asoul-check_box-text_inner {
     display: inline-flex;
     align-items: center;
   }
@@ -201,7 +201,7 @@
       background-color: var(--sub_color);
     }
 
-    .asoul-text_inner {
+    .asoul-check_box-text_inner {
       color: var(--sub_color);
     }
   }
