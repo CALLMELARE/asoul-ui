@@ -1,7 +1,10 @@
 import { computed, toRefs } from "vue";
 import classNames from "classnames";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./card.scss";
+
+export const CLS_PREFIX = `${prefix}-card`;
 
 const [createComponent] = createNameSpace("Card");
 
@@ -14,13 +17,13 @@ export default createComponent({
   setup(props, { attrs, slots, emit }) {
     return () => (
       <div
-        class={`asoul-card ${classNames({
+        class={`${CLS_PREFIX} ${classNames({
           shadow: props.shadow,
           hoverable: props.hoverable,
           inverse: props.inverse,
         })}`}
       >
-        <div class={"asoul-card-content"}>{slots.default?.()}</div>
+        <div class={`${CLS_PREFIX}-content`}>{slots.default?.()}</div>
       </div>
     );
   },

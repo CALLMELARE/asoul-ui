@@ -1,6 +1,6 @@
 @import "../utils/styles/mixin.scss";
 
-.asoul-numberflow {
+.asoul-number_flow {
   color: var(--primary_color);
   display: inline-flex;
   text-decoration: none;
@@ -29,7 +29,7 @@
   }
 }
 
-.asoul-numberflow {
+.asoul-number_flow {
   &.primary {
     color: var(--theme_color);
   }

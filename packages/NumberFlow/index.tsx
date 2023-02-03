@@ -1,7 +1,10 @@
 import { computed, onMounted, watchEffect, ref } from "vue";
 import { createNameSpace } from "../utils";
-import "./numberFlow.scss";
+import { prefix } from "../utils/core";
 import format from "../utils/format";
+import "./numberFlow.scss";
+
+export const CLS_PREFIX = `${prefix}-number_flow`;
 
 const [createComponent] = createNameSpace("NumberFlow");
 
@@ -98,7 +101,7 @@ export default createComponent({
     });
 
     return () => (
-      <span class={`asoul-numberflow`}>
+      <span class={`${CLS_PREFIX}`}>
         {format.round(value.value, props.precision)}
       </span>
     );

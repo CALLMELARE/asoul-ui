@@ -2,7 +2,10 @@ import { computed, PropType, reactive, ref } from "vue";
 import classNames from "classnames";
 import { NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./statistic.scss";
+
+export const CLS_PREFIX = `${prefix}-statistic`;
 
 const [createComponent] = createNameSpace("Statistic");
 
@@ -41,9 +44,9 @@ export default createComponent({
     const val = ref(props.value);
     const label = ref(props.label);
     return () => (
-      <div class={`asoul-statistic ${classNames(props.type)}`}>
-        <div class="asoul-statistic-label">{label.value}</div>
-        <div class="asoul-statistic-content">{styledStat(val.value)}</div>
+      <div class={`${CLS_PREFIX} ${classNames(props.type)}`}>
+        <div class={`${CLS_PREFIX}-label`}>{label.value}</div>
+        <div class={`${CLS_PREFIX}-content`}>{styledStat(val.value)}</div>
       </div>
     );
   },

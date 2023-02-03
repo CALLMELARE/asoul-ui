@@ -1,12 +1,13 @@
 import { computed, toRefs } from "vue";
 import { createNameSpace } from "../utils";
-import "./footerList.scss";
+import { CLS_PREFIX } from "./";
+import "./footer.scss";
 
 const [createComponent] = createNameSpace("FooterList");
 
 export default createComponent({
   props: {},
   setup(props, { attrs, slots, emit }) {
-    return () => <div class="asoul-footer-list">{slots.default?.()}</div>;
+    return () => <div class={`${CLS_PREFIX}-list`}>{slots.default?.()}</div>;
   },
 });

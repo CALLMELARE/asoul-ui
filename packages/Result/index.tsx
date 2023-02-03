@@ -1,7 +1,10 @@
-import { NormalTypes } from "../utils/theme/propTypes";
 import { computed, toRefs, PropType } from "vue";
+import { NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./result.scss";
+
+export const CLS_PREFIX = `${prefix}-result`;
 
 const [createComponent] = createNameSpace("Result");
 
@@ -29,10 +32,10 @@ export default createComponent({
     };
 
     return () => (
-      <div class={`asoul-result`}>
-        <div class={`asoul-result-icon ${props.type}`}>{renderIcon()}</div>
-        <div class={`asoul-result-title`}>{props.title}</div>
-        <div class={`asoul-result-subtitle`}>{props.subtitle}</div>
+      <div class={`${CLS_PREFIX}`}>
+        <div class={`${CLS_PREFIX}-icon ${props.type}`}>{renderIcon()}</div>
+        <div class={`${CLS_PREFIX}-title`}>{props.title}</div>
+        <div class={`${CLS_PREFIX}-subtitle`}>{props.subtitle}</div>
         {slots.default?.()}
       </div>
     );

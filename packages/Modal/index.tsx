@@ -1,6 +1,9 @@
 import { createNameSpace } from "../utils";
-import "./modal.scss";
+import { prefix } from "../utils/core";
 import { ASIcon, ASButton } from "../";
+import "./modal.scss";
+
+export const CLS_PREFIX = `${prefix}-modal`;
 
 const [createComponent] = createNameSpace("Modal");
 
@@ -17,15 +20,15 @@ export default createComponent({
       emit("click", false);
     };
     return () => (
-      <div class={`asoul-modal-mask ${props.show ? "" : "hide"}`}>
-        <div class={`asoul-modal`}>
-          <div class="asoul-modal-header">
+      <div class={`${CLS_PREFIX}-mask ${props.show ? "" : "hide"}`}>
+        <div class={`${CLS_PREFIX}`}>
+          <div class={`${CLS_PREFIX}-header`}>
             <span>{slots.header?.()}</span>
             <span>
               {slots.header_extra?.()}
               <ASButton
                 onClick={handleClose}
-                class="asoul-modal-close"
+                class={`${CLS_PREFIX}-close`}
                 type="text"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -37,8 +40,8 @@ export default createComponent({
               </ASButton>
             </span>
           </div>
-          <div class="asoul-modal-content">{slots.default?.()}</div>
-          <div class="asoul-modal-footer">{slots.footer?.()}</div>
+          <div class={`${CLS_PREFIX}-content`}>{slots.default?.()}</div>
+          <div class={`${CLS_PREFIX}-footer`}>{slots.footer?.()}</div>
         </div>
       </div>
     );

@@ -2,7 +2,10 @@ import { computed, PropType, toRefs } from "vue";
 import classNames from "classnames";
 import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
-import "../GradientText/gradientText.scss";
+import { prefix } from "../utils/core";
+import "./gradientText.scss";
+
+export const CLS_PREFIX = `${prefix}-gradient_text`;
 
 const [createComponent] = createNameSpace("GradientText");
 
@@ -27,7 +30,7 @@ export default createComponent({
   },
   setup(props, { attrs, slots, emit }) {
     return () => (
-      <div class={`asoul-gradient-text ${classNames(props.type)}`}>
+      <div class={`${CLS_PREFIX} ${classNames(props.type)}`}>
         {slots.default?.()}
       </div>
     );

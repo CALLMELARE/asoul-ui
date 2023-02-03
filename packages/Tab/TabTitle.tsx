@@ -1,6 +1,7 @@
 import { computed, defineComponent } from "vue";
+import { CLS_PREFIX } from "./";
 
-import "./tabTitle.scss";
+import "./tab.scss";
 
 export type TabTitleEmit = {
   title: string;
@@ -40,11 +41,11 @@ export default defineComponent({
 
     return () => (
       <div
-        class={`asoul-tab-title ${setDisabled.value} ${setActive.value}`}
+        class={`${CLS_PREFIX}-title ${setDisabled.value} ${setActive.value}`}
         onClick={(e) => handleClick(e)}
       >
         {props.title}
-        <span class={`asoul-tab-slider`} />
+        <span class={`${CLS_PREFIX}-slider`} />
       </div>
     );
   },

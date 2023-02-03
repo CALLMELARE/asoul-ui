@@ -1,6 +1,7 @@
 import { computed, ref, PropType } from "vue";
 import classNames from "classnames";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import {
   ButtonTypes,
   NormalSizes,
@@ -9,6 +10,8 @@ import {
 import ButtonDrip from "./button-drip";
 import ButtonLoading from "./button-loading";
 import "./button.scss";
+
+export const CLS_PREFIX = `${prefix}-btn`;
 
 const [createComponent] = createNameSpace("Button");
 
@@ -61,7 +64,7 @@ export default createComponent({
     return () => (
       <button
         disabled={props.disabled}
-        class={`asoul-btn ${classNames(
+        class={`${CLS_PREFIX} ${classNames(
           {
             loading: props.loading,
             disabled: props.disabled,

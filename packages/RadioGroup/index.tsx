@@ -1,7 +1,10 @@
 import { ref, PropType, Ref, provide } from "vue";
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
+import { prefix } from "../utils/core";
 import "./radioGroup.scss";
+
+export const CLS_PREFIX = `${prefix}-radio_group`;
 
 const [createComponent] = createNameSpace("RadioGroup");
 
@@ -49,7 +52,7 @@ export default createComponent({
     provide(READNONLY_RADIO_GROUP_KEY, { props, updateState, groupValue });
 
     return () => (
-      <div class={`asoul-radio-group ${props.useRow ? "useRow" : ""}`}>
+      <div class={`${CLS_PREFIX} ${props.useRow ? "useRow" : ""}`}>
         {slots.default?.()}
       </div>
     );

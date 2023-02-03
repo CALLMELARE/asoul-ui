@@ -1,11 +1,102 @@
 @import "../utils/styles/mixin.scss";
 
-.asoul-tab {
-  padding: 12px;
-  background-color: var(--sub_color_90);
-  color: var(--primary_color);
+.asoul-tab-tabs {
+  width: fit-content;
 
-  &.none {
-    display: none;
+  .asoul-tab-header {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    user-select: none;
+    overflow: scroll;
+    scrollbar-width: none;
+    border-radius: 5px 5px 0 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .asoul-tab {
+    padding: 12px;
+    background-color: var(--sub_color_90);
+    color: var(--primary_color);
+
+    &.none {
+      display: none;
+    }
+  }
+
+  .asoul-tab-title {
+    position: relative;
+    padding: 8px 12px;
+    font-size: $medium;
+    line-height: $medium * 1.3;
+    color: var(--primary_color);
+    outline: 0;
+    background-color: var(--sub_color_90);
+
+    &.active {
+      color: var(--theme_color);
+      padding: 8px 12px 6px 12px;
+
+      // border-bottom: 2px solid $primaryDefault;
+      // background-color: var(--theme_color_90);
+      .asoul-tab-slider {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--theme_color);
+        transition: left 0.3s ease;
+        -webkit-animation: scale-up-hor-center 0.2s
+          cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: scale-up-hor-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+          both;
+      }
+    }
+
+    &:not(.active) {
+      color: var(--secondary_color);
+
+      .asoul-tab-slider {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--sub_color_80);
+      }
+    }
+
+    &:hover {
+      background-color: var(--sub_color_80);
+    }
+  }
+}
+
+@-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+  }
+
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+  }
+
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }

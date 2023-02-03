@@ -8,8 +8,9 @@ import {
   ComponentPublicInstance,
 } from "vue";
 import { createNameSpace } from "../utils";
-import TabTitle, { TabTitleEmit } from "../TabTitle";
-import "./tabs.scss";
+import { CLS_PREFIX } from "./";
+import TabTitle, { TabTitleEmit } from "./TabTitle";
+import "./tab.scss";
 
 export const READONLY_TABS_KEY = "tabsKey";
 
@@ -72,8 +73,8 @@ export default createComponent({
     };
 
     return () => (
-      <div class={`asoul-tabs`}>
-        <header class={`asoul-tab-header`}>{renderTitle()}</header>
+      <div class={`${CLS_PREFIX}-tabs`}>
+        <header class={`${CLS_PREFIX}-header`}>{renderTitle()}</header>
         {slots.default?.()}
       </div>
     );

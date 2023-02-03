@@ -2,7 +2,10 @@ import { computed, PropType, provide } from "vue";
 import classNames from "classnames";
 import { AlignTypes, JustifyTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./row.scss";
+
+export const CLS_PREFIX = `${prefix}-row`;
 
 const [createComponent] = createNameSpace("Row");
 
@@ -40,9 +43,9 @@ export default createComponent({
 
     return () => (
       <div
-        class={`asoul-row ${classNames({
-          [`asoul-justify-${props.justify}`]: props.justify,
-          [`asoul-align-${props.align}`]: props.align,
+        class={`${CLS_PREFIX} ${classNames({
+          [`${CLS_PREFIX}-justify-${props.justify}`]: props.justify,
+          [`${CLS_PREFIX}-align-${props.align}`]: props.align,
         })}`}
         style={`${setStyle.value}`}
       >

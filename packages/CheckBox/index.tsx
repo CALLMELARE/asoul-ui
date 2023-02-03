@@ -1,12 +1,15 @@
 import { computed, ref, watchEffect, PropType, inject } from "vue";
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
+import { prefix } from "../utils/core";
 import {
   READONLY_CHECKBOX_KEY,
   CheckboxEvent,
   CheckboxGroupProvide,
 } from "../CheckboxGroup";
 import "./checkBox.scss";
+
+export const CLS_PREFIX = `${prefix}-check_box`;
 
 const [createComponent] = createNameSpace("Checkbox");
 
@@ -93,7 +96,7 @@ export default createComponent({
 
     return () => (
       <label
-        class={`asoul-check_box ${isDisabled.value ? "disabled" : ""} ${
+        class={`${CLS_PREFIX} ${isDisabled.value ? "disabled" : ""} ${
           setSize.value
         }`}
       >
@@ -103,11 +106,11 @@ export default createComponent({
           checked={isChecked.value}
           onChange={handleChange}
         ></input>
-        <span class="asoul-text_inner">
+        <span class={`${CLS_PREFIX}-text_inner`}>
           <span
-            class={`asoul-check_box-point ${
-              isDisabled.value ? "disabled" : ""
-            } ${isChecked.value ? "active" : ""}`}
+            class={`${CLS_PREFIX}-point ${isDisabled.value ? "disabled" : ""} ${
+              isChecked.value ? "active" : ""
+            }`}
           />
           {slots.default?.()}
         </span>

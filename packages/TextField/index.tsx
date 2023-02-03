@@ -1,7 +1,10 @@
 import { NormalSizes } from "../utils/theme/propTypes";
 import { computed, PropType, reactive, ref, toRefs } from "vue";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./textField.scss";
+
+export const CLS_PREFIX = `${prefix}-text_field`;
 
 const [createComponent] = createNameSpace("TextField");
 
@@ -55,12 +58,12 @@ export default createComponent({
     };
 
     return () => (
-      <div class={`asoul-text-field`}>
-        <div class={`asoul-text-field-wrapper`}>
-          <div class={`asoul-text-field-box`}>
+      <div class={`${CLS_PREFIX}`}>
+        <div class={`${CLS_PREFIX}-wrapper`}>
+          <div class={`${CLS_PREFIX}-box`}>
             <input
               style={`${props.block ? "width:100%;" : ""}`}
-              class={`asoul-text-field-input ${props.disabled ? "disabled" : ""}`}
+              class={`${CLS_PREFIX}-input ${props.disabled ? "disabled" : ""}`}
               type={selfType.value}
               ref={inputRef}
               value={state.value}
@@ -73,7 +76,7 @@ export default createComponent({
             />
             {props.label && (
               <div
-                class={`asoul-text-filed-label ${
+                class={`${CLS_PREFIX}-label ${
                   state.value || props.placeholder ? "focused" : ""
                 }`}
               >

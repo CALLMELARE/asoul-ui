@@ -1,6 +1,9 @@
 import { computed, reactive, toRefs } from "vue";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./showcase.scss";
+
+export const CLS_PREFIX = `${prefix}-showcase`;
 
 const [createComponent] = createNameSpace("Showcase");
 
@@ -24,16 +27,16 @@ export default createComponent({
     };
 
     return () => (
-      <div class={`asoul-showcase`} style={`height:${props.height}px;`}>
-        <div class={`asoul-showcase-img-container`}>
+      <div class={`${CLS_PREFIX}`} style={`height:${props.height}px;`}>
+        <div class={`${CLS_PREFIX}-img-container`}>
           <img
             src={props.src}
             alt="showcase"
-            class={`asoul-showcase-img`}
+            class={`${CLS_PREFIX}-img`}
             style={`${srcExist()}`}
           />
         </div>
-        <div class={`asoul-showcase-content`}>{slots.default?.()}</div>
+        <div class={`${CLS_PREFIX}-content`}>{slots.default?.()}</div>
       </div>
     );
   },

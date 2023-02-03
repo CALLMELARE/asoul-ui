@@ -2,28 +2,28 @@
 
 $font: $medium;
 
-.asoul-text-field {
+.asoul-text_field {
   display: flex;
   width: fit-content;
 
-  .asoul-text-filed-label {
+  .asoul-text_field-label {
     font-size: $font;
     line-height: $font;
     padding: $font * 1 0 0 0;
   }
 }
 
-.asoul-text-field {
+.asoul-text_field {
   width: 100%;
 
-  .asoul-text-field-wrapper {
+  .asoul-text_field-wrapper {
     width: 100%;
 
-    .asoul-text-field-box {
+    .asoul-text_field-box {
       position: relative;
       width: 100%;
 
-      .asoul-text-field-input {
+      .asoul-text_field-input {
         background-color: var(--invert_color);
         color: var(--primary_color);
         padding: $font * 1.2 5px calc($font / 2) 5px;
@@ -38,7 +38,7 @@ $font: $medium;
         &.disabled {
           pointer-events: none;
 
-          ~ .asoul-text-filed-label {
+          ~ .asoul-text_field-label {
             color: var(--secondary_color);
           }
 
@@ -51,14 +51,14 @@ $font: $medium;
           border-bottom: 2px solid;
           border-color: var(--theme_color);
 
-          ~ .asoul-text-filed-label {
+          ~ .asoul-text_field-label {
             color: var(--theme_color);
             transform: translate(-12%, -50%) scale(0.75);
           }
         }
       }
 
-      .asoul-text-filed-label {
+      .asoul-text_field-label {
         color: var(--sub_color);
         position: absolute;
         transition: 0.2s ease;

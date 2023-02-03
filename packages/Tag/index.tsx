@@ -2,7 +2,10 @@ import { computed, PropType, toRefs } from "vue";
 import classNames from "classnames";
 import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./tag.scss";
+
+export const CLS_PREFIX = `${prefix}-tag`;
 
 const [createComponent] = createNameSpace("Tag");
 
@@ -36,7 +39,7 @@ export default createComponent({
   setup(props, { attrs, slots, emit }) {
     return () => (
       <div
-        class={`asoul-tag ${classNames(
+        class={`${CLS_PREFIX} ${classNames(
           {
             disabled: props.disabled,
             rounded: props.rounded,

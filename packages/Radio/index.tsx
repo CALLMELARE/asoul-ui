@@ -1,13 +1,15 @@
 import { computed, ref, watchEffect, PropType, inject } from "vue";
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
-
+import { prefix } from "../utils/core";
 import {
   RadioGroupProvide,
   READNONLY_RADIO_GROUP_KEY,
   RadioEvent,
 } from "../RadioGroup";
 import "./radio.scss";
+
+export const CLS_PREFIX = `${prefix}-radio`;
 
 const [createComponent] = createNameSpace("Radio");
 
@@ -99,7 +101,7 @@ export default createComponent({
     });
 
     return () => (
-      <div class={`asoul-radio ${setSize.value}`}>
+      <div class={`${CLS_PREFIX} ${setSize.value}`}>
         <label class={`${isDisabled.value ? "disabled" : ""}`}>
           <input
             type="radio"
@@ -108,11 +110,11 @@ export default createComponent({
             onChange={handleChange}
             disabled={isDisabled.value}
           ></input>
-          <span class={"asoul-radio-name"}>
+          <span class={`${CLS_PREFIX}-name`}>
             <span
-              class={`asoul-radio-point ${isDisabled.value ? "disabled" : ""} ${
-                selfChecked.value ? "active" : ""
-              } ${setRounded.value}`}
+              class={`${CLS_PREFIX}-point ${
+                isDisabled.value ? "disabled" : ""
+              } ${selfChecked.value ? "active" : ""} ${setRounded.value}`}
             />
             {slots.default?.()}
           </span>

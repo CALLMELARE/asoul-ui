@@ -1,8 +1,12 @@
 import { PropType, provide } from "vue";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import { NormalSizes } from "../utils/theme/propTypes";
-const [createComponent] = createNameSpace("CheckboxGroup");
 import "./checkboxGroup.scss";
+
+export const CLS_PREFIX = `${prefix}-checkbox_group`;
+
+const [createComponent] = createNameSpace("CheckboxGroup");
 
 export const READONLY_CHECKBOX_KEY = "checkboxKey";
 
@@ -55,7 +59,7 @@ export default createComponent({
     });
 
     return () => (
-      <div class={`asoul-checkbox_group ${props.useRow ? "useRow" : ""}`}>
+      <div class={`${CLS_PREFIX} ${props.useRow ? "useRow" : ""}`}>
         {slots.default?.()}
       </div>
     );

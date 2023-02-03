@@ -1,6 +1,9 @@
 import { computed, toRefs } from "vue";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./progress.scss";
+
+export const CLS_PREFIX = `${prefix}-progress`;
 
 const [createComponent] = createNameSpace("Progress");
 
@@ -19,14 +22,14 @@ export default createComponent({
       return wid;
     });
     return () => (
-      <div class={`asoul-progress`}>
-        <div class={`asoul-progress-bar`}>
+      <div class={`${CLS_PREFIX}`}>
+        <div class={`${CLS_PREFIX}-bar`}>
           <span
-            class={`asoul-progress-linear-determinate`}
+            class={`${CLS_PREFIX}-linear-determinate`}
             style={`width:${setWidth.value}%;`}
           ></span>
           <span
-            class={`asoul-progress-linear-background`}
+            class={`${CLS_PREFIX}-linear-background`}
             style={`width:${100 - setWidth.value}%`}
           ></span>
         </div>

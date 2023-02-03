@@ -2,7 +2,10 @@ import { computed, PropType, toRefs } from "vue";
 import classNames from "classnames";
 import { NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./alert.scss";
+
+export const CLS_PREFIX = `${prefix}-alert`;
 
 const [createComponent] = createNameSpace("Alert");
 
@@ -22,13 +25,13 @@ export default createComponent({
   setup(props, { attrs, slots, emit }) {
     return () => (
       <div
-        class={`asoul-alert ${classNames(props.type, {
+        class={`${CLS_PREFIX} ${classNames(props.type, {
           outlined: props.outlined,
           border: props.border,
         })}`}
       >
-        <div class={`asoul-alert-border`} />
-        <div class={`asoul-alert-wrapper`}>{slots.default?.()}</div>
+        <div class={`${CLS_PREFIX}-border`} />
+        <div class={`${CLS_PREFIX}-wrapper`}>{slots.default?.()}</div>
       </div>
     );
   },

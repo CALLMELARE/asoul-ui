@@ -5,6 +5,18 @@
   position: relative;
   background-color: var(--theme_color);
 
+  .asoul-footer-title {
+    color: var(--invert_color);
+    font-weight: bold;
+    font-size: $medium * 1.1;
+    line-height: $medium * 1.5;
+    width: 100%;
+    max-width: 612px;
+    white-space: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   .asoul-footer-row {
     display: flex;
     justify-content: space-around;
@@ -20,5 +32,23 @@
     color: var(--invert_color);
     font-weight: bold;
     padding: 12px 0;
+  }
+
+  .asoul-footer-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 512px;
+    margin: 0 12px;
+    .asoul-footer-item {
+      color: var(--invert_color);
+      font-size: $medium;
+      line-height: $medium * 1.4;
+      width: 100%;
+      max-width: 341px;
+      white-space: pre-wrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
 }

@@ -1,7 +1,10 @@
-import { NormalTypes } from "../utils/theme/propTypes";
 import { computed, PropType, ref, toRefs } from "vue";
+import { NormalTypes } from "../utils/theme/propTypes";
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import "./divider.scss";
+
+export const CLS_PREFIX = `${prefix}-divider`;
 
 const [createComponent] = createNameSpace("Divider");
 
@@ -19,7 +22,7 @@ export default createComponent({
     return () => (
       <div
         style={color.value ? `border-color:${color.value};` : ""}
-        class={`asoul-divider ${isDashed.value ? "dashed" : ""}`}
+        class={`${CLS_PREFIX} ${isDashed.value ? "dashed" : ""}`}
       ></div>
     );
   },

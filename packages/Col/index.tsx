@@ -1,7 +1,10 @@
 import { computed, CSSProperties, PropType, ref, toRefs } from "vue";
 import classNames from "classnames";
+import { prefix } from "../utils/core";
 import { createNameSpace } from "../utils";
 import "./col.scss";
+
+export const CLS_PREFIX = `${prefix}-col`;
 
 const [createComponent] = createNameSpace("Col");
 
@@ -47,9 +50,9 @@ export default createComponent({
     return () => (
       <tag
         style={setStyle.value}
-        class={`asoul-col ${classNames(
-          [`asoul-col-${props.span}`],
-          [`asoul-offset-${props.offset}`]
+        class={`${CLS_PREFIX} ${classNames(
+          [`${CLS_PREFIX}-${props.span}`],
+          [`${CLS_PREFIX}-offset-${props.offset}`]
         )}`}
       >
         {slots.default?.()}

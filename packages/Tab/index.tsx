@@ -1,7 +1,11 @@
 import { computed, ref, inject, watchEffect } from "vue";
 import { createNameSpace } from "../utils";
-import { READONLY_TABS_KEY, TabsProvide } from "../Tabs";
+import Tabs, { READONLY_TABS_KEY, TabsProvide } from "./Tabs";
+import TabTitle from "./TabTitle";
+import { prefix } from "../utils/core";
 import "./tab.scss";
+
+export const CLS_PREFIX = `${prefix}-tab`;
 
 const [createComponent] = createNameSpace("Tab");
 
@@ -34,7 +38,9 @@ export default createComponent({
     });
 
     return () => (
-      <div class={`asoul-tab ${isDisabled.value}`}>{slots.default?.()}</div>
+      <div class={`${CLS_PREFIX} ${isDisabled.value}`}>{slots.default?.()}</div>
     );
   },
 });
+
+export { Tabs, TabTitle };

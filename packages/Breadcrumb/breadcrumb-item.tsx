@@ -1,8 +1,8 @@
 import { inject } from "vue";
-import { createNameSpace } from "../utils";
-import "../Breadcrumb/breadcrumb.scss";
 import { useRouter } from "vue-router";
-import { BreadcrumbProvide, READONLY_BREADCRUMB_KEY } from "./index";
+import { createNameSpace } from "../utils";
+import { CLS_PREFIX, BreadcrumbProvide, READONLY_BREADCRUMB_KEY } from "./";
+import "../Breadcrumb/breadcrumb.scss";
 
 const [createComponent] = createNameSpace("BreadcrumbItem");
 
@@ -42,20 +42,20 @@ export default createComponent({
       return;
     }
     return () => (
-      <div class={`asoul-breadcrumb-item`}>
+      <div class={`${CLS_PREFIX}-item`}>
         {context.disabled ? (
-          <span class={`asoul-breadcrumb-content disabled`}>
+          <span class={`${CLS_PREFIX}-content disabled`}>
             {slots.default?.()}
           </span>
         ) : (
           <span
-            class={`asoul-breadcrumb-content`}
+            class={`${CLS_PREFIX}-content`}
             onClick={() => link(props.to ? props.to : props.href)}
           >
             {slots.default?.()}
           </span>
         )}
-        <span class={`asoul-breadcrumb-separator`}>{context.separator}</span>
+        <span class={`${CLS_PREFIX}-separator`}>{context.separator}</span>
       </div>
     );
   },
