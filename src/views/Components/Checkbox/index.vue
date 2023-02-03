@@ -18,18 +18,28 @@
     <ASCheckBox size="large">Large Checkbox</ASCheckBox>
     <Code code="<ASCheckBox size='large'>Large Checkbox</ASCheckBox>"></Code>
 
+    <h2>组合</h2>
+    <ASCheckboxGroup>
+      <ASCheckBox size="medium">第一个选项</ASCheckBox
+      ><ASCheckBox size="medium">第二个选项</ASCheckBox
+      ><ASCheckBox size="medium">第三个选项</ASCheckBox>
+    </ASCheckboxGroup>
+
     <h1>API</h1>
     <h2>Checkbox Props</h2>
     <ApiTable :api="checkboxApi"></ApiTable>
+    <h2>CheckboxGroup Props</h2>
+    <ApiTable :api="checkboxGroupApi"></ApiTable>
   </div>
 </template>
 
 <script lang="ts">
-import { ASCheckBox } from "asoul-ui";
+import { ASCheckBox, ASCheckboxGroup } from "asoul-ui";
 import Code from "../../../components/Code.vue";
 import ApiTable from "../../../components/ApiTable.vue";
 
 import checkboxApi from "./apis/checkbox-api.json";
+import checkboxGroupApi from "./apis/checkboxGroup-api.json";
 
 import { useRouter } from "vue-router";
 export default {
@@ -44,7 +54,7 @@ export default {
       router.push(url);
     }
 
-    return { open, jump, checkboxApi };
+    return { open, jump, checkboxApi, checkboxGroupApi };
   },
 };
 </script>
