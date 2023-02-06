@@ -1,24 +1,23 @@
-import { NormalTypes } from "../utils/theme/propTypes";
-import { computed, toRefs, PropType } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
+// style
 import "./result.scss";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-result`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Result");
 
-export default createComponent({
+// component
+const Result = createComponent({
   props: {
-    type: {
-      type: String as PropType<NormalTypes>,
-      required: true,
-    },
-    title: {
-      type: String,
-      default: "",
-    },
-    subtitle: {
-      type: String,
-      default: "",
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     const renderIcon = () => {
@@ -29,12 +28,14 @@ export default createComponent({
     };
 
     return () => (
-      <div class={`asoul-result`}>
-        <div class={`asoul-result-icon ${props.type}`}>{renderIcon()}</div>
-        <div class={`asoul-result-title`}>{props.title}</div>
-        <div class={`asoul-result-subtitle`}>{props.subtitle}</div>
+      <div class={`${CLS_PREFIX}`}>
+        <div class={`${CLS_PREFIX}-icon ${props.type}`}>{renderIcon()}</div>
+        <div class={`${CLS_PREFIX}-title`}>{props.title}</div>
+        <div class={`${CLS_PREFIX}-subtitle`}>{props.subtitle}</div>
         {slots.default?.()}
       </div>
     );
   },
 });
+
+export default Result;

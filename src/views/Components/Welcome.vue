@@ -38,12 +38,12 @@ export default {
     user-select: none;
     font-size: 4rem;
     letter-spacing: 0.25rem;
-    color: var(--theme_color_90);
+    color: var(--asoul-theme-color-90);
     animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       both;
   }
   .welcome-subtext {
-    color: var(--theme_color);
+    color: var(--asoul-theme-color);
     animation: blink infinite 3s;
     letter-spacing: 0.25rem;
   }

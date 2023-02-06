@@ -1,27 +1,38 @@
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
+import { Folder20Filled } from "@vicons/fluent";
+// internal dependencies
 import { createNameSpace } from "../utils";
-import "./empty.scss";
+import { prefix } from "../utils/core";
 import { ASIcon } from "../";
-import { FolderOpenTwotone } from "@vicons/material";
-import { computed, onMounted, watchEffect, ref } from "vue";
+// style
+import "./empty.scss";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-empty`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Empty");
 
-export default createComponent({
+// component
+const Empty = createComponent({
   props: {
-    description: {
-      type: String,
-      default: "空空如也",
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     return () => (
-      <div class="asoul-empty">
+      <div class={`${CLS_PREFIX}`}>
         <ASIcon size="36px" style={`text-align: center;`}>
-          <FolderOpenTwotone />
+          <Folder20Filled />
         </ASIcon>
         {slots.default?.()}
-        <div class="asoul-empty-description">{props.description}</div>
+        <div class={`${CLS_PREFIX}-description`}>{props.description}</div>
       </div>
     );
   },
 });
+
+export default Empty;

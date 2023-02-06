@@ -47,9 +47,9 @@ export default {
   margin: 0.2rem 0;
 }
 .bg-1 {
-  background-color: var(--theme_color);
+  background-color: var(--asoul-theme-color);
 }
 .bg-2 {
-  background-color: var(--theme_color_50);
+  background-color: var(--asoul-theme-color-50);
 }
 </style>

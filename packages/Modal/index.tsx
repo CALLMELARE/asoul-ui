@@ -1,31 +1,40 @@
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
+import { ASButton } from "../";
+// style
 import "./modal.scss";
-import { ASIcon, ASButton } from "../";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-modal`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Modal");
 
-export default createComponent({
+// component
+const Modal = createComponent({
   props: {
-    show: {
-      type: Boolean,
-    },
+    ...BasicProps,
   },
   emits: ["click"],
   setup(props, { attrs, slots, emit }) {
-    // console.log("show:" + props.show);
     const handleClose = () => {
       emit("click", false);
     };
     return () => (
-      <div class={`asoul-modal-mask ${props.show ? "" : "hide"}`}>
-        <div class={`asoul-modal`}>
-          <div class="asoul-modal-header">
+      <div class={`${CLS_PREFIX}-mask ${props.show ? "" : "hide"}`}>
+        <div class={`${CLS_PREFIX}`}>
+          <div class={`${CLS_PREFIX}-header`}>
             <span>{slots.header?.()}</span>
             <span>
               {slots.header_extra?.()}
               <ASButton
                 onClick={handleClose}
-                class="asoul-modal-close"
+                class={`${CLS_PREFIX}-close`}
                 type="text"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -37,10 +46,12 @@ export default createComponent({
               </ASButton>
             </span>
           </div>
-          <div class="asoul-modal-content">{slots.default?.()}</div>
-          <div class="asoul-modal-footer">{slots.footer?.()}</div>
+          <div class={`${CLS_PREFIX}-content`}>{slots.default?.()}</div>
+          <div class={`${CLS_PREFIX}-footer`}>{slots.footer?.()}</div>
         </div>
       </div>
     );
   },
 });
+
+export default Modal;

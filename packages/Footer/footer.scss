@@ -3,7 +3,19 @@
 .asoul-footer {
   width: 100%;
   position: relative;
-  background-color: var(--theme_color);
+  background-color: var(--asoul-theme-color);
+
+  .asoul-footer-title {
+    color: var(--asoul-invert-color);
+    font-weight: bold;
+    font-size: $medium * 1.1;
+    line-height: $medium * 1.5;
+    width: 100%;
+    max-width: 612px;
+    white-space: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 
   .asoul-footer-row {
     display: flex;
@@ -16,9 +28,27 @@
   .asoul-footer-copyright {
     width: 100%;
     text-align: center;
-    background-color: var(--secondary_color_80);
-    color: var(--invert_color);
+    background-color: var(--asoul-secondary-color-80);
+    color: var(--asoul-invert-color);
     font-weight: bold;
     padding: 12px 0;
+  }
+
+  .asoul-footer-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 512px;
+    margin: 0 12px;
+    .asoul-footer-item {
+      color: var(--asoul-invert-color);
+      font-size: $medium;
+      line-height: $medium * 1.4;
+      width: 100%;
+      max-width: 341px;
+      white-space: pre-wrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
 }

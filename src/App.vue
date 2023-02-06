@@ -23,7 +23,7 @@ body {
   margin: 0;
 }
 .app {
-  background-color: var(--invert_color);
+  background-color: var(--asoul-invert-color);
   height: 100vh;
 }
 </style>

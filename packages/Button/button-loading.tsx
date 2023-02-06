@@ -1,16 +1,24 @@
 import { defineComponent } from "vue";
+import { CLS_PREFIX } from "./";
 
 const ButtonLoading = defineComponent({
   setup(props, { attrs }) {
     return () => (
-      <div class="asoul-btn-loading">
+      <div class={`${CLS_PREFIX}-loading`}>
         <svg
           x="0px"
           y="0px"
           viewBox="0 0 24 30"
           style="enable-background:new 0 0 50 50;"
         >
-          <rect x="0" y="10" width="2" height="10" fill="currentColor" opacity="0.2">
+          <rect
+            x="0"
+            y="10"
+            width="2"
+            height="10"
+            fill="currentColor"
+            opacity="0.2"
+          >
             <animate
               attributeName="opacity"
               attributeType="XML"
@@ -36,7 +44,14 @@ const ButtonLoading = defineComponent({
               repeatCount="indefinite"
             />
           </rect>
-          <rect x="8" y="10" width="2" height="10" fill="currentColor" opacity="0.2">
+          <rect
+            x="8"
+            y="10"
+            width="2"
+            height="10"
+            fill="currentColor"
+            opacity="0.2"
+          >
             <animate
               attributeName="opacity"
               attributeType="XML"
@@ -62,7 +77,14 @@ const ButtonLoading = defineComponent({
               repeatCount="indefinite"
             />
           </rect>
-          <rect x="16" y="10" width="2" height="10" fill="currentColor" opacity="0.2">
+          <rect
+            x="16"
+            y="10"
+            width="2"
+            height="10"
+            fill="currentColor"
+            opacity="0.2"
+          >
             <animate
               attributeName="opacity"
               attributeType="XML"

@@ -1,40 +1,30 @@
-import { AlignTypes, JustifyTypes } from "../utils/theme/propTypes";
-import { computed, PropType, provide } from "vue";
+// vue
+import { computed, provide } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
+import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
+// style
 import "./row.scss";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-row`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Row");
 
 export const READONLY_LAYOUT_KEY = "layoutKey";
 
-export default createComponent({
+// component
+const Row = createComponent({
   props: {
-    tag: {
-      type: String as PropType<keyof HTMLElementTagNameMap>,
-      default: "div",
-    },
-    gutter: {
-      type: [String, Number],
-      default: 0,
-    },
-    justify: {
-      type: String as PropType<JustifyTypes>,
-      default: "start",
-    },
-    align: {
-      type: String as PropType<AlignTypes>,
-      default: "top",
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     provide(READONLY_LAYOUT_KEY, { gutter: props.gutter });
-
-    const setClass = computed(() => {
-      const style: string[] = [];
-      props.justify && style.push(`asoul-justify-${props.justify}`);
-      props.align && style.push(`asoul-align-${props.align}`);
-      return style.join(" ");
-    });
 
     const setStyle = computed(() => {
       if (props.gutter) {
@@ -45,9 +35,17 @@ export default createComponent({
     });
 
     return () => (
-      <div class={`asoul-row ${setClass.value}`} style={`${setStyle.value}`}>
+      <div
+        class={`${CLS_PREFIX} ${classNames({
+          [`${CLS_PREFIX}-justify-${props.justify}`]: props.justify,
+          [`${CLS_PREFIX}-align-${props.align}`]: props.align,
+        })}`}
+        style={`${setStyle.value}`}
+      >
         {slots.default?.()}
       </div>
     );
   },
 });
+
+export default Row;

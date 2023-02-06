@@ -3,8 +3,20 @@
     <h1>进度 / Progress</h1>
     <tip>它能表达事情进行到什么程度了</tip>
     <h2>基础</h2>
-    <ASProgress value="66"></ASProgress>
-    <Code code="<ASProgress value='66'></ASProgress>"></Code>
+    <ASProgress value="66.66"></ASProgress>
+    <Code code="<ASProgress value='66.66'></ASProgress>"></Code>
+    <h2>显示信息</h2>
+    <ASProgress value="66.66" showInfo="true"></ASProgress>
+    <Code code="<ASProgress value='66.66' showInfo='true'></ASProgress>"></Code>
+    <h2>显示状态</h2>
+    <ASProgress value="66.66" status="success"></ASProgress>
+    <Code code="<ASProgress value='66.66' status='success'></ASProgress>"></Code
+    ><ASProgress value="66.66" status="fail"></ASProgress>
+    <Code code="<ASProgress value='66.66' status='fail'></ASProgress>"></Code>
+    <ASProgress value="66.66" showInfo="true" active="true"></ASProgress>
+    <Code
+      code="<ASProgress value='66.66' showInfo='true' active='true'></ASProgress>"
+    ></Code>
     <h2>自定义上限</h2>
     <ASProgress value="648" maxvalue="1024"></ASProgress>
     <Code code="<ASProgress value='648' maxvalue='1024'></ASProgress>"></Code>

@@ -14,27 +14,27 @@
   border: 1px solid;
   user-select: none;
   font-size: $medium;
-  color: var(--theme_color);
-  border-color: var(--theme_color_30);
-  background-color: var(--theme_color_20);
+  color: var(--asoul-theme-color);
+  border-color: var(--asoul-theme-color-30);
+  background-color: var(--asoul-theme-color-20);
   &.outlined {
     background-color: transparent;
   }
   &.disabled {
-    color: var(--secondary_color);
-    border-color: var(--secondary_color_30);
-    background-color: var(--secondary_color_90);
+    color: var(--asoul-secondary-color);
+    border-color: var(--asoul-secondary-color-30);
+    background-color: var(--asoul-secondary-color-90);
   }
-  &.invert {
-    color: var(--invert_color);
-    border-color: var(--theme_color);
-    background-color: var(--theme_color);
+  &.inverse {
+    color: var(--asoul-invert-color);
+    border-color: var(--asoul-theme-color);
+    background-color: var(--asoul-theme-color);
   }
   &.success {
     color: $successDark;
     border-color: transparentize($successDark, 0.3);
     background-color: transparentize($successDark, 0.9);
-    &.invert {
+    &.inverse {
       border-color: $successDark;
       background-color: $successDark;
     }
@@ -43,7 +43,7 @@
     color: $warningDark;
     border-color: transparentize($warningDark, 0.3);
     background-color: transparentize($warningDark, 0.9);
-    &.invert {
+    &.inverse {
       border-color: $warningDark;
       background-color: $warningDark;
     }
@@ -52,7 +52,7 @@
     color: $errorDark;
     border-color: transparentize($errorDark, 0.3);
     background-color: transparentize($errorDark, 0.9);
-    &.invert {
+    &.inverse {
       border-color: $errorDark;
       background-color: $errorDark;
     }

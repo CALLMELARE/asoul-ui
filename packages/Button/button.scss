@@ -14,7 +14,7 @@
   border-radius: 4px;
 
   font-size: 15px;
-  color: var(--primary_color);
+  color: var(--asoul-primary-color);
   background-color: transparent;
   padding: 0 15px;
   overflow: hidden;
@@ -52,13 +52,13 @@
   }
 
   &.disabled {
-    background-color: var(--sub_color);
+    background-color: var(--asoul-sub-color);
     border-color: transparent !important;
-    color: var(--secondary_color) !important;
+    color: var(--asoul-secondary-color) !important;
 
     &:hover,
     &:focus {
-      background-color: var(--sub_color);
+      background-color: var(--asoul-sub-color);
     }
 
     cursor: not-allowed !important;
@@ -79,51 +79,44 @@
 }
 
 .asoul-btn {
-  &.default {
-    background-color: var(--theme_color);
-    color: var(--invert_color);
-
-    &:hover,
-    &:focus {
-      background-color: var(--theme_color_10);
-    }
+  background-color: var(--asoul-theme-color);
+  color: var(--asoul-invert-color);
+  &:hover {
+    background-color: var(--asoul-theme-color-90);
   }
 
   &.outlined {
     border: 1px solid;
-    border-color: var(--theme_color);
-    color: var(--theme_color);
+    border-color: var(--asoul-theme-color);
+    color: var(--asoul-theme-color);
+    background-color: transparent;
 
-    &:hover,
-    &:focus {
-      background-color: var(--theme_color_90);
+    &:hover {
+      background-color: var(--asoul-theme-color-10);
     }
   }
 
   &.text {
-    color: var(--theme_color);
+    color: var(--asoul-theme-color);
+    background-color: transparent;
 
     &:hover {
-      background-color: var(--theme_color_10);
+      background-color: var(--asoul-theme-color-10);
     }
   }
 
   &.glass {
-    background-color: var(--invert_color_30);
+    background-color: var(--asoul-invert-color-30);
     backdrop-filter: blur(10px);
-    color: var(--primary_color);
+    color: var(--asoul-theme-color);
 
-    &:hover,
-    &:focus {
-      background-color: var(--theme_color_90);
+    &:hover {
+      background-color: var(--asoul-theme-color-10);
     }
   }
 }
 
 .asoul-btn {
-  &.primary {
-  }
-
   &.success {
     border-color: $successDefault;
     background-color: $successDefault;
@@ -131,7 +124,7 @@
 
     &:hover,
     &:focus {
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       background-color: $successLight;
     }
   }
@@ -143,7 +136,7 @@
 
     &:hover,
     &:focus {
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       background-color: $warningLight;
     }
   }
@@ -155,13 +148,13 @@
 
     &:hover,
     &:focus {
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       background-color: $errorLight;
     }
   }
 }
 
-.asoul-button-drip {
+.asoul-btn-drip {
   position: absolute;
   left: 0;
   top: 0;
@@ -204,14 +197,14 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  color: var(--secondary_color);
-  border-color: var(--sub_color);
-  background-color: var(--sub_color);
+  color: var(--asoul-secondary-color);
+  border-color: var(--asoul-sub-color);
+  background-color: var(--asoul-sub-color);
 
   svg {
     width: 24px;
     height: 100%;
-    color: var(--secondary_color);
+    color: var(--asoul-secondary-color);
   }
 
   &.success {

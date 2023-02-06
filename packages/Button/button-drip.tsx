@@ -1,4 +1,5 @@
 import { defineComponent, computed, ref, onMounted, PropType } from "vue";
+import { CLS_PREFIX } from "./";
 
 type Completed = () => any;
 
@@ -28,7 +29,7 @@ const ButtonDrip = defineComponent({
     });
 
     return () => (
-      <div ref={dripRef} class="asoul-button-drip">
+      <div ref={dripRef} class={`${CLS_PREFIX}-drip`}>
         <svg width="20" height="20" viewBox="0 0 20 20" style={setPlace.value}>
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g fill="rgba(255, 255, 255, 0.3)">

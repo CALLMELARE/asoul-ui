@@ -5,7 +5,7 @@
   position: relative;
   margin-bottom: $medium;
   display: flex;
-  border-color: var(--invert_color);
+  border-color: var(--asoul-invert-color);
 
   .asoul-alert-wrapper {
     width: 100%;
@@ -18,12 +18,12 @@
 
   &.primary {
     .asoul-alert-border {
-      background-color: var(--theme_color);
+      background-color: var(--asoul-theme-color);
     }
 
     .asoul-alert-wrapper {
-      color: var(--theme_color);
-      background-color: var(--theme_color_10);
+      color: var(--asoul-theme-color);
+      background-color: var(--asoul-theme-color-10);
     }
   }
 
@@ -89,7 +89,7 @@
 
     &.primary {
       .asoul-alert-border {
-        background-color: var(--theme_color);
+        background-color: var(--asoul-theme-color);
       }
     }
 
@@ -117,7 +117,7 @@
   &.outlined {
     &.primary {
       border: 1px solid;
-      border-color: var(--theme_color);
+      border-color: var(--asoul-theme-color);
     }
 
     .asoul-alert-wrapper {

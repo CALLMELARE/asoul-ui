@@ -1,7 +1,7 @@
 @import "../utils/styles/mixin.scss";
 
-.asoul-numberflow {
-  color: var(--primary_color);
+.asoul-number_flow {
+  color: var(--asoul-primary-color);
   display: inline-flex;
   text-decoration: none;
 
@@ -24,14 +24,14 @@
   &.code {
     white-space: nowrap;
     padding: 0 0.35em;
-    background-color: var(--sub_color_60);
+    background-color: var(--asoul-sub-color-60);
     border-radius: 5px;
   }
 }
 
-.asoul-numberflow {
+.asoul-number_flow {
   &.primary {
-    color: var(--theme_color);
+    color: var(--asoul-theme-color);
   }
 
   &.success {

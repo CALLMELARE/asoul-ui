@@ -1,36 +1,39 @@
-import { NormalTypes } from "../utils/theme/propTypes";
-import { computed, PropType, toRefs } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
+import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
+// style
 import "./alert.scss";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-alert`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Alert");
 
-export default createComponent({
+// component
+const Alert = createComponent({
   props: {
-    type: {
-      type: String as PropType<NormalTypes>,
-      default: "primary",
-    },
-    border: {
-      type: Boolean,
-    },
-    outlined: {
-      type: Boolean,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names = [];
-      props.type && names.push(props.type);
-      props.outlined && names.push("outlined");
-      props.border && names.push("border");
-      return names.join(" ");
-    });
     return () => (
-      <div class={`asoul-alert ${setClass.value}`}>
-        <div class={`asoul-alert-border`} />
-        <div class={`asoul-alert-wrapper`}>{slots.default?.()}</div>
+      <div
+        class={`${CLS_PREFIX} ${classNames(props.type, {
+          outlined: props.outlined,
+          border: props.border,
+        })}`}
+      >
+        <div class={`${CLS_PREFIX}-border`} />
+        <div class={`${CLS_PREFIX}-wrapper`}>{slots.default?.()}</div>
       </div>
     );
   },
 });
+
+export default Alert;

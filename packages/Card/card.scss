@@ -8,26 +8,26 @@
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid;
-  border-color: var(--sub_color);
-  background-color: var(--invert_color);
-  color: var(--primary_color);
+  border-color: var(--asoul-sub-color);
+  background-color: var(--asoul-invert-color);
+  color: var(--asoul-primary-color);
 }
 
 .asoul-card {
   &.hoverable {
     &:hover {
-      box-shadow: 0 8px 30px var(--primary_color_12);
+      box-shadow: 0 8px 30px var(--asoul-primary-color-12);
     }
   }
 
   &.shadow {
-    box-shadow: 0 5px 10px var(--primary_color_12);
+    box-shadow: 0 5px 10px var(--asoul-primary-color-12);
     border-color: transparent;
   }
 
   &.inverse {
-    background-color: var(--theme_color);
-    color: var(--invert_color);
+    background-color: var(--asoul-theme-color);
+    color: var(--asoul-invert-color);
   }
 }
 

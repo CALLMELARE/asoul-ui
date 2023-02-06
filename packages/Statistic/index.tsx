@@ -1,33 +1,27 @@
+// vue
+import { ref } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
+import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
+// style
 import "./statistic.scss";
-import { computed, PropType, reactive, ref } from "vue";
-import { NormalTypes } from "../utils/theme/propTypes";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-statistic`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Statistic");
 
-export default createComponent({
+// component
+const Statistic = createComponent({
   props: {
-    separate: {
-      type: Boolean,
-      default: false,
-    },
-    type: {
-      type: String as PropType<NormalTypes>,
-      default: "",
-    },
-    value: {
-      type: String,
-    },
-    label: {
-      type: String,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names: string[] = [];
-      props.type && names.push(props.type);
-      return names.join(" ");
-    });
     const styledStat = (n: String) => {
       if (props.separate) {
         const re = /(?=(?!\b)(\d{3})+$)/g;
@@ -45,10 +39,12 @@ export default createComponent({
     const val = ref(props.value);
     const label = ref(props.label);
     return () => (
-      <div class={`asoul-statistic ${setClass.value}`}>
-        <div class="asoul-statistic-label">{label.value}</div>
-        <div class="asoul-statistic-content">{styledStat(val.value)}</div>
+      <div class={`${CLS_PREFIX} ${classNames(props.type)}`}>
+        <div class={`${CLS_PREFIX}-label`}>{label.value}</div>
+        <div class={`${CLS_PREFIX}-content`}>{styledStat(val.value)}</div>
       </div>
     );
   },
 });
+
+export default Statistic;

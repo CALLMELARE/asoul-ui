@@ -1,21 +1,21 @@
+// vue
 import { inject } from "vue";
-import { createNameSpace } from "../utils";
-import "../Breadcrumb/breadcrumb.scss";
 import { useRouter } from "vue-router";
-import { BreadcrumbProvide, READONLY_BREADCRUMB_KEY } from "./index";
+// props
+import { ItemProps } from "./Props";
+// internal dependencies
+import { createNameSpace } from "../utils";
+import { CLS_PREFIX, BreadcrumbProvide, READONLY_BREADCRUMB_KEY } from "./";
+// style
+import "./breadcrumb.scss";
 
+// createNameSpace
 const [createComponent] = createNameSpace("BreadcrumbItem");
 
-export default createComponent({
+// component
+const BreadcrumbItem = createComponent({
   props: {
-    to: {
-      type: [String, Object],
-      default: "",
-    },
-    href: {
-      type: String,
-      default: "",
-    },
+    ...ItemProps,
   },
   setup(props, { attrs, slots, emit }) {
     const router = useRouter();
@@ -42,21 +42,23 @@ export default createComponent({
       return;
     }
     return () => (
-      <div class={`asoul-breadcrumb-item`}>
+      <div class={`${CLS_PREFIX}-item`}>
         {context.disabled ? (
-          <span class={`asoul-breadcrumb-content disabled`}>
+          <span class={`${CLS_PREFIX}-content disabled`}>
             {slots.default?.()}
           </span>
         ) : (
           <span
-            class={`asoul-breadcrumb-content`}
+            class={`${CLS_PREFIX}-content`}
             onClick={() => link(props.to ? props.to : props.href)}
           >
             {slots.default?.()}
           </span>
         )}
-        <span class={`asoul-breadcrumb-separator`}>{context.separator}</span>
+        <span class={`${CLS_PREFIX}-separator`}>{context.separator}</span>
       </div>
     );
   },
 });
+
+export default BreadcrumbItem;

@@ -1,31 +1,31 @@
 @import "../utils/styles/mixin.scss";
 
 .asoul-row {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-.asoul-justify-center {
-    justify-content: center;
+.asoul-row-justify-center {
+  justify-content: center;
 }
 
-.asoul-justify-end {
-    justify-content: flex-end;
+.asoul-row-justify-end {
+  justify-content: flex-end;
 }
 
-.asoul-justify-space-around {
-    justify-content: space-around;
+.asoul-row-justify-space-around {
+  justify-content: space-around;
 }
 
-.asoul-justify-space-between {
-    justify-content: space-between;
+.asoul-row-justify-space-between {
+  justify-content: space-between;
 }
 
-.asoul-align-middle {
-    align-items: center;
+.asoul-row-align-middle {
+  align-items: center;
 }
 
-.asoul-align-bottom {
-    align-items: flex-end;
+.asoul-row-align-bottom {
+  align-items: flex-end;
 }

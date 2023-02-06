@@ -1,21 +1,25 @@
-import { computed, ref, inject, watchEffect } from "vue";
+// vue
+import { computed, ref, inject } from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
-import { READONLY_TABS_KEY, TabsProvide } from "../Tabs";
+import Tabs, { READONLY_TABS_KEY, TabsProvide } from "./Tabs";
+import TabTitle from "./TabTitle";
+import { prefix } from "../utils/core";
+// style
 import "./tab.scss";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-tab`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Tab");
 
-export default createComponent({
+// component
+const Tab = createComponent({
   props: {
-    title: {
-      type: String,
-      default: "",
-    },
-    value: {
-      type: [String, Number],
-      default: "",
-    },
-    disabled: Boolean,
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     const context = inject<TabsProvide>(READONLY_TABS_KEY);
@@ -29,12 +33,15 @@ export default createComponent({
       return;
     }
 
-    const isDisabled = computed(() => {
+    const isSelected = computed(() => {
       return context.currentChecked.value == self.value ? "" : "none";
     });
 
     return () => (
-      <div class={`asoul-tab ${isDisabled.value}`}>{slots.default?.()}</div>
+      <div class={`${CLS_PREFIX} ${isSelected.value}`}>{slots.default?.()}</div>
     );
   },
 });
+
+export default Tab;
+export { Tabs, TabTitle };

@@ -109,7 +109,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   .about-content-title {
-    color: var(--theme_color);
+    color: var(--asoul-theme-color);
     cursor: default;
     user-select: none;
     display: flex;
@@ -119,7 +119,7 @@ export default {
     letter-spacing: 0.3rem;
   }
   .about-content-subtitle {
-    color: var(--sub_color);
+    color: var(--asoul-sub-color);
     cursor: default;
     user-select: none;
     margin: 1rem 0;
@@ -133,7 +133,7 @@ export default {
   .about-subtitle {
     cursor: default;
     user-select: none;
-    color: var(--primary_color);
+    color: var(--asoul-primary-color);
     font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
@@ -142,7 +142,7 @@ export default {
   .about-text {
     cursor: default;
     user-select: none;
-    color: var(--secondary_color);
+    color: var(--asoul-secondary-color);
     text-align: center;
     padding: 0.25rem 0;
     display: flex;

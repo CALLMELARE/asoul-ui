@@ -1,8 +1,19 @@
+// vue
 import { PropType, provide } from "vue";
+// props
+import { CheckboxGroupProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
 import { NormalSizes } from "../utils/theme/propTypes";
+// style
+import "./checkBox.scss";
+
+// prefix definition
+export const CLS_PREFIX = `${prefix}-checkbox_group`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("CheckboxGroup");
-import "./checkboxGroup.scss";
 
 export const READONLY_CHECKBOX_KEY = "checkboxKey";
 
@@ -29,18 +40,10 @@ export type CheckboxGroupProvide = {
   handlerParentChange: (e: CheckboxEvent) => void;
 };
 
-export default createComponent({
+// component
+const CheckboxGroup = createComponent({
   props: {
-    disabled: Boolean,
-    modelValue: {
-      type: Array as PropType<string[]>,
-      default: () => [],
-    },
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
-    useRow: Boolean,
+    ...CheckboxGroupProps,
   },
   emits: ["change", "update:modelValue"],
   setup(props, { slots, emit }) {
@@ -55,9 +58,11 @@ export default createComponent({
     });
 
     return () => (
-      <div class={`asoul-checkbox_group ${props.useRow ? "useRow" : ""}`}>
+      <div class={`${CLS_PREFIX} ${props.useRow ? "useRow" : ""}`}>
         {slots.default?.()}
       </div>
     );
   },
 });
+
+export default CheckboxGroup;

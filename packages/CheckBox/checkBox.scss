@@ -7,15 +7,15 @@
   width: auto;
   cursor: pointer;
   user-select: none;
-  .asoul-text_inner {
-    color: var(--primary_color);
+  .asoul-check_box-text_inner {
+    color: var(--asoul-primary-color);
   }
   &.mini {
     $size: $mini;
     height: $size;
     line-height: $size;
 
-    .asoul-text_inner {
+    .asoul-check_box-text_inner {
       font-size: $size;
       padding-left: $size * 0.3;
 
@@ -46,7 +46,7 @@
     height: $size;
     line-height: $size;
 
-    .asoul-text_inner {
+    .asoul-check_box-text_inner {
       font-size: $size;
       padding-left: $size * 0.3;
 
@@ -77,7 +77,7 @@
     height: $size;
     line-height: $size;
 
-    .asoul-text_inner {
+    .asoul-check_box-text_inner {
       font-size: $size;
       padding-left: $size * 0.3;
 
@@ -109,7 +109,7 @@
     line-height: $size;
     font-size: $size;
 
-    .asoul-text_inner {
+    .asoul-check_box-text_inner {
       font-size: $size;
       line-height: $size;
       padding-left: $size * 0.3;
@@ -140,14 +140,14 @@
 .asoul-check_box {
   .asoul-check_box-point {
     border: 1px solid;
-    border-color: var(--theme_color);
+    border-color: var(--asoul-theme-color);
     transition: all 0.2s ease 0s;
     position: relative;
     display: inline-block;
     transform: scale(0.875);
 
     &::before {
-      background-color: var(--theme_color);
+      background-color: var(--asoul-theme-color);
       content: "";
       position: absolute;
       position: absolute;
@@ -157,7 +157,7 @@
 
     &.disabled {
       border: 1px solid;
-      border-color: var(--sub_color);
+      border-color: var(--asoul-sub-color);
     }
 
     &.active::before {
@@ -173,7 +173,7 @@
     }
   }
 
-  .asoul-text_inner {
+  .asoul-check_box-text_inner {
     display: inline-flex;
     align-items: center;
   }
@@ -190,7 +190,7 @@
 
   &:hover:not(.disabled) {
     .asoul-check_box-point {
-      background-color: var(--theme_color_80);
+      background-color: var(--asoul-theme-color-80);
     }
   }
 
@@ -198,11 +198,30 @@
     cursor: not-allowed;
 
     .asoul-check_box-point::before {
-      background-color: var(--sub_color);
+      background-color: var(--asoul-sub-color);
     }
 
-    .asoul-text_inner {
-      color: var(--sub_color);
+    .asoul-check_box-text_inner {
+      color: var(--asoul-sub-color);
+    }
+  }
+}
+
+.asoul-checkbox_group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .asoul-checkbox:not(.asoul-checkbox:first-of-type) {
+    margin-top: 15px;
+  }
+
+  &.useRow {
+    flex-direction: row;
+
+    .asoul-checkbox:not(.asoul-checkbox:first-of-type) {
+      margin-left: 15px;
+      margin-top: 0;
     }
   }
 }

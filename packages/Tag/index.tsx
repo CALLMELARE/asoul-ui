@@ -1,52 +1,44 @@
-import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
-import { computed, PropType, toRefs } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
+import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
+// style
 import "./tag.scss";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-tag`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Tag");
 
-export default createComponent({
+// component
+const Tag = createComponent({
   props: {
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
-    type: {
-      type: String as PropType<NormalTypes>,
-      default: "primary",
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    rounded: {
-      type: Boolean,
-      default: false,
-    },
-    outlined: {
-      type: Boolean,
-      default: false,
-    },
-    invert:{
-      type: Boolean,
-      default: false,
-    }
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names = [];
-      props.size && names.push(props.size);
-      props.type && names.push(props.type);
-      props.disabled && names.push("disabled");
-      props.rounded && names.push("rounded");
-      props.outlined && names.push("outlined");
-      props.invert && names.push("invert");
-      return names.join(" ");
-    });
     return () => (
-      <div class={`asoul-tag ${setClass.value}`}>
+      <div
+        class={`${CLS_PREFIX} ${classNames(
+          {
+            disabled: props.disabled,
+            rounded: props.rounded,
+            outlined: props.outlined,
+            inverse: props.inverse,
+          },
+          props.size,
+          props.type
+        )}`}
+      >
         {slots.default?.()}
       </div>
     );
   },
 });
+
+export default Tag;

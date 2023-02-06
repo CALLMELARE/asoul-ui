@@ -15,8 +15,8 @@
     <ASTag outlined>Outlined</ASTag>
     <Code code="<ASTag outlined>Outlined</ASTag>"></Code>
     <h2>反色</h2>
-    <ASTag invert>Invert</ASTag>
-    <Code code="<ASTag invert>Invert</ASTag>"></Code>
+    <ASTag inverse>Invert</ASTag>
+    <Code code="<ASTag inverse>Invert</ASTag>"></Code>
     <h2>类型</h2>
     <ASTag type="success">Success</ASTag>
     <Code code="<ASTag type='success'>Success</ASTag>"></Code>

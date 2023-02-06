@@ -1,19 +1,23 @@
-import { computed, reactive, toRefs } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
+// style
 import "./showcase.scss";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}-showcase`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("Showcase");
 
-export default createComponent({
+// component
+const Showcase = createComponent({
   props: {
-    src: {
-      type: String,
-      required: true,
-    },
-    height: {
-      type: [Number, String],
-      default: 500,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     const srcExist = () => {
@@ -24,17 +28,19 @@ export default createComponent({
     };
 
     return () => (
-      <div class={`asoul-showcase`} style={`height:${props.height}px;`}>
-        <div class={`asoul-showcase-img-container`}>
+      <div class={`${CLS_PREFIX}`} style={`height:${props.height}px;`}>
+        <div class={`${CLS_PREFIX}-img-container`}>
           <img
             src={props.src}
             alt="showcase"
-            class={`asoul-showcase-img`}
+            class={`${CLS_PREFIX}-img`}
             style={`${srcExist()}`}
           />
         </div>
-        <div class={`asoul-showcase-content`}>{slots.default?.()}</div>
+        <div class={`${CLS_PREFIX}-content`}>{slots.default?.()}</div>
       </div>
     );
   },
 });
+
+export default Showcase;

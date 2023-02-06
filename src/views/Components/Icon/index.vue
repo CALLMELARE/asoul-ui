@@ -6,7 +6,7 @@
     <ASIcon>
       <Wrench16Regular />
     </ASIcon>
-    <Code code="<ASIcon :src='img'>...</ASIcon>"></Code>
+    <Code code="<ASIcon><Wrench16Regular /></ASIcon>"></Code>
 
     <h1>API</h1>
     <h2>Icon Props</h2>

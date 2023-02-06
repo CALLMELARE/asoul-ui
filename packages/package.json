@@ -1,6 +1,6 @@
 {
   "name": "asoul-ui",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "description": "Vue3 UI library,for ASoul",
   "main": "index.ts",
   "bin": "index.ts",
@@ -29,6 +29,7 @@
   "author": "LARE",
   "license": "MIT",
   "dependencies": {
-    "@vicons/material": "^0.12.0"
+    "@vicons/fluent": "latest",
+    "@vicons/utils": "latest"
   }
 }

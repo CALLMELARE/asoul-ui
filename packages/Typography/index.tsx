@@ -1,74 +1,66 @@
+// vue
+import {} from "vue";
+// props
+import { TextProps } from "./Props";
+// external dependencies
+import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
+import { prefix } from "../utils/core";
+// style
 import "./typography.scss";
-import { computed, PropType } from "vue";
-import { NormalTypes } from "../utils/theme/propTypes";
 
+// prefix definition
+export const CLS_PREFIX = `${prefix}`;
+
+// createNameSpace
 const [createComponent] = createNameSpace("GradientText");
 
+// component
 export const H1 = createComponent({
   setup(props, { attrs, slots, emit }) {
-    return () => <div class={`asoul-h1`}>{slots.default?.()}</div>;
+    return () => <div class={`${CLS_PREFIX}-h1`}>{slots.default?.()}</div>;
   },
 });
 
 export const H2 = createComponent({
   setup(props, { attrs, slots, emit }) {
-    return () => <div class={`asoul-h2`}>{slots.default?.()}</div>;
+    return () => <div class={`${CLS_PREFIX}-h2`}>{slots.default?.()}</div>;
   },
 });
 
 export const H3 = createComponent({
   setup(props, { attrs, slots, emit }) {
-    return () => <div class={`asoul-h3`}>{slots.default?.()}</div>;
+    return () => <div class={`${CLS_PREFIX}-h3`}>{slots.default?.()}</div>;
   },
 });
 
 export const Tip = createComponent({
   setup(props, { attrs, slots, emit }) {
-    return () => <div class={`asoul-tip`}>{slots.default?.()}</div>;
+    return () => <div class={`${CLS_PREFIX}-tip`}>{slots.default?.()}</div>;
   },
 });
 
 export const Text = createComponent({
   props: {
-    indent: {
-      type: Boolean,
-      default: false,
-    },
-    italic: {
-      type: Boolean,
-      default: false,
-    },
-    underline: {
-      type: Boolean,
-      default: false,
-    },
-    delete: {
-      type: Boolean,
-      default: false,
-    },
-    code: {
-      type: Boolean,
-      default: false,
-    },
-    type: {
-      type: String as PropType<NormalTypes>,
-      default: "",
-    },
+    ...TextProps,
   },
   setup(props, { attrs, slots, emit }) {
-    const setClass = computed(() => {
-      const names: string[] = [];
-      props.indent && names.push("indent");
-      props.italic && names.push("italic");
-      props.underline && names.push("underline");
-      props.delete && names.push("delete");
-      props.code && names.push("code");
-      props.type && names.push(props.type);
-      return names.join(" ");
-    });
     return () => (
-      <div class={`asoul-text ${setClass.value}`}>{slots.default?.()}</div>
+      <div
+        class={`${CLS_PREFIX}-text ${classNames(
+          {
+            indent: props.indent,
+            italic: props.italic,
+            underline: props.underline,
+            delete: props.delete,
+            code: props.code,
+          },
+          props.type
+        )}`}
+      >
+        {slots.default?.()}
+      </div>
     );
   },
 });
