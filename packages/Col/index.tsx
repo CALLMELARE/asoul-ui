@@ -1,42 +1,25 @@
+// vue
 import { computed, CSSProperties, PropType, ref, toRefs } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
+// internal dependencies
 import { prefix } from "../utils/core";
 import { createNameSpace } from "../utils";
+// style
 import "./col.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-col`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Col");
 
-const calc = (n: number) => {
-  const base = 100 / 24;
-  if (n >= 24) {
-    return "100%";
-  } else {
-    return `${base * n}%`;
-  }
-};
-
-export default createComponent({
+// component
+const Col = createComponent({
   props: {
-    id: {
-      type: String,
-    },
-    tag: {
-      type: String as PropType<keyof HTMLElementTagNameMap>,
-      default: "div",
-    },
-    span: {
-      type: [String, Number],
-      default: 24,
-    },
-    offset: {
-      type: [String, Number],
-      default: 0,
-    },
-    align: {
-      type: String,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     const gutter = ref<string | number>(0);
@@ -60,3 +43,5 @@ export default createComponent({
     );
   },
 });
+
+export default Col;
