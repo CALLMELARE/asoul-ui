@@ -29,6 +29,7 @@
   "author": "LARE",
   "license": "MIT",
   "dependencies": {
-    "@vicons/material": "^0.12.0"
+    "@vicons/fluent": "latest",
+    "@vicons/utils": "latest"
   }
 }

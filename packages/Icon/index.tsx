@@ -2,6 +2,8 @@
 import { ref } from "vue";
 // props
 import { BasicProps } from "./Props";
+// external dependencies
+import { Icon as vIcon } from "@vicons/utils";
 // internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
@@ -23,11 +25,10 @@ const Icon = createComponent({
     const color = ref<string>(props.color);
     const size = ref<string>(props.size);
     return () => (
-      <i
-        class={`${CLS_PREFIX}`}
-        style={`color: ${color.value};font-size: ${size.value}`}
-      >
-        {slots.default?.()}
+      <i class={`${CLS_PREFIX}`}>
+        <vIcon size={size} color={color}>
+          {slots.default?.()}
+        </vIcon>
       </i>
     );
   },

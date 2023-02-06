@@ -41,7 +41,7 @@ const Progress = createComponent({
 
     const renderProgress = () => {
       if (props.type === "line") {
-        return <Line {...omit(props, ["type"])} />;
+        return <Line {...omit(props, ["type"])}></Line>;
       }
     };
 
