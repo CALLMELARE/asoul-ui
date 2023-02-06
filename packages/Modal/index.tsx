@@ -1,17 +1,24 @@
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
-import { ASIcon, ASButton } from "../";
+import { ASButton } from "../";
+// style
 import "./modal.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-modal`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Modal");
 
+// component
 const Modal = createComponent({
   props: {
-    show: {
-      type: Boolean,
-    },
+    ...BasicProps,
   },
   emits: ["click"],
   setup(props, { attrs, slots, emit }) {

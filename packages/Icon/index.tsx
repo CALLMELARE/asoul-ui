@@ -1,16 +1,23 @@
-import { computed, ref, toRefs } from "vue";
+// vue
+import { ref } from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./icon.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-icon`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Icon");
 
+// component
 const Icon = createComponent({
   props: {
-    color: { type: String, default: "" },
-    size: { type: String, default: "" },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     const color = ref<string>(props.color);
