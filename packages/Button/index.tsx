@@ -1,38 +1,27 @@
-import { computed, ref, PropType } from "vue";
+// vue
+import { ref } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
-import {
-  ButtonTypes,
-  NormalSizes,
-  NormalTypes,
-} from "../utils/theme/propTypes";
 import ButtonDrip from "./button-drip";
 import ButtonLoading from "./button-loading";
+// style
 import "./button.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-btn`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Button");
 
-export default createComponent({
+// component
+const Button = createComponent({
   props: {
-    type: {
-      type: String as PropType<ButtonTypes>,
-      default: "default",
-    },
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
-    color: {
-      type: String as PropType<NormalTypes>,
-      default: "primary",
-    },
-    disabled: Boolean,
-    loading: Boolean,
-    auto: Boolean,
-    block: Boolean,
+    ...BasicProps,
   },
   emits: ["click"],
   setup(props, { slots, emit }) {
@@ -91,3 +80,5 @@ export default createComponent({
     );
   },
 });
+
+export default Button;
