@@ -1,25 +1,26 @@
-import { computed, toRefs } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
 import FooterItem from "./FooterItem";
 import FooterList from "./FooterList";
 import FooterTitle from "./FooterTitle";
+// style
 import "./footer.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-footer`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Footer");
 
+// component
 const Footer = createComponent({
   props: {
-    copyinfo: {
-      type: String,
-      default: "ASoul UI",
-    },
-    copyright: Boolean,
-    bgcolor: {
-      type: String,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     const getYear = () => {
@@ -39,6 +40,10 @@ const Footer = createComponent({
     );
   },
 });
+
+Footer.Item = FooterItem;
+Footer.List = FooterList;
+Footer.Title = FooterTitle;
 
 export default Footer;
 export { FooterItem, FooterList, FooterTitle };

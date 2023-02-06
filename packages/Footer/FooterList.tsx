@@ -1,10 +1,15 @@
-import { computed, toRefs } from "vue";
+// vue
+import {} from "vue";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { CLS_PREFIX } from "./";
+// style
 import "./footer.scss";
 
-const [createComponent] = createNameSpace("FooterList");
+// createNameSpace
+const [createComponent] = createNameSpace("Footer.List");
 
+// component
 const FooterList = createComponent({
   props: {},
   setup(props, { attrs, slots, emit }) {
