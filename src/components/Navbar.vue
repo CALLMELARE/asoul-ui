@@ -116,7 +116,7 @@ export default {
     user-select: none;
     padding: 1.25rem 0;
     line-height: 1;
-    color: $EileenTheme;
+    color: var(--asoul-theme-color);
   }
   .nav-bar-theme {
     display: flex;
