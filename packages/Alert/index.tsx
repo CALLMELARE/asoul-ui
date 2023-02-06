@@ -1,26 +1,25 @@
+// vue
 import { computed, PropType, toRefs } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
-import { NormalTypes } from "../utils/theme/propTypes";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./alert.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-alert`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Alert");
 
+// component
 export default createComponent({
   props: {
-    type: {
-      type: String as PropType<NormalTypes>,
-      default: "primary",
-    },
-    border: {
-      type: Boolean,
-    },
-    outlined: {
-      type: Boolean,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     return () => (
