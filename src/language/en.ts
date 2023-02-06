@@ -42,7 +42,7 @@ export default {
     Theme: "Theme",
     Color: {
       name: "Colors",
-      tip: "This part is based on SCSS",
+      tip: "This part is based on CSS Variable",
       default: {
         name: "Default Theme Color",
         themeColor: "Theme Color",

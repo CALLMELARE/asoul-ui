@@ -34,12 +34,14 @@ export const applyTheme = (themes: Array<ThemeTypes> = []) => {
 
 export const generateDerivedCSSVariables = (theme: ThemeTypes) => {
   let arr: ThemeTypes[] = [];
+  const hex = theme.value.substring(1);
+
   if (theme.variable === "--asoul-theme-color") {
     arr.push(theme);
     [90, 80, 70, 60, 50, 40, 30, 20, 10].forEach((alpha) => {
       arr.push({
         variable: `--asoul-theme-color-${alpha}`,
-        value: addColorAlpha(theme.value, alpha),
+        value: addColorAlpha(hex, alpha / 100),
       });
     });
   }
@@ -49,7 +51,7 @@ export const generateDerivedCSSVariables = (theme: ThemeTypes) => {
     [12].forEach((alpha) => {
       arr.push({
         variable: `--asoul-primary-color-${alpha}`,
-        value: addColorAlpha(theme.value, alpha),
+        value: addColorAlpha(hex, alpha / 100),
       });
     });
   }
@@ -59,7 +61,7 @@ export const generateDerivedCSSVariables = (theme: ThemeTypes) => {
     [90, 80, 30].forEach((alpha) => {
       arr.push({
         variable: `--asoul-secondary-color-${alpha}`,
-        value: addColorAlpha(theme.value, alpha),
+        value: addColorAlpha(hex, alpha / 100),
       });
     });
   }
@@ -69,7 +71,7 @@ export const generateDerivedCSSVariables = (theme: ThemeTypes) => {
     [90, 80, 60].forEach((alpha) => {
       arr.push({
         variable: `--asoul-sub-color-${alpha}`,
-        value: addColorAlpha(theme.value, alpha),
+        value: addColorAlpha(hex, alpha / 100),
       });
     });
   }
@@ -79,7 +81,7 @@ export const generateDerivedCSSVariables = (theme: ThemeTypes) => {
     [30].forEach((alpha) => {
       arr.push({
         variable: `--asoul-invert-color-${alpha}`,
-        value: addColorAlpha(theme.value, alpha),
+        value: addColorAlpha(hex, alpha / 100),
       });
     });
   }

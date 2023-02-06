@@ -42,7 +42,7 @@ export default {
     Theme: "主题",
     Color: {
       name: "色彩",
-      tip: "这一部分基于 SCSS 实现",
+      tip: "这一部分基于 CSS 变量实现",
       default: {
         name: "默认主题色",
         themeColor: "主题色",
@@ -106,7 +106,7 @@ export default {
   about: {
     asoulmembers: "ASoul 成员",
     contactMe: "联系我",
-    specialThanks: "特别鸣谢"
+    specialThanks: "特别鸣谢",
   },
   welcome: "请从左侧目录开始浏览",
   api: {
