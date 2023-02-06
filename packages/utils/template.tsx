@@ -1,5 +1,5 @@
 // vue
-import { computed } from "vue";
+import {} from "vue";
 // props
 import { BasicProps } from "./Props";
 // external dependencies

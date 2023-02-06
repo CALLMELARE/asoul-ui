@@ -1,12 +1,15 @@
+// vue
 import { computed, defineComponent } from "vue";
-
+// props
 import { LineProps } from "./Props";
-
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { CLS_PREFIX, validProgress } from "./";
 
+// createNameSpace
 const [createComponent] = createNameSpace("Progress.Line");
 
+// component
 export default createComponent({
   props: {
     ...LineProps,
