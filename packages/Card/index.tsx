@@ -1,18 +1,25 @@
-import { computed, toRefs } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./card.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-card`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Card");
 
-export default createComponent({
+// component
+const Card = createComponent({
   props: {
-    hoverable: Boolean,
-    shadow: Boolean,
-    inverse: Boolean,
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     return () => (
@@ -28,3 +35,5 @@ export default createComponent({
     );
   },
 });
+
+export default Card;
