@@ -1,34 +1,27 @@
-import { computed, PropType, provide } from "vue";
+// vue
+import { computed, provide } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
-import { AlignTypes, JustifyTypes } from "../utils/theme/propTypes";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./row.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-row`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Row");
 
 export const READONLY_LAYOUT_KEY = "layoutKey";
 
+// component
 const Row = createComponent({
   props: {
-    tag: {
-      type: String as PropType<keyof HTMLElementTagNameMap>,
-      default: "div",
-    },
-    gutter: {
-      type: [String, Number],
-      default: 0,
-    },
-    justify: {
-      type: String as PropType<JustifyTypes>,
-      default: "start",
-    },
-    align: {
-      type: String as PropType<AlignTypes>,
-      default: "top",
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     provide(READONLY_LAYOUT_KEY, { gutter: props.gutter });
