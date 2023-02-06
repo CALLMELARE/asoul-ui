@@ -1,12 +1,19 @@
-import { computed, PropType, toRefs } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
-import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./gradientText.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-gradient_text`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("GradientText");
 
 export type GradientType = {
@@ -18,15 +25,10 @@ export type GradientType = {
   };
 };
 
+// component
 const GradientText = createComponent({
   props: {
-    type: {
-      type: String as PropType<NormalTypes>,
-      default: "",
-    },
-    gradient: {
-      type: Object as PropType<GradientType>,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     return () => (
