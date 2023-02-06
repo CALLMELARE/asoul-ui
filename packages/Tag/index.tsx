@@ -1,40 +1,25 @@
-import { computed, PropType, toRefs } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
-import { NormalSizes, NormalTypes } from "../utils/theme/propTypes";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./tag.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-tag`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Tag");
 
+// component
 const Tag = createComponent({
   props: {
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
-    type: {
-      type: String as PropType<NormalTypes>,
-      default: "primary",
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    rounded: {
-      type: Boolean,
-      default: false,
-    },
-    outlined: {
-      type: Boolean,
-      default: false,
-    },
-    inverse: {
-      type: Boolean,
-      default: false,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     return () => (

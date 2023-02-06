@@ -1,34 +1,24 @@
-import { NormalSizes } from "../utils/theme/propTypes";
-import { computed, PropType, reactive, ref, toRefs } from "vue";
+// vue
+import { reactive, ref } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
+import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./textField.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-text_field`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("TextField");
 
+// component
 const TextField = createComponent({
-  props: {
-    value: {
-      type: [String, Number],
-      default: "",
-    },
-    type: { type: String, default: "text" },
-    placeholder: String,
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
-    autocomplete: String,
-    readonly: Boolean,
-    disabled: Boolean,
-    clearable: Boolean,
-    label: String,
-    block: Boolean,
-    prefix: [String, Number],
-    suffix: [String, Number],
-  },
+  props: { ...BasicProps },
   emits: ["change", "blur", "focus", "clearClick"],
   setup(props, { attrs, slots, emit }) {
     const state = reactive({
@@ -63,7 +53,9 @@ const TextField = createComponent({
           <div class={`${CLS_PREFIX}-box`}>
             <input
               style={`${props.block ? "width:100%;" : ""}`}
-              class={`${CLS_PREFIX}-input ${props.disabled ? "disabled" : ""}`}
+              class={`${CLS_PREFIX}-input ${classNames({
+                disabled: props.disabled,
+              })}`}
               type={selfType.value}
               ref={inputRef}
               value={state.value}
