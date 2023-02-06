@@ -7,7 +7,7 @@ export const CLS_PREFIX = `${prefix}-modal`;
 
 const [createComponent] = createNameSpace("Modal");
 
-export default createComponent({
+const Modal = createComponent({
   props: {
     show: {
       type: Boolean,
@@ -15,7 +15,6 @@ export default createComponent({
   },
   emits: ["click"],
   setup(props, { attrs, slots, emit }) {
-    // console.log("show:" + props.show);
     const handleClose = () => {
       emit("click", false);
     };
@@ -47,3 +46,5 @@ export default createComponent({
     );
   },
 });
+
+export default Modal;

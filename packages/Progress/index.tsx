@@ -29,7 +29,7 @@ export const validProgress = (p?: number) => {
 };
 
 // component
-export default createComponent({
+const Progress = createComponent({
   props: {
     ...BasicProps,
   },
@@ -48,3 +48,5 @@ export default createComponent({
     return () => <div class={`${CLS_PREFIX}`}>{renderProgress()}</div>;
   },
 });
+
+export default Progress;

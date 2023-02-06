@@ -9,7 +9,7 @@ export const CLS_PREFIX = `${prefix}-tag`;
 
 const [createComponent] = createNameSpace("Tag");
 
-export default createComponent({
+const Tag = createComponent({
   props: {
     size: {
       type: String as PropType<NormalSizes>,
@@ -55,3 +55,5 @@ export default createComponent({
     );
   },
 });
+
+export default Tag;

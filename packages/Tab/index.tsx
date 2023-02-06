@@ -9,7 +9,7 @@ export const CLS_PREFIX = `${prefix}-tab`;
 
 const [createComponent] = createNameSpace("Tab");
 
-export default createComponent({
+const Tab = createComponent({
   props: {
     title: {
       type: String,
@@ -43,4 +43,5 @@ export default createComponent({
   },
 });
 
+export default Tab;
 export { Tabs, TabTitle };

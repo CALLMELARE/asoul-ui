@@ -39,7 +39,7 @@ function rolling(props: RollingProps): void {
   tiktok();
 }
 
-export default createComponent({
+const NumberFlow = createComponent({
   props: {
     start: {
       type: Number,
@@ -107,3 +107,5 @@ export default createComponent({
     );
   },
 });
+
+export default NumberFlow;

@@ -11,7 +11,7 @@ const [createComponent] = createNameSpace("Row");
 
 export const READONLY_LAYOUT_KEY = "layoutKey";
 
-export default createComponent({
+const Row = createComponent({
   props: {
     tag: {
       type: String as PropType<keyof HTMLElementTagNameMap>,
@@ -54,3 +54,5 @@ export default createComponent({
     );
   },
 });
+
+export default Row;

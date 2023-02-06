@@ -10,7 +10,7 @@ export const CLS_PREFIX = `${prefix}-footer`;
 
 const [createComponent] = createNameSpace("Footer");
 
-export default createComponent({
+const Footer = createComponent({
   props: {
     copyinfo: {
       type: String,
@@ -40,4 +40,5 @@ export default createComponent({
   },
 });
 
+export default Footer;
 export { FooterItem, FooterList, FooterTitle };

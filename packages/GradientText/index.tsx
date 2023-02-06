@@ -18,7 +18,7 @@ export type GradientType = {
   };
 };
 
-export default createComponent({
+const GradientText = createComponent({
   props: {
     type: {
       type: String as PropType<NormalTypes>,
@@ -36,3 +36,5 @@ export default createComponent({
     );
   },
 });
+
+export default GradientText;

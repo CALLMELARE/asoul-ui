@@ -24,7 +24,7 @@ export type TabsProvide = {
   currentChecked: Ref<string | number>;
 };
 
-export default createComponent({
+const Tabs = createComponent({
   props: {
     select: {
       type: [String, Number],
@@ -80,3 +80,5 @@ export default createComponent({
     );
   },
 });
+
+export default Tabs;

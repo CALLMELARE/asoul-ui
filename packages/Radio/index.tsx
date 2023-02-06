@@ -13,7 +13,7 @@ export const CLS_PREFIX = `${prefix}-radio`;
 
 const [createComponent] = createNameSpace("Radio");
 
-export default createComponent({
+const Radio = createComponent({
   props: {
     checked: Boolean,
     disabled: Boolean,
@@ -123,3 +123,5 @@ export default createComponent({
     );
   },
 });
+
+export default Radio;

@@ -33,7 +33,7 @@ export interface RadioEvent {
   nativeEvent: Event;
 }
 
-export default createComponent({
+const RadioGroup = createComponent({
   props: {
     initialValue: [String, Number],
     useRow: Boolean,
@@ -58,3 +58,5 @@ export default createComponent({
     );
   },
 });
+
+export default RadioGroup;

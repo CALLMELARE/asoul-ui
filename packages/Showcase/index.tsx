@@ -7,7 +7,7 @@ export const CLS_PREFIX = `${prefix}-showcase`;
 
 const [createComponent] = createNameSpace("Showcase");
 
-export default createComponent({
+const Showcase = createComponent({
   props: {
     src: {
       type: String,
@@ -41,3 +41,5 @@ export default createComponent({
     );
   },
 });
+
+export default Showcase;

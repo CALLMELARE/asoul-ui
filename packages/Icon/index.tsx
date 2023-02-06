@@ -7,7 +7,7 @@ export const CLS_PREFIX = `${prefix}-icon`;
 
 const [createComponent] = createNameSpace("Icon");
 
-export default createComponent({
+const Icon = createComponent({
   props: {
     color: { type: String, default: "" },
     size: { type: String, default: "" },
@@ -25,3 +25,5 @@ export default createComponent({
     );
   },
 });
+
+export default Icon;

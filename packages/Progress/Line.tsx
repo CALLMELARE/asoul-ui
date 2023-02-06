@@ -10,7 +10,7 @@ import { CLS_PREFIX, validProgress } from "./";
 const [createComponent] = createNameSpace("Progress.Line");
 
 // component
-export default createComponent({
+const Line = createComponent({
   props: {
     ...LineProps,
   },
@@ -34,3 +34,5 @@ export default createComponent({
     );
   },
 });
+
+export default Line;

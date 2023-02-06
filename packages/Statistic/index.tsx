@@ -9,7 +9,7 @@ export const CLS_PREFIX = `${prefix}-statistic`;
 
 const [createComponent] = createNameSpace("Statistic");
 
-export default createComponent({
+const Statistic = createComponent({
   props: {
     separate: {
       type: Boolean,
@@ -51,3 +51,5 @@ export default createComponent({
     );
   },
 });
+
+export default Statistic;

@@ -8,7 +8,7 @@ export const CLS_PREFIX = `${prefix}-result`;
 
 const [createComponent] = createNameSpace("Result");
 
-export default createComponent({
+const Result = createComponent({
   props: {
     type: {
       type: String as PropType<NormalTypes>,
@@ -41,3 +41,5 @@ export default createComponent({
     );
   },
 });
+
+export default Result;

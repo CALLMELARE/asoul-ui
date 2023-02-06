@@ -9,7 +9,7 @@ export const CLS_PREFIX = `${prefix}-empty`;
 
 const [createComponent] = createNameSpace("Empty");
 
-export default createComponent({
+const Empty = createComponent({
   props: {
     description: {
       type: String,
@@ -28,3 +28,5 @@ export default createComponent({
     );
   },
 });
+
+export default Empty;

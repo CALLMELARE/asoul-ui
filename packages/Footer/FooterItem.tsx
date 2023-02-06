@@ -5,9 +5,11 @@ import "./footer.scss";
 
 const [createComponent] = createNameSpace("FooterItem");
 
-export default createComponent({
+const FooterItem = createComponent({
   props: {},
   setup(props, { attrs, slots, emit }) {
     return () => <div class={`${CLS_PREFIX}-item`}>{slots.default?.()}</div>;
   },
 });
+
+export default FooterItem;

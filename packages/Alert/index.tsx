@@ -17,7 +17,7 @@ export const CLS_PREFIX = `${prefix}-alert`;
 const [createComponent] = createNameSpace("Alert");
 
 // component
-export default createComponent({
+const Alert = createComponent({
   props: {
     ...BasicProps,
   },
@@ -35,3 +35,5 @@ export default createComponent({
     );
   },
 });
+
+export default Alert;

@@ -8,7 +8,7 @@ export const CLS_PREFIX = `${prefix}-divider`;
 
 const [createComponent] = createNameSpace("Divider");
 
-export default createComponent({
+const Divider = createComponent({
   props: {
     color: {
       type: String,
@@ -27,3 +27,5 @@ export default createComponent({
     );
   },
 });
+
+export default Divider;

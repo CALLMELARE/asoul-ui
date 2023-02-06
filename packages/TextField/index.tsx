@@ -8,7 +8,7 @@ export const CLS_PREFIX = `${prefix}-text_field`;
 
 const [createComponent] = createNameSpace("TextField");
 
-export default createComponent({
+const TextField = createComponent({
   props: {
     value: {
       type: [String, Number],
@@ -89,3 +89,5 @@ export default createComponent({
     );
   },
 });
+
+export default TextField;
