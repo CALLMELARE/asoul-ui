@@ -1,11 +1,19 @@
-import { ref, PropType, Ref, provide } from "vue";
+// vue
+import { ref, Ref, provide } from "vue";
+// props
+import { RadioGroupProps } from "./Props";
+import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
 import { prefix } from "../utils/core";
-import "./radioGroup.scss";
+// style
+import "./radio.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-radio_group`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("RadioGroup");
 
 export const READNONLY_RADIO_GROUP_KEY = "radioGroupKey";
@@ -33,15 +41,10 @@ export interface RadioEvent {
   nativeEvent: Event;
 }
 
+// component
 const RadioGroup = createComponent({
   props: {
-    initialValue: [String, Number],
-    useRow: Boolean,
-    disabled: Boolean,
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
+    ...RadioGroupProps,
   },
   emits: ["change"],
   setup(props, { slots, emit }) {
@@ -52,7 +55,7 @@ const RadioGroup = createComponent({
     provide(READNONLY_RADIO_GROUP_KEY, { props, updateState, groupValue });
 
     return () => (
-      <div class={`${CLS_PREFIX} ${props.useRow ? "useRow" : ""}`}>
+      <div class={`${CLS_PREFIX} ${classNames({ useRow: props.useRow })}`}>
         {slots.default?.()}
       </div>
     );

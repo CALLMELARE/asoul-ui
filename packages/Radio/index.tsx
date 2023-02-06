@@ -1,28 +1,31 @@
-import { computed, ref, watchEffect, PropType, inject } from "vue";
+// vue
+import { computed, ref, watchEffect, inject } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
+import classNames from "classnames";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
 import { prefix } from "../utils/core";
-import {
+import RadioGroup, {
   RadioGroupProvide,
   READNONLY_RADIO_GROUP_KEY,
   RadioEvent,
-} from "../RadioGroup";
+} from "./RadioGroup";
+// style
 import "./radio.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-radio`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Radio");
 
+// component
 const Radio = createComponent({
   props: {
-    checked: Boolean,
-    disabled: Boolean,
-    rounded: Boolean,
-    value: { type: [String, Number], required: true },
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
+    ...BasicProps,
   },
   emits: ["change"],
   setup(props, { emit, slots }) {
@@ -47,17 +50,10 @@ const Radio = createComponent({
       }
     };
 
-    /**
-     * when component init,it will execute once.
-     * watchEffect will executed auto when the dependence is changed
-     */
-
     if (context) {
       watchEffect(changeStatus);
     }
-    /**
-     * without radioGroup
-     */
+
     if (!context) {
       watchEffect(() => {
         selfChecked.value = props.checked ? true : false;
@@ -88,20 +84,8 @@ const Radio = createComponent({
       }
     };
 
-    const setSize = computed(() => {
-      const names: string[] = [];
-      props.size && names.push(props.size);
-      return names;
-    });
-
-    const setRounded = computed(() => {
-      const names: string[] = [];
-      props.rounded && names.push("rounded");
-      return names;
-    });
-
     return () => (
-      <div class={`${CLS_PREFIX} ${setSize.value}`}>
+      <div class={`${CLS_PREFIX} ${classNames(props.size)}`}>
         <label class={`${isDisabled.value ? "disabled" : ""}`}>
           <input
             type="radio"
@@ -112,9 +96,14 @@ const Radio = createComponent({
           ></input>
           <span class={`${CLS_PREFIX}-name`}>
             <span
-              class={`${CLS_PREFIX}-point ${
-                isDisabled.value ? "disabled" : ""
-              } ${selfChecked.value ? "active" : ""} ${setRounded.value}`}
+              class={`${CLS_PREFIX}-point ${classNames(
+                {
+                  rounded: props.rounded,
+                  active: selfChecked.value,
+                  disabled: isDisabled.value,
+                },
+                props.size
+              )}`}
             />
             {slots.default?.()}
           </span>
@@ -124,4 +113,7 @@ const Radio = createComponent({
   },
 });
 
+Radio.Group = RadioGroup;
+
 export default Radio;
+export { RadioGroup };
