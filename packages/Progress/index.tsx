@@ -1,21 +1,23 @@
-import { computed, toRefs } from "vue";
+// vue
+import { computed } from "vue";
+// props
+import { BasicProps } from "./Props";
+// External dependencies
 import omit from "omit.js";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
 import Line from "./Line";
+// style
 import "./progress.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-progress`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Progress");
 
-const BasicProps = {
-  value: { type: Number, default: 0 },
-  maxvalue: { type: Number, default: "100" },
-  text: { type: String, default: "" },
-  type: { type: String, default: "line" },
-};
-
+// internal methods
 export const validProgress = (p?: number) => {
   if (!p || p < 0) {
     return 0;
@@ -26,6 +28,7 @@ export const validProgress = (p?: number) => {
   return p;
 };
 
+// component
 export default createComponent({
   props: {
     ...BasicProps,

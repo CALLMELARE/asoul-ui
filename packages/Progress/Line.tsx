@@ -1,4 +1,7 @@
 import { computed, defineComponent } from "vue";
+
+import { LineProps } from "./Props";
+
 import { createNameSpace } from "../utils";
 import { CLS_PREFIX, validProgress } from "./";
 
@@ -6,12 +9,7 @@ const [createComponent] = createNameSpace("Progress.Line");
 
 export default createComponent({
   props: {
-    value: { type: Number, required: true },
-    maxvalue: {
-      type: Number,
-      default: "100",
-    },
-    text: { type: String },
+    ...LineProps,
   },
   setup(props, { attrs, slots, emit }) {
     const setWidth = computed(() => {
