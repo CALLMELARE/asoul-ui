@@ -79,29 +79,26 @@
 }
 
 .asoul-btn {
-  &.default {
-    background-color: var(--asoul-theme-color);
-    color: var(--asoul-invert-color);
-
-    &:hover,
-    &:focus {
-      background-color: var(--asoul-theme-color-10);
-    }
+  background-color: var(--asoul-theme-color);
+  color: var(--asoul-invert-color);
+  &:hover {
+    background-color: var(--asoul-theme-color-90);
   }
 
   &.outlined {
     border: 1px solid;
     border-color: var(--asoul-theme-color);
     color: var(--asoul-theme-color);
+    background-color: transparent;
 
-    &:hover,
-    &:focus {
-      background-color: var(--asoul-theme-color-90);
+    &:hover {
+      background-color: var(--asoul-theme-color-10);
     }
   }
 
   &.text {
     color: var(--asoul-theme-color);
+    background-color: transparent;
 
     &:hover {
       background-color: var(--asoul-theme-color-10);
@@ -111,19 +108,15 @@
   &.glass {
     background-color: var(--asoul-invert-color-30);
     backdrop-filter: blur(10px);
-    color: var(--asoul-primary-color);
+    color: var(--asoul-theme-color);
 
-    &:hover,
-    &:focus {
-      background-color: var(--asoul-theme-color-90);
+    &:hover {
+      background-color: var(--asoul-theme-color-10);
     }
   }
 }
 
 .asoul-btn {
-  &.primary {
-  }
-
   &.success {
     border-color: $successDefault;
     background-color: $successDefault;

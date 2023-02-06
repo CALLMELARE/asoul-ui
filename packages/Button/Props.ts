@@ -8,7 +8,7 @@ import {
 export const BasicProps = {
   type: {
     type: String as PropType<ButtonTypes>,
-    default: "default",
+    default: "",
   },
   size: {
     type: String as PropType<NormalSizes>,
