@@ -1,4 +1,8 @@
+// vue
 import { computed, ref, watchEffect, PropType, inject } from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
 import { prefix } from "../utils/core";
@@ -7,24 +11,19 @@ import {
   CheckboxEvent,
   CheckboxGroupProvide,
 } from "../CheckboxGroup";
+// style
 import "./checkBox.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-check_box`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Checkbox");
 
-export default createComponent({
+// component
+const CheckBox = createComponent({
   props: {
-    disabled: Boolean,
-    modelValue: Boolean,
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
-    label: {
-      type: [String],
-      default: "",
-    },
+    ...BasicProps,
   },
   emits: ["change", "update:modelValue"],
   setup(props, { slots, emit }) {
@@ -118,3 +117,5 @@ export default createComponent({
     );
   },
 });
+
+export default CheckBox;
