@@ -1,11 +1,18 @@
-import { computed, onMounted, watchEffect, ref } from "vue";
+// vue
+import { onMounted, watchEffect, ref } from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
 import format from "../utils/format";
+// style
 import "./numberFlow.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-number_flow`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("NumberFlow");
 
 interface RollingProps {
@@ -16,6 +23,7 @@ interface RollingProps {
   handleStop: () => void;
 }
 
+// internal methods
 const easeOut = (t: number): number => {
   return 1 - Math.pow(1 - t, 3);
 };
@@ -39,28 +47,10 @@ function rolling(props: RollingProps): void {
   tiktok();
 }
 
+// component
 const NumberFlow = createComponent({
   props: {
-    start: {
-      type: Number,
-      default: 0,
-    },
-    end: {
-      type: Number,
-      default: 0,
-    },
-    duration: {
-      type: Number,
-      default: 2000,
-    },
-    precision: {
-      type: Number,
-      default: 0,
-    },
-    active: {
-      type: Boolean,
-      default: false,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     let ongoing = false;
