@@ -1,6 +1,12 @@
-import { computed, defineComponent } from "vue";
+// vue
+import { defineComponent } from "vue";
+// props
+import { TabTitleProps } from "./Props";
+// external dependencies
+import classNames from "classnames";
+// internal dependencies
 import { CLS_PREFIX } from "./";
-
+// style
 import "./tab.scss";
 
 export type TabTitleEmit = {
@@ -9,18 +15,10 @@ export type TabTitleEmit = {
   e: MouseEvent;
 };
 
+// component
 export default defineComponent({
   props: {
-    title: {
-      type: String,
-      default: "",
-    },
-    value: {
-      type: [String, Number],
-      default: "",
-    },
-    disabled: Boolean,
-    active: [String, Number],
+    ...TabTitleProps,
   },
   emits: ["click"],
   setup(props, { attrs, slots, emit }) {
@@ -31,17 +29,12 @@ export default defineComponent({
       emit("click", { title, value, e } as TabTitleEmit);
     };
 
-    const setDisabled = computed(() => {
-      return props.disabled ? "disabled" : "";
-    });
-
-    const setActive = computed(() => {
-      return props.active == props.value ? "active" : "";
-    });
-
     return () => (
       <div
-        class={`${CLS_PREFIX}-title ${setDisabled.value} ${setActive.value}`}
+        class={`${CLS_PREFIX}-title ${classNames({
+          disabled: props.disabled,
+          active: props.active == props.value,
+        })}`}
         onClick={(e) => handleClick(e)}
       >
         {props.title}

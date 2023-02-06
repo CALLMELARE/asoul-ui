@@ -1,30 +1,25 @@
-import { computed, PropType, reactive, ref } from "vue";
+// vue
+import { ref } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
-import { NormalTypes } from "../utils/theme/propTypes";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./statistic.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-statistic`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Statistic");
 
+// component
 const Statistic = createComponent({
   props: {
-    separate: {
-      type: Boolean,
-      default: false,
-    },
-    type: {
-      type: String as PropType<NormalTypes>,
-      default: "",
-    },
-    value: {
-      type: String,
-    },
-    label: {
-      type: String,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     const styledStat = (n: String) => {
