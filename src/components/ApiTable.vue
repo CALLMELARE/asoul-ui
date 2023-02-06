@@ -66,14 +66,14 @@ th {
 }
 
 .api-table caption {
-  color: var(--primary_color);
+  color: var(--asoul-primary-color);
   font: italic 85%/1 arial, sans-serif;
   padding: 1em 0;
   text-align: center;
 }
 
 .api-table th {
-  color: var(--invert_color);
+  color: var(--asoul-invert-color);
   border-width: 0 0 0 1px;
   font-size: inherit;
   margin: 0;
@@ -84,7 +84,7 @@ th {
 }
 
 .api-table td {
-  color: var(--secondary_color);
+  color: var(--asoul-secondary-color);
   border-width: 0 0 0 1px;
   font-size: inherit;
   margin: 0;
@@ -95,8 +95,8 @@ th {
 }
 
 .api-table thead {
-  background-color: var(--theme_color_90);
-  color: var(--primary_color);
+  background-color: var(--asoul-theme-color-90);
+  color: var(--asoul-primary-color);
   text-align: left;
   vertical-align: bottom;
   font-weight: normal;

@@ -3,10 +3,10 @@
 .asoul-footer {
   width: 100%;
   position: relative;
-  background-color: var(--theme_color);
+  background-color: var(--asoul-theme-color);
 
   .asoul-footer-title {
-    color: var(--invert_color);
+    color: var(--asoul-invert-color);
     font-weight: bold;
     font-size: $medium * 1.1;
     line-height: $medium * 1.5;
@@ -28,8 +28,8 @@
   .asoul-footer-copyright {
     width: 100%;
     text-align: center;
-    background-color: var(--secondary_color_80);
-    color: var(--invert_color);
+    background-color: var(--asoul-secondary-color-80);
+    color: var(--asoul-invert-color);
     font-weight: bold;
     padding: 12px 0;
   }
@@ -41,7 +41,7 @@
     max-width: 512px;
     margin: 0 12px;
     .asoul-footer-item {
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       font-size: $medium;
       line-height: $medium * 1.4;
       width: 100%;

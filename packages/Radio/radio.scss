@@ -7,7 +7,7 @@
   width: initial;
 
   .asoul-radio-name {
-    color: var(--primary_color);
+    color: var(--asoul-primary-color);
   }
 
   &.mini {
@@ -137,17 +137,17 @@
 
     &:hover:not(.disabled) {
       .asoul-radio-point {
-        background-color: var(--theme_color_80);
+        background-color: var(--asoul-theme-color-80);
       }
     }
 
     &.disabled {
-      color: var(--sub_color);
+      color: var(--asoul-sub-color);
       cursor: not-allowed;
 
       .asoul-radio-point {
         border: 1px solid;
-        border-color: var(--sub_color);
+        border-color: var(--asoul-sub-color);
       }
     }
   }
@@ -161,7 +161,7 @@
   .asoul-radio-point {
     $radius: 5px;
     border: 1px solid;
-    border-color: var(--theme_color);
+    border-color: var(--asoul-theme-color);
     border-radius: $radius;
     transition: all 0.2s ease 0s;
     position: relative;
@@ -169,7 +169,7 @@
     transform: scale(0.875);
 
     &::before {
-      background-color: var(--theme_color);
+      background-color: var(--asoul-theme-color);
       content: "";
       position: absolute;
       transform: scale(0);
@@ -177,7 +177,7 @@
     }
 
     &.disabled::before {
-      background-color: var(--sub_color);
+      background-color: var(--asoul-sub-color);
     }
 
     &.active::before {

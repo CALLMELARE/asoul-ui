@@ -1,47 +1,47 @@
 // Themes
 
 :root {
-  --theme_color: #576690;
-  --theme_color_90: rgba(87, 102, 144, 0.9);
-  --theme_color_80: rgba(87, 102, 144, 0.8);
-  --theme_color_60: rgba(87, 102, 144, 0.6);
-  --theme_color_50: rgba(87, 102, 144, 0.5);
-  --theme_color_30: rgba(87, 102, 144, 0.3);
-  --theme_color_20: rgba(87, 102, 144, 0.2);
-  --theme_color_10: rgba(87, 102, 144, 0.1);
-  --primary_color: #252525;
-  --primary_color_12: rgba(37, 37, 37, 0.12);
-  --secondary_color: #656667;
-  --secondary_color_90: rgba(101, 102, 103, 0.9);
-  --secondary_color_80: rgba(101, 102, 103, 0.8);
-  --secondary_color_30: rgba(101, 102, 103, 0.3);
-  --sub_color: #cccccc;
-  --sub_color_90: rgba(204, 204, 204, 0.9);
-  --sub_color_80: rgba(204, 204, 204, 0.8);
-  --sub_color_60: rgba(204, 204, 204, 0.6);
-  --invert_color: #ffffff;
-  --invert_color_30: rgba(255, 255, 255, 0.3);
+  --asoul-theme-color: #576690;
+  --asoul-theme-color-90: rgba(87, 102, 144, 0.9);
+  --asoul-theme-color-80: rgba(87, 102, 144, 0.8);
+  --asoul-theme-color-60: rgba(87, 102, 144, 0.6);
+  --asoul-theme-color-50: rgba(87, 102, 144, 0.5);
+  --asoul-theme-color-30: rgba(87, 102, 144, 0.3);
+  --asoul-theme-color-20: rgba(87, 102, 144, 0.2);
+  --asoul-theme-color-10: rgba(87, 102, 144, 0.1);
+  --asoul-primary-color: #252525;
+  --asoul-primary-color-12: rgba(37, 37, 37, 0.12);
+  --asoul-secondary-color: #656667;
+  --asoul-secondary-color-90: rgba(101, 102, 103, 0.9);
+  --asoul-secondary-color-80: rgba(101, 102, 103, 0.8);
+  --asoul-secondary-color-30: rgba(101, 102, 103, 0.3);
+  --asoul-sub-color: #cccccc;
+  --asoul-sub-color-90: rgba(204, 204, 204, 0.9);
+  --asoul-sub-color-80: rgba(204, 204, 204, 0.8);
+  --asoul-sub-color-60: rgba(204, 204, 204, 0.6);
+  --asoul-invert-color: #ffffff;
+  --asoul-invert-color-30: rgba(255, 255, 255, 0.3);
 }
 
 .theme-dark {
-  --theme_color: #576690;
-  --theme_color_90: rgba(87, 102, 144, 0.9);
-  --theme_color_80: rgba(87, 102, 144, 0.8);
-  --theme_color_60: rgba(87, 102, 144, 0.6);
-  --theme_color_50: rgba(87, 102, 144, 0.5);
-  --theme_color_30: rgba(87, 102, 144, 0.3);
-  --theme_color_20: rgba(87, 102, 144, 0.2);
-  --theme_color_10: rgba(87, 102, 144, 0.1);
-  --primary_color: #ffffff;
-  --primary_color_12: rgba(255, 255, 255, 0.12);
-  --secondary_color: #cccccc;
-  --secondary_color_90: rgba(204, 204, 204, 0.9);
-  --secondary_color_80: rgba(204, 204, 204, 0.8);
-  --secondary_color_30: rgba(204, 204, 204, 0.3);
-  --sub_color: #656667;
-  --sub_color_90: rgba(101, 102, 103, 0.9);
-  --sub_color_80: rgba(101, 102, 103, 0.8);
-  --sub_color_60: rgba(101, 102, 103, 0.6);
-  --invert_color: #252525;
-  --invert_color_30: rgba(37, 37, 37, 0.3);
+  --asoul-theme-color: #576690;
+  --asoul-theme-color-90: rgba(87, 102, 144, 0.9);
+  --asoul-theme-color-80: rgba(87, 102, 144, 0.8);
+  --asoul-theme-color-60: rgba(87, 102, 144, 0.6);
+  --asoul-theme-color-50: rgba(87, 102, 144, 0.5);
+  --asoul-theme-color-30: rgba(87, 102, 144, 0.3);
+  --asoul-theme-color-20: rgba(87, 102, 144, 0.2);
+  --asoul-theme-color-10: rgba(87, 102, 144, 0.1);
+  --asoul-primary-color: #ffffff;
+  --asoul-primary-color-12: rgba(255, 255, 255, 0.12);
+  --asoul-secondary-color: #cccccc;
+  --asoul-secondary-color-90: rgba(204, 204, 204, 0.9);
+  --asoul-secondary-color-80: rgba(204, 204, 204, 0.8);
+  --asoul-secondary-color-30: rgba(204, 204, 204, 0.3);
+  --asoul-sub-color: #656667;
+  --asoul-sub-color-90: rgba(101, 102, 103, 0.9);
+  --asoul-sub-color-80: rgba(101, 102, 103, 0.8);
+  --asoul-sub-color-60: rgba(101, 102, 103, 0.6);
+  --asoul-invert-color: #252525;
+  --asoul-invert-color-30: rgba(37, 37, 37, 0.3);
 }

@@ -27,12 +27,12 @@ export default {
   margin: 0.5rem 0;
   padding: 0.5rem;
   border: 1px solid;
-  border-color: var(--theme_color_30);
+  border-color: var(--asoul-theme-color-30);
   border-radius: 5px;
 }
 
 .hljs {
-  color: var(--primary_color);
+  color: var(--asoul-primary-color);
   background: #ffffff;
 }
 
@@ -94,7 +94,7 @@ export default {
 .hljs-selector-tag,
 .hljs-selector-pseudo {
   /* prettylights-syntax-entity-tag */
-  color: var(--theme_color);
+  color: var(--asoul-theme-color);
 }
 
 .hljs-subst {

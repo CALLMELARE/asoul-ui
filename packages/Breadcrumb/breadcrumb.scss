@@ -7,7 +7,7 @@
     user-select: none;
     .asoul-breadcrumb-content {
       display: inline-flex;
-      color: var(--secondary_color_30);
+      color: var(--asoul-secondary-color-30);
       width: auto;
       line-height: 1.2;
       cursor: pointer;
@@ -15,7 +15,7 @@
         cursor: default;
       }
       &:hover {
-        color: var(--theme_color_30);
+        color: var(--asoul-theme-color-30);
       }
     }
     .asoul-breadcrumb-separator {
@@ -25,11 +25,11 @@
       cursor: default;
       width: fit-content;
       height: fit-content;
-      color: var(--secondary_color);
+      color: var(--asoul-secondary-color);
     }
     &:last-child {
       .asoul-breadcrumb-content {
-        color: var(--theme_color);
+        color: var(--asoul-theme-color);
       }
       .asoul-breadcrumb-separator {
         display: none;

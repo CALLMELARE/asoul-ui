@@ -140,7 +140,7 @@ export default {
     display: flex;
     flex-direction: column;
     .home-banner-title {
-      color: var(--primary_color);
+      color: var(--asoul-primary-color);
       cursor: default;
       user-select: none;
       margin-top: 20vh;
@@ -151,7 +151,7 @@ export default {
       letter-spacing: 0.3rem;
     }
     .home-banner-subtitle {
-      color: var(--primary_color);
+      color: var(--asoul-primary-color);
       cursor: default;
       user-select: none;
       margin-top: 1rem;
@@ -232,7 +232,7 @@ export default {
     }
     #item-1 {
       background-color: $AvaTheme;
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       .home-banner-avatar {
         background-image: url("assets/avatar-ava.png");
       }
@@ -242,7 +242,7 @@ export default {
     }
     #item-2 {
       background-color: $BellaTheme;
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       .home-banner-avatar {
         background-image: url("assets/avatar-bella.png");
       }
@@ -252,7 +252,7 @@ export default {
     }
     #item-3 {
       background-color: $CarolTheme;
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       .home-banner-avatar {
         background-image: url("assets/avatar-carol.png");
       }
@@ -262,7 +262,7 @@ export default {
     }
     #item-4 {
       background-color: $DianaTheme;
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       .home-banner-avatar {
         background-image: url("assets/avatar-diana.png");
       }
@@ -272,7 +272,7 @@ export default {
     }
     #item-5 {
       background-color: $EileenTheme;
-      color: var(--invert_color);
+      color: var(--asoul-invert-color);
       .home-banner-avatar {
         background-image: url("assets/avatar-eileen.png");
       }
@@ -296,50 +296,50 @@ export default {
 @keyframes ava-trans {
   0% {
     color: $AvaTheme;
-    background-color: var(--invert_color);
+    background-color: var(--asoul-invert-color);
   }
   100% {
-    color: var(--invert_color);
+    color: var(--asoul-invert-color);
     background-color: $AvaTheme;
   }
 }
 @keyframes bella-trans {
   0% {
     color: $BellaTheme;
-    background-color: var(--invert_color);
+    background-color: var(--asoul-invert-color);
   }
   100% {
-    color: var(--invert_color);
+    color: var(--asoul-invert-color);
     background-color: $BellaTheme;
   }
 }
 @keyframes carol-trans {
   0% {
     color: $CarolTheme;
-    background-color: var(--invert_color);
+    background-color: var(--asoul-invert-color);
   }
   100% {
-    color: var(--invert_color);
+    color: var(--asoul-invert-color);
     background-color: $CarolTheme;
   }
 }
 @keyframes diana-trans {
   0% {
     color: $DianaTheme;
-    background-color: var(--invert_color);
+    background-color: var(--asoul-invert-color);
   }
   100% {
-    color: var(--invert_color);
+    color: var(--asoul-invert-color);
     background-color: $DianaTheme;
   }
 }
 @keyframes eileen-trans {
   0% {
     color: $EileenTheme;
-    background-color: var(--invert_color);
+    background-color: var(--asoul-invert-color);
   }
   100% {
-    color: var(--invert_color);
+    color: var(--asoul-invert-color);
     background-color: $EileenTheme;
   }
 }

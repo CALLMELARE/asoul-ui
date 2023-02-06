@@ -24,49 +24,49 @@ $font: $medium;
       width: 100%;
 
       .asoul-text_field-input {
-        background-color: var(--invert_color);
-        color: var(--primary_color);
+        background-color: var(--asoul-invert-color);
+        color: var(--asoul-primary-color);
         padding: $font * 1.2 5px calc($font / 2) 5px;
         font-size: $font;
         line-height: $font;
         outline: none;
         border: none;
         border-bottom: 2px solid;
-        border-color: var(--sub_color);
+        border-color: var(--asoul-sub-color);
         // border-radius: 5px;
 
         &.disabled {
           pointer-events: none;
 
           ~ .asoul-text_field-label {
-            color: var(--secondary_color);
+            color: var(--asoul-secondary-color);
           }
 
           cursor: not-allowed;
-          background-color: var(--sub_color);
+          background-color: var(--asoul-sub-color);
           user-select: none;
         }
 
         &:focus:not(.disabled) {
           border-bottom: 2px solid;
-          border-color: var(--theme_color);
+          border-color: var(--asoul-theme-color);
 
           ~ .asoul-text_field-label {
-            color: var(--theme_color);
+            color: var(--asoul-theme-color);
             transform: translate(-12%, -50%) scale(0.75);
           }
         }
       }
 
       .asoul-text_field-label {
-        color: var(--sub_color);
+        color: var(--asoul-sub-color);
         position: absolute;
         transition: 0.2s ease;
         top: $font * 0.2;
         left: 5px;
 
         &.focused {
-          color: var(--sub_color);
+          color: var(--asoul-sub-color);
           transform: translate(-12%, -50%) scale(0.75);
         }
       }

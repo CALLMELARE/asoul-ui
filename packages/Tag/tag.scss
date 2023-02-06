@@ -14,21 +14,21 @@
   border: 1px solid;
   user-select: none;
   font-size: $medium;
-  color: var(--theme_color);
-  border-color: var(--theme_color_30);
-  background-color: var(--theme_color_20);
+  color: var(--asoul-theme-color);
+  border-color: var(--asoul-theme-color-30);
+  background-color: var(--asoul-theme-color-20);
   &.outlined {
     background-color: transparent;
   }
   &.disabled {
-    color: var(--secondary_color);
-    border-color: var(--secondary_color_30);
-    background-color: var(--secondary_color_90);
+    color: var(--asoul-secondary-color);
+    border-color: var(--asoul-secondary-color-30);
+    background-color: var(--asoul-secondary-color-90);
   }
   &.inverse {
-    color: var(--invert_color);
-    border-color: var(--theme_color);
-    background-color: var(--theme_color);
+    color: var(--asoul-invert-color);
+    border-color: var(--asoul-theme-color);
+    background-color: var(--asoul-theme-color);
   }
   &.success {
     color: $successDark;

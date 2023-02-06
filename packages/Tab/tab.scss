@@ -20,8 +20,8 @@
 
   .asoul-tab {
     padding: 12px;
-    background-color: var(--sub_color_90);
-    color: var(--primary_color);
+    background-color: var(--asoul-sub-color-90);
+    color: var(--asoul-primary-color);
 
     &.none {
       display: none;
@@ -33,23 +33,23 @@
     padding: 8px 12px;
     font-size: $medium;
     line-height: $medium * 1.3;
-    color: var(--primary_color);
+    color: var(--asoul-primary-color);
     outline: 0;
-    background-color: var(--sub_color_90);
+    background-color: var(--asoul-sub-color-90);
 
     &.active {
-      color: var(--theme_color);
+      color: var(--asoul-theme-color);
       padding: 8px 12px 6px 12px;
 
       // border-bottom: 2px solid $primaryDefault;
-      // background-color: var(--theme_color_90);
+      // background-color: var(--asoul-theme-color-90);
       .asoul-tab-slider {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: var(--theme_color);
+        background-color: var(--asoul-theme-color);
         transition: left 0.3s ease;
         -webkit-animation: scale-up-hor-center 0.2s
           cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -59,7 +59,7 @@
     }
 
     &:not(.active) {
-      color: var(--secondary_color);
+      color: var(--asoul-secondary-color);
 
       .asoul-tab-slider {
         position: absolute;
@@ -67,12 +67,12 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: var(--sub_color_80);
+        background-color: var(--asoul-sub-color-80);
       }
     }
 
     &:hover {
-      background-color: var(--sub_color_80);
+      background-color: var(--asoul-sub-color-80);
     }
   }
 }

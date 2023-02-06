@@ -25,16 +25,16 @@
     box-sizing: border-box;
     border-radius: 5px;
     border: 1px solid;
-    border-color: var(--sub_color);
-    background-color: var(--invert_color);
-    color: var(--primary_color);
+    border-color: var(--asoul-sub-color);
+    background-color: var(--asoul-invert-color);
+    color: var(--asoul-primary-color);
 
     .asoul-modal-header {
       padding: 16px;
       box-sizing: border-box;
       font-weight: bold;
       // border-bottom: 1px solid;
-      // border-color:(--sub_color);
+      // border-color:(--asoul-sub-color);
       display: flex;
       justify-content: space-between;
 
@@ -52,7 +52,7 @@
       display: flex;
       justify-content: flex-end;
       // border-top: 1px solid;
-      // border-color:(--sub_color);
+      // border-color:(--asoul-sub-color);
     }
 
     .asoul-modal-content {

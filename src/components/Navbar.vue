@@ -103,8 +103,8 @@ export default {
   height: 3.75rem;
   display: flex;
   position: sticky;
-  background-color: var(--invert_color);
-  box-shadow: 0 5px 10px var(--primary_color_12);
+  background-color: var(--asoul-invert-color);
+  box-shadow: 0 5px 10px var(--asoul-primary-color-12);
 
   .nav-bar-brand {
     width: 15%;

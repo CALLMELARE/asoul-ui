@@ -8,7 +8,7 @@
   cursor: pointer;
   user-select: none;
   .asoul-check_box-text_inner {
-    color: var(--primary_color);
+    color: var(--asoul-primary-color);
   }
   &.mini {
     $size: $mini;
@@ -140,14 +140,14 @@
 .asoul-check_box {
   .asoul-check_box-point {
     border: 1px solid;
-    border-color: var(--theme_color);
+    border-color: var(--asoul-theme-color);
     transition: all 0.2s ease 0s;
     position: relative;
     display: inline-block;
     transform: scale(0.875);
 
     &::before {
-      background-color: var(--theme_color);
+      background-color: var(--asoul-theme-color);
       content: "";
       position: absolute;
       position: absolute;
@@ -157,7 +157,7 @@
 
     &.disabled {
       border: 1px solid;
-      border-color: var(--sub_color);
+      border-color: var(--asoul-sub-color);
     }
 
     &.active::before {
@@ -190,7 +190,7 @@
 
   &:hover:not(.disabled) {
     .asoul-check_box-point {
-      background-color: var(--theme_color_80);
+      background-color: var(--asoul-theme-color-80);
     }
   }
 
@@ -198,11 +198,11 @@
     cursor: not-allowed;
 
     .asoul-check_box-point::before {
-      background-color: var(--sub_color);
+      background-color: var(--asoul-sub-color);
     }
 
     .asoul-check_box-text_inner {
-      color: var(--sub_color);
+      color: var(--asoul-sub-color);
     }
   }
 }

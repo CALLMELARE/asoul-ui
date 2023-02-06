@@ -28,7 +28,7 @@
     }
 
     &.info {
-      background-color: var(--theme_color);
+      background-color: var(--asoul-theme-color);
     }
 
     .success-icon {
@@ -39,7 +39,7 @@
       width: 10px;
       height: 4px;
       border-radius: 2px;
-      background-color: var(--invert_color);
+      background-color: var(--asoul-invert-color);
       line-height: 0;
       font-size: 0;
       transform: rotate(45deg);
@@ -50,7 +50,7 @@
         width: 20px;
         height: 4px;
         border-radius: 2px 2px 2px 0;
-        background-color: var(--invert_color);
+        background-color: var(--asoul-invert-color);
         transform: rotate(-90deg) translateY(-50%) translateX(50%);
       }
     }
@@ -63,7 +63,7 @@
       width: 4px;
       height: 26px;
       border-radius: 2px;
-      background-color: var(--invert_color);
+      background-color: var(--asoul-invert-color);
       line-height: 0;
       font-size: 0;
 
@@ -75,7 +75,7 @@
         width: 4px;
         height: 4px;
         border-radius: 2px;
-        background-color: var(--invert_color);
+        background-color: var(--asoul-invert-color);
       }
     }
 
@@ -87,7 +87,7 @@
       width: 26px;
       height: 4px;
       border-radius: 2px;
-      background-color: var(--invert_color);
+      background-color: var(--asoul-invert-color);
       line-height: 0;
       font-size: 0;
       transform: rotate(45deg);
@@ -98,7 +98,7 @@
         width: 26px;
         height: 4px;
         border-radius: 2px;
-        background-color: var(--invert_color);
+        background-color: var(--asoul-invert-color);
         transform: rotate(-90deg);
       }
     }
@@ -111,7 +111,7 @@
       width: 4px;
       height: 4px;
       border-radius: 2px;
-      background-color: var(--invert_color);
+      background-color: var(--asoul-invert-color);
       line-height: 0;
       font-size: 0;
 
@@ -123,19 +123,19 @@
         width: 4px;
         height: 26px;
         border-radius: 2px;
-        background-color: var(--invert_color);
+        background-color: var(--asoul-invert-color);
       }
     }
   }
 
   .asoul-result-title {
-    color: var(--primary_color);
+    color: var(--asoul-primary-color);
     font-size: $large;
     line-height: 1.3;
   }
 
   .asoul-result-subtitle {
-    color: var(--secondary_color);
+    color: var(--asoul-secondary-color);
     font-size: $medium;
     line-height: 2;
   }
