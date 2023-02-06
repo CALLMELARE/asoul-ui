@@ -13,3 +13,16 @@ export const BasicProps = {
     default: "",
   },
 };
+
+export const CheckboxGroupProps = {
+  disabled: { type: Boolean, default: false },
+  modelValue: {
+    type: Array as PropType<string[]>,
+    default: () => [],
+  },
+  size: {
+    type: String as PropType<NormalSizes>,
+    default: "medium",
+  },
+  useRow: { type: Boolean, default: false },
+};

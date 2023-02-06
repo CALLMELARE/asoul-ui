@@ -6,11 +6,11 @@ import { BasicProps } from "./Props";
 import { createNameSpace } from "../utils";
 import { NormalSizes } from "../utils/theme/propTypes";
 import { prefix } from "../utils/core";
-import {
+import CheckboxGroup, {
   READONLY_CHECKBOX_KEY,
   CheckboxEvent,
   CheckboxGroupProvide,
-} from "../CheckboxGroup";
+} from "./CheckboxGroup";
 // style
 import "./checkBox.scss";
 
@@ -118,4 +118,7 @@ const CheckBox = createComponent({
   },
 });
 
+CheckBox.Group = CheckboxGroup;
+
 export default CheckBox;
+export { CheckboxGroup };
