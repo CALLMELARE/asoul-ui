@@ -1,12 +1,20 @@
-import { computed, PropType, provide } from "vue";
+// vue
+import { provide } from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import classNames from "classnames";
-import { NormalSizes } from "../utils/theme/propTypes";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+import BreadcrumbItem from "./breadcrumb-item";
+// style
 import "./breadcrumb.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-breadcrumb`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Breadcrumb");
 
 export const READONLY_BREADCRUMB_KEY = "breadcrumbKey";
@@ -16,20 +24,10 @@ export type BreadcrumbProvide = {
   disabled: Boolean;
 };
 
-export default createComponent({
+// component
+const Breadcrumb = createComponent({
   props: {
-    separator: {
-      type: String,
-      default: ">",
-    },
-    size: {
-      type: String as PropType<NormalSizes>,
-      default: "medium",
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     provide(READONLY_BREADCRUMB_KEY, {
@@ -44,3 +42,7 @@ export default createComponent({
     );
   },
 });
+
+Breadcrumb.Item = BreadcrumbItem;
+
+export default Breadcrumb;

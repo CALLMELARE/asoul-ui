@@ -1,21 +1,21 @@
+// vue
 import { inject } from "vue";
 import { useRouter } from "vue-router";
+// props
+import { ItemProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { CLS_PREFIX, BreadcrumbProvide, READONLY_BREADCRUMB_KEY } from "./";
-import "../Breadcrumb/breadcrumb.scss";
+// style
+import "./breadcrumb.scss";
 
+// createNameSpace
 const [createComponent] = createNameSpace("BreadcrumbItem");
 
-export default createComponent({
+// component
+const BreadcrumbItem = createComponent({
   props: {
-    to: {
-      type: [String, Object],
-      default: "",
-    },
-    href: {
-      type: String,
-      default: "",
-    },
+    ...ItemProps,
   },
   setup(props, { attrs, slots, emit }) {
     const router = useRouter();
@@ -60,3 +60,5 @@ export default createComponent({
     );
   },
 });
+
+export default BreadcrumbItem;
