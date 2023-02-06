@@ -1,20 +1,23 @@
-import { computed, PropType, ref, toRefs } from "vue";
-import { NormalTypes } from "../utils/theme/propTypes";
+// vue
+import { ref } from "vue";
+// props
+import { BasicProps } from "./Props";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
+// style
 import "./divider.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-divider`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Divider");
 
+// component
 const Divider = createComponent({
   props: {
-    color: {
-      type: String,
-      default: "",
-    },
-    dashed: { type: Boolean, default: false },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     const isDashed = ref<boolean>(props.dashed);

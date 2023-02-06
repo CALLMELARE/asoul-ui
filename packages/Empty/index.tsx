@@ -1,20 +1,26 @@
-import { computed, onMounted, watchEffect, ref } from "vue";
+// vue
+import {} from "vue";
+// props
+import { BasicProps } from "./Props";
+// external dependencies
 import { FolderOpenTwotone } from "@vicons/material";
+// internal dependencies
 import { createNameSpace } from "../utils";
 import { prefix } from "../utils/core";
 import { ASIcon } from "../";
+// style
 import "./empty.scss";
 
+// prefix definition
 export const CLS_PREFIX = `${prefix}-empty`;
 
+// createNameSpace
 const [createComponent] = createNameSpace("Empty");
 
+// component
 const Empty = createComponent({
   props: {
-    description: {
-      type: String,
-      default: "空空如也",
-    },
+    ...BasicProps,
   },
   setup(props, { attrs, slots, emit }) {
     return () => (
