@@ -46,28 +46,28 @@ const Line = createComponent({
 
     return () => (
       <div
-        class={`${CLS_PREFIX}-bar ${classNames({
-          [`${CLS_PREFIX}-bar-with-info`]: props.showInfo || props.status,
-          [`${CLS_PREFIX}-bar-with-info-success`]: props.status === "success",
-          [`${CLS_PREFIX}-bar-with-info-fail`]: props.status === "fail",
-          [`${CLS_PREFIX}-bar-active`]: props.active,
+        class={`${CLS_PREFIX}-line ${classNames({
+          [`${CLS_PREFIX}-line-with-info`]: props.showInfo || props.status,
+          [`${CLS_PREFIX}-line-with-info-success`]: props.status === "success",
+          [`${CLS_PREFIX}-line-with-info-fail`]: props.status === "fail",
+          [`${CLS_PREFIX}-line-active`]: props.active,
         })}`}
       >
-        <div class={`${CLS_PREFIX}-linear-outer`}>
+        <div class={`${CLS_PREFIX}-line-outer`}>
           <span
-            class={`${CLS_PREFIX}-linear-completed`}
+            class={`${CLS_PREFIX}-line-completed`}
             style={`width:${setWidth.value}%;`}
           ></span>
           <span
-            class={`${CLS_PREFIX}-linear-background`}
+            class={`${CLS_PREFIX}-line-background`}
             style={`width:${100 - setWidth.value}%`}
           ></span>
         </div>
-        <div class={`${CLS_PREFIX}-linear-info`}>
+        <div class={`${CLS_PREFIX}-line-info`}>
           {props.status ? (
             renderStatus()
           ) : (
-            <span class={`${CLS_PREFIX}-linear-info-text`}>
+            <span class={`${CLS_PREFIX}-line-info-text`}>
               {(props.value / props.maxvalue) * 100 + "%"}
             </span>
           )}
