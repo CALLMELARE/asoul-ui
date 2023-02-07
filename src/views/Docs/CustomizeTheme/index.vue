@@ -73,15 +73,36 @@ export default {
       router.push(url);
     }
 
-    const changeTheme = (themeCode: string) => {
+    function changeTheme(
+      themeCode: "ava" | "bella" | "carol" | "diana" | "eileen"
+    ) {
       const theme = presetThemes[themeCode];
       let arr = [];
-      for (const key in theme) {
-        arr.push({ variable: key, value: theme[key] });
-      }
+
+      arr.push({
+        variable: "--asoul-theme-color",
+        value: theme["--asoul-theme-color"],
+      });
+      arr.push({
+        variable: "--asoul-primary-color",
+        value: theme["--asoul-primary-color"],
+      });
+      arr.push({
+        variable: "--asoul-secondary-color",
+        value: theme["--asoul-secondary-color"],
+      });
+      arr.push({
+        variable: "--asoul-sub-color",
+        value: theme["--asoul-sub-color"],
+      });
+      arr.push({
+        variable: "--asoul-invert-color",
+        value: theme["--asoul-invert-color"],
+      });
+
       const allVars = generateAllDerivedCSSVariables(arr);
       applyTheme(allVars);
-    };
+    }
 
     return { open, jump, changeTheme };
   },
