@@ -99,6 +99,7 @@ export default {
     feedback: {
       name: "Feedback",
       Alert: "Alert",
+      Empty: "Empty",
       Progress: "Progress",
       Result: "Result",
     },

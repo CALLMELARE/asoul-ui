@@ -14,6 +14,7 @@ import Breadcrumb from "../views/Components/Breadcrumb/index.vue";
 import Button from "../views/Components/Button/index.vue";
 import Card from "../views/Components/Card/index.vue";
 import Checkbox from "../views/Components/Checkbox/index.vue";
+import Empty from "../views/Components/Empty/index.vue";
 import GradientText from "../views/Components/GradientText/index.vue";
 import Icon from "../views/Components/Icon/index.vue";
 import NumberFlow from "../views/Components/NumberFlow/index.vue";
@@ -120,6 +121,12 @@ const routes = [
         name: "Checkbox",
         component: Checkbox,
         meta: { title: "复选框 / Checkbox" },
+      },
+      {
+        path: "empty",
+        name: "Empty",
+        component: Empty,
+        meta: { title: "空状态 / Empty" },
       },
       {
         path: "gradient-text",

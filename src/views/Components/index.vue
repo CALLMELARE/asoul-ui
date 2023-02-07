@@ -78,6 +78,7 @@ export default {
           path: "components",
           children: [
             { name: t("components.feedback.Alert"), path: "alert" },
+            { name: t("components.feedback.Empty"), path: "empty" },
             { name: t("components.feedback.Progress"), path: "progress" },
             { name: t("components.feedback.Result"), path: "result" },
           ],

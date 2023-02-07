@@ -1,0 +1,9 @@
+[
+  {
+    "name": "description",
+    "type": "string",
+    "default": "空空如也",
+    "option": "-",
+    "desc": "文字描述"
+  }
+]

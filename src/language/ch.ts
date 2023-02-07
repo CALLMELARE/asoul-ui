@@ -99,6 +99,7 @@ export default {
     feedback: {
       name: "反馈组件",
       Alert: "警告信息 / Alert",
+      Empty: "空状态 / Empty",
       Progress: "进度 / Progress",
       Result: "结果页 / Result",
     },
